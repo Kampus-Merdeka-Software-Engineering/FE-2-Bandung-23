@@ -16,12 +16,9 @@ html,body {
 }
  
 header.navbar-container {
-  max-width: 1200px;
   width: 100%;
-  height: 70px;
+  height: 80px;
   margin: auto;
-  margin-top: 15px;
-  border-radius: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -31,7 +28,8 @@ header.navbar-container {
 }
  
 header.navbar-container .logo img {
-  width: 170px;
+  margin: auto;
+  width: 200px;
 }
  
 header.navbar-container .nav-list ul {
@@ -204,7 +202,7 @@ main .content .content-image img {
  }
 
 /*Offering*/
-main .offer {
+.offer {
   width: 100%;
   align-items: center;
   margin: auto;
@@ -215,7 +213,7 @@ main .offer {
   text-align: center;
   font-size: 2.5rem;
   color: #B2533E;
-  margin-top: 20px;
+
   margin-bottom: 0;
 }
 
@@ -278,15 +276,19 @@ main .offer {
 
 /*Order*/
 .order {
+  height: 400px;
   background-color: #FDFAF2;
 }
 
-.order-des .title {
+.order .order-des {
+  margin: 30px;
+}
+
+.order .order-des .title {
+  justify-content: center;
   text-align: center;
   font-size: 2.5rem;
   color: #B2533E;
-  margin-top: 20px;
-  margin-bottom: 0px;
 }
 
 .order-des hr {
@@ -300,7 +302,6 @@ main .offer {
 .grid-order {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  margin: auto;
 }
 
 .order .grid-order .card {
@@ -314,7 +315,6 @@ main .offer {
 
 /*Footer*/
 footer {
-  border: 2px solid black;
   display: flex;
   flex-wrap: wrap;
   
@@ -322,7 +322,11 @@ footer {
   height: 200px;
 }
 
-.footer-logo img {
+.footer-logo {
+  margin-left: 80px;
+}
+
+.footer-col img {
   position: relative;
   justify-content: center;
   display: flex;
@@ -342,18 +346,29 @@ ul {
 }
 
 .footer-col h3 {
+  text-align: center;
   position: relative;
   margin-bottom: 20px;
 }
 
 ul li a {
+  text-align: center;
   display: block;
   color: white;
   text-decoration: none;
 }
 
-.copyright {
-  color: white;
-  background-color: black;
+.social-links {
   text-align: center;
+  height: 40px;
+}
+
+.social-links i {
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+}
+
+..social-links i fa-brands::before {
+  size: 40px;
 }
