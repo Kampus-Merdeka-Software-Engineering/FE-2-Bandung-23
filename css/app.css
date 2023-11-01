@@ -5,9 +5,10 @@
   margin: 0;
 }
  
-html,body {
+html,body,main {
   width: 100%;
   height: 100vh;
+  font-size: 100%;
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
@@ -57,12 +58,20 @@ header.navbar-container .nav-list li:hover a {
   background-color: #425c77;
   color: white;
 }
+
+.hamburger {
+  display: none;
+}
+
+.hamburger i {
+  font-size: 2.2rem;
+  color: white;
+  display: none;
+}
  
 main {
   
   width: 100%;
-  
-  ;
   flex: 1;
  
   display: flex;
@@ -80,6 +89,7 @@ main {
 main .content .content-description {
   flex: 1 1;
   text-align: center;
+  width: 100%;
 }
  
 main .content .content-description .title {
@@ -117,21 +127,19 @@ main .content .content-description button:hover {
 main .content .content-image {
   flex: 1;
   display: flex;
-  align-items: end;
+  justify-content: end;
 }
  
 main .content .content-image img {
-  position: relative;
-  float: right;
-  margin: auto;
-  min-width: 450px;
-  width: 700px;
+  min-width: 300px;
+  width: 100%;
   
 }
 
 /*About SR*/
 
 .about-sr {
+  width: 100%;
   flex: 1;
   margin-left: 20px;
   display: flex;
@@ -141,7 +149,7 @@ main .content .content-image img {
  
 .about-sr .about-description {
   flex: 1 1;
-  padding: 100px 200px 100px 50px;
+  padding: auto;
 }
  
 .about-sr .about-description .title {
@@ -192,8 +200,8 @@ main .content .content-image img {
 }
  
 .about-sr .about-image img {
-  min-width: 350px;
-  width: 450px;
+  max-width: 450px;
+  width: 100%;
   margin: auto;
 }
 
@@ -225,7 +233,8 @@ main .content .content-image img {
 
 .grid .card {
   text-align: center;
-  width: 200px;
+  max-width: 200px;
+  width: 100%;
   border-radius: 20px;
   box-shadow: 3px 3px 10px 3px black;
   justify-content: center;
@@ -242,6 +251,9 @@ main .content .content-image img {
 }
 
 .grid img {
+  max-width: 200px;
+  width: 100%;
+  
   object-fit: cover;
   border-radius: 20px;
   
@@ -276,7 +288,9 @@ main .content .content-image img {
 
 /*Order*/
 .order {
-  height: 400px;
+  max-height: 400px;
+  height: 100%;
+  width: 100%;
   background-color: #FDFAF2;
 }
 
@@ -300,6 +314,7 @@ main .content .content-image img {
 }
 
 .grid-order {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(4,1fr);
 }
@@ -317,9 +332,10 @@ main .content .content-image img {
 footer {
   display: flex;
   flex-wrap: wrap;
-  
   background-color: #186F65;
-  height: 200px;
+  max-height: 400px;
+  height: 100%;
+  width: 100%;
 }
 
 .footer-logo {
@@ -369,6 +385,55 @@ ul li a {
   height: 40px;
 }
 
-..social-links i fa-brands::before {
+.social-links i fa-brands::before {
   size: 40px;
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  header.navbar-container .logo img {
+    width: 150px;
+  }
+  
+  main .content .content-image img {
+    width: 75%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  header.navbar-container .logo img {
+    width: 100px;
+  }
+  
+  main .content .content-image img {
+    width: 62.5%;
+    
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  header.navbar-container .logo img {
+    width: 75px;
+  }
+  
+  main .content .content-image img {
+    width: 55%;
+  }
 }
