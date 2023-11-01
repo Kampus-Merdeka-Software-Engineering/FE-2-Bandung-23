@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+ 
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+ 
+html,body {
+  width: 100%;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+ 
+header.navbar-container {
+  max-width: 1200px;
+  width: 100%;
+  height: 70px;
+  margin: auto;
+  margin-top: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #186F65;
+  padding-block: 1rem;
+
+}
+ 
+header.navbar-container .logo img {
+  width: 170px;
+}
+ 
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+ 
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+ 
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.30rem;
+  font-weight: 500;
+  color: White;
+  padding: .5rem 1.5rem;
+  border-radius: 999px;
+  transition: all .2s ease-in-out;
+}
+ 
+header.navbar-container .nav-list li:hover a {
+  background-color: #425c77;
+  color: white;
+}
+ 
+main {
+  
+  width: 100%;
+  
+  ;
+  flex: 1;
+ 
+  display: flex;
+  align-items: center;
+}
+ 
+.content {
+  width: 100%;
+  flex: 1;
+ 
+  display: flex;
+  align-items: center;
+}
+ 
+main .content .content-description {
+  flex: 1 1;
+  text-align: center;
+}
+ 
+main .content .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+ 
+main .content .content-description p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+ 
+main .content .content-description button {
+  padding: .8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+ 
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #186F65;
+  cursor: pointer;
+  transition: all .15s ease-in;
+}
+ 
+main .content .content-description button:hover {
+  border: 3px solid #186F65;
+  color: #2D3E50;
+  background-color: transparent;
+}
+ 
+main .content .content-image {
+  flex: 1;
+  display: flex;
+  align-items: end;
+}
+ 
+main .content .content-image img {
+  position: relative;
+  float: right;
+  margin: auto;
+  min-width: 450px;
+  width: 700px;
+  
+}
+
+/*About SR*/
+
+.about-sr {
+  flex: 1;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  background-color: #FDFAF2;
+}
+ 
+.about-sr .about-description {
+  flex: 1 1;
+  padding: 100px 200px 100px 50px;
+}
+ 
+.about-sr .about-description .title {
+  font-size: 2.5rem;
+  
+  color: #B2533E;
+}
+ 
+.about-sr .about-description p {
+  margin-block: 1rem;
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+.about-sr .about-description hr {
+  width: 100px;
+  height: 5px;
+  margin-left: 0;
+  border-radius: 15px;
+  background-color: #B2533E;
+}
+ 
+.about-sr .about-description button {
+  padding: .8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+ 
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #186F65;
+  cursor: pointer;
+  transition: all .15s ease-in;
+}
+ 
+.about-sr .about-description button:hover {
+  border: 3px solid #186F65;
+  color: #2D3E50;
+  background-color: transparent;
+}
+ 
+.about-sr .about-image {
+  flex: 1;
+  display: flex;
+}
+ 
+.about-sr .about-image img {
+  min-width: 350px;
+  width: 450px;
+  margin: auto;
+}
+
+ .hero {
+  display: flex;
+ }
+
+/*Offering*/
+main .offer {
+  width: 100%;
+  align-items: center;
+  margin: auto;
+  justify-content: center;
+}
+
+.offer-des .title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #B2533E;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.offer-des p {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+.grid .card {
+  text-align: center;
+  width: 200px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 10px 3px black;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  width: 100%;
+  padding: 30px 100px;
+  grid-gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid img {
+  object-fit: cover;
+  border-radius: 20px;
+  
+}
+
+.offer-button {
+  text-align: center;
+  align-items: center;
+}
+
+.offer-button button {
+  justify-content: center;
+  padding: .8rem 2.5rem;
+  margin-block: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #186F65;
+  cursor: pointer;
+  transition: all .15s ease-in;
+}
+ 
+.offer-button button:hover {
+  border: 3px solid #186F65;
+  color: #2D3E50;
+  background-color: transparent;
+}
+
+/*Order*/
+.order {
+  background-color: #FDFAF2;
+}
+
+.order-des .title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #B2533E;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.order-des hr {
+  width: 250px;
+  height: 5px;
+  margin: auto;
+  border-radius: 15px;
+  background-color: #B2533E;
+}
+
+.grid-order {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  margin: auto;
+}
+
+.order .grid-order .card {
+  width: 100px;
+}
+
+.card-order {
+  text-align: center;
+  margin-block: 50px;
+}
+
+/*Footer*/
+footer {
+  border: 2px solid black;
+  display: flex;
+  flex-wrap: wrap;
+  
+  background-color: #186F65;
+  height: 200px;
+}
+
+.footer-logo img {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  width: 170px;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col {
+  color: white;
+  margin: auto;
+  width: 25%;
+}
+
+.footer-col h3 {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  color: white;
+  background-color: black;
+  text-align: center;
+}
