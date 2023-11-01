@@ -141,7 +141,7 @@ main .content .content-image img {
 .about-sr {
   width: 100%;
   flex: 1;
-  margin-left: 20px;
+  
   display: flex;
   align-items: center;
   background-color: #FDFAF2;
@@ -234,6 +234,7 @@ main .content .content-image img {
 .grid .card {
   text-align: center;
   max-width: 200px;
+  min-width: 200px;
   width: 100%;
   border-radius: 20px;
   box-shadow: 3px 3px 10px 3px black;
@@ -252,6 +253,7 @@ main .content .content-image img {
 
 .grid img {
   max-width: 200px;
+  min-width: 200px;
   width: 100%;
   
   object-fit: cover;
@@ -334,7 +336,7 @@ footer {
   flex-wrap: wrap;
   background-color: #186F65;
   max-height: 400px;
-  height: 100%;
+  
   width: 100%;
 }
 
@@ -358,6 +360,7 @@ ul {
 
 .footer-col {
   color: white;
+  padding: 20px;
   margin: auto;
   width: 25%;
 }
@@ -404,6 +407,7 @@ ul li a {
   main .content .content-image img {
     width: 75%;
   }
+
 }
 
 @media (max-width: 768px) {
@@ -437,7 +441,7 @@ ul li a {
   }
 
   .footer-col h3 {
-    margin-bottom: 7px;
+    margin-block: 7px;
   }
 }
 
