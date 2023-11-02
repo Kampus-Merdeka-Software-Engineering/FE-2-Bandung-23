@@ -65,13 +65,18 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .container {
-  margin: 20px;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  min-height: 100vh;
+  max-width: 300px;
+  width: 100%;
+  margin: 20px 10px;
 }
 
 .side-bar {
@@ -80,26 +85,33 @@ header.navbar-container .nav-list li:hover a {
   align-items: center;
   position: relative;
   flex: 1;
-  margin-block: 10px;
   max-width: 400px;
   width: 100%;
-  height: 700px;
-  margin: 10px;
+  height: 300px;
+  margin-bottom: 20px;
   border: 2px solid black;
   border-radius: 10px;
 }
 
-.content {
+.row-konten {
+  height: 700px;
+  max-width: 700px;
+  width: 100%;
+  margin: 20px 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.konten {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
-  position: relative;
-  flex: 1;
-  margin-block: 10px;
-  max-width: 1000px;
+
+  max-width: 700px;
   width: 100%;
   height: 700px;
-  margin: 10px;
+
   border: 2px solid black;
   border-radius: 10px;
 }
