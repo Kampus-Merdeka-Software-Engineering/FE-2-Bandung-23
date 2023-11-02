@@ -1,21 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
- 
-*, *::before, *::after {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
 }
- 
-html,body,main {
+
+html,
+body,
+main {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   font-size: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
- 
+
+/* Header */
+
 header.navbar-container {
   width: 100%;
   height: 80px;
@@ -23,37 +29,36 @@ header.navbar-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #186F65;
+  background-color: #186f65;
   padding-block: 1rem;
-
 }
- 
+
 header.navbar-container .logo img {
   margin: auto;
   width: 200px;
 }
- 
+
 header.navbar-container .nav-list ul {
   padding-left: 0;
   display: flex;
   justify-content: center;
   gap: 2rem 1rem;
 }
- 
+
 header.navbar-container .nav-list li {
   list-style-type: none;
 }
- 
+
 header.navbar-container .nav-list li a {
   text-decoration: none;
-  font-size: 1.30rem;
+  font-size: 1.3rem;
   font-weight: 500;
   color: White;
-  padding: .5rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 999px;
-  transition: all .2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
- 
+
 header.navbar-container .nav-list li:hover a {
   background-color: #425c77;
   color: white;
@@ -68,72 +73,70 @@ header.navbar-container .nav-list li:hover a {
   color: white;
   display: none;
 }
- 
+
 main {
-  
   width: 100%;
   flex: 1;
- 
+
   display: flex;
   align-items: center;
 }
- 
+
 .content {
   width: 100%;
   flex: 1;
- 
+
   display: flex;
   align-items: center;
 }
- 
+
 main .content .content-description {
   flex: 1 1;
   text-align: center;
   width: 100%;
 }
- 
+
 main .content .content-description .title {
   font-size: 3.5rem;
   margin-block: 1rem;
 }
- 
+
 main .content .content-description p {
   line-height: 1.7rem;
   font-size: 1.2rem;
 }
- 
+
 main .content .content-description button {
-  padding: .8rem 2.5rem;
+  padding: 0.8rem 2.5rem;
   margin-block-start: 1rem;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1rem;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: white;
- 
+
   border: 3px solid transparent;
   border-radius: 999px;
-  background-color: #186F65;
+  background-color: #186f65;
   cursor: pointer;
-  transition: all .15s ease-in;
+  transition: all 0.15s ease-in;
 }
- 
+
 main .content .content-description button:hover {
-  border: 3px solid #186F65;
-  color: #2D3E50;
+  border: 3px solid #186f65;
+  color: #2d3e50;
   background-color: transparent;
 }
- 
+
 main .content .content-image {
   flex: 1;
   display: flex;
   justify-content: end;
 }
- 
+
 main .content .content-image img {
   min-width: 300px;
   width: 100%;
-  
 }
 
 /*About SR*/
@@ -141,23 +144,23 @@ main .content .content-image img {
 .about-sr {
   width: 100%;
   flex: 1;
-  
+
   display: flex;
   align-items: center;
-  background-color: #FDFAF2;
+  background-color: #fdfaf2;
 }
- 
+
 .about-sr .about-description {
   flex: 1 1;
   padding: auto;
 }
- 
+
 .about-sr .about-description .title {
   font-size: 2.5rem;
-  
-  color: #B2533E;
+
+  color: #b2533e;
 }
- 
+
 .about-sr .about-description p {
   margin-block: 1rem;
   line-height: 1.7rem;
@@ -169,45 +172,45 @@ main .content .content-image img {
   height: 5px;
   margin-left: 0;
   border-radius: 15px;
-  background-color: #B2533E;
+  background-color: #b2533e;
 }
- 
+
 .about-sr .about-description button {
-  padding: .8rem 2.5rem;
+  padding: 0.8rem 2.5rem;
   margin-block-start: 1rem;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1rem;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: white;
- 
+
   border: 3px solid transparent;
   border-radius: 999px;
-  background-color: #186F65;
+  background-color: #186f65;
   cursor: pointer;
-  transition: all .15s ease-in;
+  transition: all 0.15s ease-in;
 }
- 
+
 .about-sr .about-description button:hover {
-  border: 3px solid #186F65;
-  color: #2D3E50;
+  border: 3px solid #186f65;
+  color: #2d3e50;
   background-color: transparent;
 }
- 
+
 .about-sr .about-image {
   flex: 1;
   display: flex;
 }
- 
+
 .about-sr .about-image img {
   max-width: 450px;
   width: 100%;
   margin: auto;
 }
 
- .hero {
+.hero {
   display: flex;
- }
+}
 
 /*Offering*/
 .offer {
@@ -220,7 +223,7 @@ main .content .content-image img {
 .offer-des .title {
   text-align: center;
   font-size: 2.5rem;
-  color: #B2533E;
+  color: #b2533e;
 
   margin-bottom: 0;
 }
@@ -243,7 +246,7 @@ main .content .content-image img {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   width: 100%;
   padding: 30px 100px;
   grid-gap: 50px;
@@ -255,10 +258,9 @@ main .content .content-image img {
   max-width: 200px;
   min-width: 200px;
   width: 100%;
-  
+
   object-fit: cover;
   border-radius: 20px;
-  
 }
 
 .offer-button {
@@ -268,23 +270,23 @@ main .content .content-image img {
 
 .offer-button button {
   justify-content: center;
-  padding: .8rem 2.5rem;
+  padding: 0.8rem 2.5rem;
   margin-block: 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1rem;
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
   color: white;
   border: 3px solid transparent;
   border-radius: 999px;
-  background-color: #186F65;
+  background-color: #186f65;
   cursor: pointer;
-  transition: all .15s ease-in;
+  transition: all 0.15s ease-in;
 }
- 
+
 .offer-button button:hover {
-  border: 3px solid #186F65;
-  color: #2D3E50;
+  border: 3px solid #186f65;
+  color: #2d3e50;
   background-color: transparent;
 }
 
@@ -293,7 +295,7 @@ main .content .content-image img {
   max-height: 400px;
   height: 100%;
   width: 100%;
-  background-color: #FDFAF2;
+  background-color: #fdfaf2;
 }
 
 .order .order-des {
@@ -304,7 +306,7 @@ main .content .content-image img {
   justify-content: center;
   text-align: center;
   font-size: 2.5rem;
-  color: #B2533E;
+  color: #b2533e;
 }
 
 .order-des hr {
@@ -312,13 +314,13 @@ main .content .content-image img {
   height: 5px;
   margin: auto;
   border-radius: 15px;
-  background-color: #B2533E;
+  background-color: #b2533e;
 }
 
 .grid-order {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .order .grid-order .card {
@@ -334,9 +336,9 @@ main .content .content-image img {
 footer {
   display: flex;
   flex-wrap: wrap;
-  background-color: #186F65;
+  background-color: #186f65;
   max-height: 400px;
-  
+
   width: 100%;
 }
 
@@ -403,11 +405,10 @@ ul li a {
   header.navbar-container .logo img {
     width: 150px;
   }
-  
+
   main .content .content-image img {
     width: 75%;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -420,14 +421,13 @@ ul li a {
   header.navbar-container .logo img {
     width: 120px;
   }
-  
+
   main .content .content-image img {
     width: 62.5%;
-    
   }
 
   .grid {
-    grid-template-columns: repeat(2 ,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-col .title {
@@ -455,7 +455,7 @@ ul li a {
   header.navbar-container .logo img {
     width: 75px;
   }
-  
+
   main .content .content-image img {
     width: 55%;
   }
