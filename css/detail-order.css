@@ -93,6 +93,7 @@ header.navbar-container .nav-list li:hover a {
   height: 250px;
   border: 2px solid black;
   border-radius: 10px;
+  background-color: #FDFAF2;
   
   /* background-color: grey; */
   }
@@ -106,6 +107,7 @@ header.navbar-container .nav-list li:hover a {
   height: 500px;
   border: 2px solid black;
   border-radius: 10px;
+  background-color: #FFF1CD;
   /* background-color: cyan; */
   }
 
