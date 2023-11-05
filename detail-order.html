@@ -36,82 +36,86 @@
 
     <!-- Main -->
     <main>
-      <div class="pesanan">
-        <h3><span><u>Pesanan Saya</u></span></h3>
-       </div>
       <div class="container">
-        
-        <div id="body">
-          <div class="package">
-            <div class="item"><img src="../img/Ayam Taliwang.jpg" alt="" class="img"></div>
-          <div class="cart">
-            <div class="item-card">
-              <h2 class="cart-text"><span>Ayam taliwang</span></h2><br>
-              <p class="cart-text-p">ayam taliwang adalah makanan khas yang berasal dari Karang Taliwang, 
-                Mataram, Nusa Tenggara Barat. Makanan ini berbahan dasar daging ayam</p>
-            </div>
-
-            <div class="custom-counter">
-              
-            </div>
-
-          </div>
-          </div>
-          <!-- <h1>makanan</h1>
-          <p>Postingan Artikel-Artikel</p> -->
-         </div>
-         <div id="sidebar">
-          <h1>informasi pengiriman</h1>
-          <form method “post” action “proses.html”>
-            <table border=”0″ cellpadding=”1″ >
-            <tr>
-            <td width=”90″>Nama</td>
-            <td colspan=”2″>:<input name=”nama_mhs” type=”text” value=”” size=”30″ maxlength=”30″
-            width=”3″/><br/>
-            </td>
-            </tr>
-            
-            <tr>
-            <td valign=”top”>Alamat</td>
-            <td colspan=”2″>:<textarea name=”alamat” cols=”27″ rows=”3″ ></textarea><br/></td>
-            </tr>
-           
-            <tr>
-            <td> Telpon</td>
-            <td colspan=”2″>:<input name=”telpon” type=”text” value=”” size=”15″ maxlength=”12″/><br/></td>
-            </tr>
-            
-            <tr>
-            <td></td>
-            <td align=”left” ><input type=”submit” name=”submit” value=”daftar”></td>
-            </tr>
-            
-            </table>
-            </form>
-            <button class="submit">Konfirmasi pesanan</button>
-         </div>
-        <!-- <div class="row-konten">
-          <div class="konten">
-            <h1>Informasi Pengiriman</h1>
-          </div>
-        </div>
-
-        <div class="pesanan">
-         <h3><span><u>Pesanan Saya</u></span></h3>
-        </div>
         <div class="row">
-          <div class="side-bar">
-            <img src="" alt=""><br>
-            <h1>Kategori</h1><br>
-            <p>nama pesanan</p><br>
-            <button>tambah pesanan</button>
-            <br><a href="#">pesanan lainnya</a>
-            <br><p>catatan tambahan</p>
-            <table border="1">
-              <tr></tr>
-            </table>
+          <div class="pesanan">
+            <h2>Pesanan Saya</h2>
+            <hr />
           </div>
-        </div> -->
+          <div class="side-bar">
+            <div class="order-menu">
+              <img src="img/Ayam Taliwang.jpg" alt="Ayam Taliwang" />
+              <div class="jenis-order">
+                <h3>Ayam Taliwang</h3>
+                <p>
+                  Masakan nusantara ini berbahan dasar jagung, biasanya
+                  disajikan sebagai penutup makanan.
+                </p>
+                <div class="jumlah-order">
+                  <p class="minus">-</p>
+                  <p class="num">1</p>
+                  <p class="plus">+</p>
+                </div>
+              </div>
+              <div class="harga">
+                <h3>Rp 65.000</h3>
+              </div>
+            </div>
+            <div class="pesanan-lainnya">
+              <h4><a href="menu.html">Pesanan Lainnya</a></h4>
+              <p>Catatan Khusus</p>
+              <input
+                type="text"
+                placeholder="Tambahkan catatan mengenai pesanan anda disini..."
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row-konten">
+          <div class="konten">
+            <h2 class="info-pengiriman">Informasi Pengiriman</h2>
+            <div class="form">
+              <div class="nama">
+                <label>Nama Depan</label>
+                <input type="text" />
+              </div>
+              <div class="nama-belakang">
+                <label>Nama Belakang</label>
+                <input type="text" />
+              </div>
+              <div class="email">
+                <label>Email</label>
+                <input type="email" />
+              </div>
+              <div class="no-telp">
+                <label>Nomor Telepon</label>
+                <input type="number" />
+              </div>
+              <div class="alamat">
+                <label>Alamat Lengkap</label>
+                <input type="text" />
+              </div>
+            </div>
+            <div class="subtotal">
+              <div class="subtotal-item">
+                <div class="subtotal-left">
+                  <p>Subtotal</p>
+                  <p>Biaya Antar</p>
+                  <h3>Total</h3>
+                </div>
+                <div class="subtotal-right">
+                  <p>Rp 65.000</p>
+                  <p>Rp 5000</p>
+                  <h3>Rp 70.000</h3>
+                </div>
+              </div>
+            </div>
+            <div class="konfir-btn">
+              <button>Konfirmasi Pesanan</button>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
