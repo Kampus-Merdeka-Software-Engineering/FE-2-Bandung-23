@@ -22,119 +22,119 @@ main {
 
 /* Header */
 header.navbar-container {
-    width: 100%;
-    height: 80px;
-    margin: auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #186f65;
-    padding-block: 1rem;
-  }
-  
-  header.navbar-container .logo img {
-    margin: auto;
-    width: 200px;
-  }
-  
-  header.navbar-container .nav-list ul {
-    padding-left: 0;
-    display: flex;
-    justify-content: center;
-    gap: 2rem 1rem;
-  }
-  
-  header.navbar-container .nav-list li {
-    list-style-type: none;
-  }
-  
-  header.navbar-container .nav-list li a {
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: White;
-    padding: 0.5rem 1.5rem;
-    border-radius: 999px;
-    transition: all 0.2s ease-in-out;
-  }
-  
-  header.navbar-container .nav-list li:hover a {
-    background-color: #425c77;
-    color: white;
-  }
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #186f65;
+  padding-block: 1rem;
+}
+
+header.navbar-container .logo img {
+  margin: auto;
+  width: 200px;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: White;
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  transition: all 0.2s ease-in-out;
+}
+
+header.navbar-container .nav-list li:hover a {
+  background-color: #425c77;
+  color: white;
+}
 
 main {
-    width: 100%;
-    flex: 1;
-  
-    display: flex;
-    align-items: center;
-  }
+  width: 100%;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+}
 
 /* Tentang Kami */
 .content {
-    margin-right: 30px;
-    margin-left: 30px;
-    margin-top: 20px;
-    flex: 1;
-    display: flex;
-    align-items: center;
-  }
-  
-  main .content .content-description {
-    flex: 1 1;
-    text-align: center;
-    width: 100%;
-  }
-  
-  main .content .content-description .title {
-    font-size: 3.5rem;
-    margin-block: 1rem;
-  }
-  
-  main .content .content-description p {
-    line-height: 1.7rem;
-    font-size: 1.2rem;
-  }
-  
-  main .content .content-image {
-    flex: 1;
-    display: flex;
-    justify-content: end;
-  }
-  
-  main .content .content-image img {
-    min-width: 300px;
-    width: 100%;
-  }
- 
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+main .content .content-description {
+  flex: 1 1;
+  text-align: center;
+  width: 100%;
+}
+
+main .content .content-description .title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
+}
+
+main .content .content-description p {
+  line-height: 1.7rem;
+  font-size: 1.2rem;
+}
+
+main .content .content-image {
+  flex: 1;
+  display: flex;
+  justify-content: end;
+}
+
+main .content .content-image img {
+  min-width: 300px;
+  width: 100%;
+}
+
 /*Tim Kami*/
 .tim {
-    max-height: 900px;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    background-color: #fdfaf2;
-  }
+  max-height: 900px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #fdfaf2;
+}
 
 .tim .tim-kami {
-    margin: 30px;
-  }
-  
+  margin: 30px;
+}
+
 .tim .tim-kami .title {
-    justify-content: center;
-    text-align: center;
-    font-size: 2.5rem;
-    color: #b2533e;
-  }
+  justify-content: center;
+  text-align: center;
+  font-size: 2.5rem;
+  color: #b2533e;
+}
 
 .tim-kami hr {
-    width: 150px;
-    height: 5px;
-    margin: auto;
-    border-radius: 15px;
-    background-color: #b2533e;
-  }
+  width: 150px;
+  height: 5px;
+  margin: auto;
+  border-radius: 15px;
+  background-color: #b2533e;
+}
 
 .aboutus-container {
   display: grid;
