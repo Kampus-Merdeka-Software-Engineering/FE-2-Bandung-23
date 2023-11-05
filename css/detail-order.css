@@ -175,16 +175,25 @@ header.navbar-container .nav-list li:hover a {
   background-color: #b2533e;
 }
 
-.pesanan-lainnya {
+.pesanan-lainnya{
   max-height: 130px;
   height: 100%;
   padding: 10px;
+  
 }
+
+.pesanan-lainnya h4{
+  margin-bottom: 10px;
+  
+}
+
+
 
 .pesanan-lainnya a {
   color: #b2533e;
   padding-bottom: 10px;
   margin-bottom: 50px;
+  text-decoration: none;
 
 }
 
@@ -290,12 +299,17 @@ header.navbar-container .nav-list li:hover a {
   display: flex;
   border-radius: 10px;
   background-color: #fce09b;
-  max-width: 500px;
+  max-width: 550px;
   width: 100%;
   max-height: 100px;
   height: 100%;
   align-items: center;
   justify-content: space-between;
+  padding-top: 10px;
+}
+
+.subtotal-item h3{
+  margin-block: 10px;
 }
 
 .subtotal-left,
