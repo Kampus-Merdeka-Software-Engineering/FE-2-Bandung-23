@@ -110,7 +110,8 @@ main {
  
 /*Tim Kami*/
 .tim {
-    max-height: 400px;
+    max-height: 600px;
+    text-align: center;
     height: 100%;
     width: 100%;
     background-color: #fdfaf2;
@@ -140,24 +141,23 @@ main {
   grid-template-columns: repeat(3, 1fr); /* Dua kolom dengan lebar yang sama */
   grid-template-rows: repeat(2, 1fr); /* Tiga baris dengan tinggi yang sama */
   grid-gap: 20px; /* Jarak antara elemen-elemen dalam grid */
-  margin-left: 200px;
+  justify-content: center;
+  /*display: flex;*/
+  flex-wrap: wrap;
 }
 
 .aboutus-container .aboutus-item {
-  width: 100px;
+  width: 200px;
+  text-align: center;
 }
 
-.aboutus-item {
+.aboutus-item r{
   text-align: center;
 }
 
 .aboutus-item img {
-  width: 125px;
-  height: 125px;
-}
-
-.aboutus-item p {
-  margin: 10px 0;
+  width: 200px;
+  height: 200px;
 }
 
 /*Footer*/
