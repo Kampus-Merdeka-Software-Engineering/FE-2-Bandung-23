@@ -96,13 +96,13 @@ header.navbar-container .nav-list li:hover a {
 
 .artikel {
   /* display: flex; */
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
   position: relative;
   /* flex: 1; */
   max-width: 400px;
   width: 100%;
-  height: 840px;
+  height: 775px;
   margin-bottom: 20px;
   border: 2px solid black;
   border-radius: 10px;
@@ -116,7 +116,13 @@ header.navbar-container .nav-list li:hover a {
   width: 100%;
   height: 25px;
   margin-top: 20px;
-  font-size: 28px;
+  margin-bottom: 70px;
+  font-size: 24px;
+}
+
+.title-hr{
+  height: 5px;
+  background-color: #FCE09B;
 }
 
 .artikel p  {
@@ -124,11 +130,12 @@ header.navbar-container .nav-list li:hover a {
   color: white;
   position: relative;
   /* height: 25px; */
-  margin-top: 40px;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-  font-size: 20px;
+  padding-left: 15px;
+  font-size: 18px;
 }
 
 .artikel a{
@@ -138,9 +145,15 @@ header.navbar-container .nav-list li:hover a {
   padding-right: 10px;
   padding-left: 10px;
   color: white;
-  background-color: #FCE09B;
+  background-color: #D7996C;
   border: 1px solid #B2533E;
-  font-size: 18px;
+  font-size: 16px;
+  text-decoration: none;
+  font-style: italic;
+}
+
+.artikel i{
+  margin-left: 10px;
 }
 
 .row-konten {
@@ -164,6 +177,10 @@ header.navbar-container .nav-list li:hover a {
 
   border: 2px solid black;
   border-radius: 10px;
+}
+
+.artikel-hr{
+  margin-block: 30px;
 }
 
 .review {
