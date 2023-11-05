@@ -106,6 +106,31 @@ header.navbar-container .nav-list li:hover a {
   justify-content: center;
 }
 
+.search-bar {
+  text-align: center;
+  border: 3px black;
+} 
+
+.search-bar input[type=text]{
+  font-family: "Poppins";
+  font-weight: 650;
+  text-align: center;
+  border-width: 30px;
+  margin-bottom: 8px;
+  border: 8px grey;
+  font-size: 20px;
+}
+
+.search-bar button {
+  padding: 6px 10px;
+  border-radius: 300x;
+  margin-top: 8px;
+  margin-right: 16px;
+  background:white;
+  font-size: 17px;
+  cursor: pointer;
+}
+
 .konten {
   display: flex;
   position: relative;
