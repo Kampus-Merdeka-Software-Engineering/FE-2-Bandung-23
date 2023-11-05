@@ -79,7 +79,7 @@ header.navbar-container .nav-list li:hover a {
   margin: 20px 10px;
 }
 
-.side-bar-a {
+.kategori {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,7 +94,7 @@ header.navbar-container .nav-list li:hover a {
   background-color: #FCE09B;
 }
 
-.side-bar-b {
+.artikel {
   /* display: flex; */
   /* justify-content: center;
   align-items: center; */
@@ -109,7 +109,7 @@ header.navbar-container .nav-list li:hover a {
   background-color: #B2533E;
 }
 
-.artikel {
+.title {
   text-align: center;
   color: white;
   position: relative;
@@ -119,31 +119,7 @@ header.navbar-container .nav-list li:hover a {
   font-size: 28px;
 }
 
-p.artikel-1{
-  text-align: left;
-  color: white;
-  position: relative;
-  /* height: 25px; */
-  margin-top: 70px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-a.artikel-1{
-  text-align: center;
-  margin-left: 60px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  color: white;
-  background-color: #FCE09B;
-  border: 1px solid #B2533E;
-  font-size: 18px;
-}
-
-p.artikel-2{
+.artikel p  {
   text-align: left;
   color: white;
   position: relative;
@@ -155,7 +131,7 @@ p.artikel-2{
   font-size: 20px;
 }
 
-a.artikel-2{
+.artikel a{
   text-align: center;
   margin-left: 60px;
   margin-right: 10px;
@@ -166,56 +142,6 @@ a.artikel-2{
   border: 1px solid #B2533E;
   font-size: 18px;
 }
-
-p.artikel-3{
-  text-align: left;
-  color: white;
-  position: relative;
-  /* height: 25px; */
-  margin-top: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-a.artikel-3{
-  text-align: center;
-  margin-left: 60px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  color: white;
-  background-color: #FCE09B;
-  border: 1px solid #B2533E;
-  font-size: 18px;
-}
-
-p.artikel-4{
-  text-align: left;
-  color: white;
-  position: relative;
-  /* height: 25px; */
-  margin-top: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-a.artikel-4{
-  text-align: center;
-  margin-left: 60px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  color: white;
-  background-color: #FCE09B;
-  border: 1px solid #B2533E;
-  font-size: 18px;
-}
-
-
 
 .row-konten {
   min-height: 100vh;
