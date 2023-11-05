@@ -215,6 +215,10 @@ a.artikel-4{
   font-size: 18px;
 }
 
+.side-bar ul li a {
+  color: black;
+}
+
 .row-konten {
   height: 700px;
   max-width: 700px;
@@ -222,6 +226,31 @@ a.artikel-4{
   margin: 20px 10px;
   align-items: center;
   justify-content: center;
+}
+
+.search-bar {
+  text-align: center;
+  border: 3px black;
+} 
+
+.search-bar input[type=text]{
+  font-family: "Poppins";
+  font-weight: 650;
+  text-align: center;
+  border-width: 30px;
+  margin-bottom: 8px;
+  border: 8px grey;
+  font-size: 20px;
+}
+
+.search-bar button {
+  padding: 6px 10px;
+  border-radius: 300x;
+  margin-top: 8px;
+  margin-right: 16px;
+  background:white;
+  font-size: 17px;
+  cursor: pointer;
 }
 
 .konten {
@@ -280,7 +309,7 @@ ul {
   margin-bottom: 20px;
 }
 
-ul li a {
+.footer-col ul li a {
   text-align: center;
   display: block;
   color: white;
