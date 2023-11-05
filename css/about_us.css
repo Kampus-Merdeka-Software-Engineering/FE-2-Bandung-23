@@ -110,7 +110,7 @@ main {
  
 /*Tim Kami*/
 .tim {
-    max-height: 600px;
+    max-height: 900px;
     text-align: center;
     height: 100%;
     width: 100%;
@@ -129,7 +129,7 @@ main {
   }
 
 .tim-kami hr {
-    width: 250px;
+    width: 150px;
     height: 5px;
     margin: auto;
     border-radius: 15px;
@@ -142,17 +142,14 @@ main {
   grid-template-rows: repeat(2, 1fr); /* Tiga baris dengan tinggi yang sama */
   grid-gap: 20px; /* Jarak antara elemen-elemen dalam grid */
   justify-content: center;
-  /*display: flex;*/
+  margin: auto;
   flex-wrap: wrap;
 }
 
 .aboutus-container .aboutus-item {
-  width: 200px;
+  width: 240px;
   text-align: center;
-}
-
-.aboutus-item r{
-  text-align: center;
+  margin: auto;
 }
 
 .aboutus-item img {
@@ -162,129 +159,129 @@ main {
 
 /*Footer*/
 footer {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #186f65;
-    max-height: 400px;
-  
-    width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #186f65;
+  max-height: 400px;
+
+  width: 100%;
+}
+
+.footer-logo {
+  margin-left: 80px;
+}
+
+.footer-col img {
+  position: relative;
+  justify-content: center;
+  display: flex;
+  max-width: 170px;
+  width: 100%;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-col {
+  color: white;
+  padding: 20px;
+  margin: auto;
+  width: 25%;
+}
+
+.footer-col h3 {
+  text-align: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+ul li a {
+  text-align: center;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.social-links {
+  text-align: center;
+  height: 40px;
+}
+
+.social-links i {
+  font-size: 25px;
+  width: 40px;
+  height: 40px;
+}
+
+.social-links i fa-brands::before {
+  size: 40px;
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
   }
-  
-  .footer-logo {
-    margin-left: 80px;
+  .title {
+    font-size: 1.75rem;
   }
-  
-  .footer-col img {
-    position: relative;
-    justify-content: center;
-    display: flex;
-    max-width: 170px;
-    width: 100%;
-    align-items: center;
+  header.navbar-container .logo img {
+    width: 150px;
   }
-  
-  ul {
-    list-style: none;
-    padding: 0;
+
+  main .content .content-image img {
+    width: 75%;
   }
-  
-  .footer-col {
-    color: white;
-    padding: 20px;
-    margin: auto;
-    width: 25%;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
   }
-  
-  .footer-col h3 {
-    text-align: center;
-    position: relative;
-    margin-bottom: 20px;
+  .title {
+    font-size: 1.5rem;
   }
-  
-  ul li a {
-    text-align: center;
-    display: block;
-    color: white;
-    text-decoration: none;
+  header.navbar-container .logo img {
+    width: 120px;
   }
-  
-  .social-links {
-    text-align: center;
-    height: 40px;
+
+  main .content .content-image img {
+    width: 62.5%;
   }
-  
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-col .title {
+    font-size: 100%;
+  }
+
   .social-links i {
-    font-size: 25px;
-    width: 40px;
-    height: 40px;
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
   }
-  
-  .social-links i fa-brands::before {
-    size: 40px;
+
+  .footer-col h3 {
+    margin-block: 7px;
   }
-  
-  @media (max-width: 1366px) {
-    html {
-      font-size: 75%;
-    }
-    .title {
-      font-size: 1.75rem;
-    }
-    header.navbar-container .logo img {
-      width: 150px;
-    }
-  
-    main .content .content-image img {
-      width: 75%;
-    }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
   }
-  
-  @media (max-width: 768px) {
-    html {
-      font-size: 62.5%;
-    }
-    .title {
-      font-size: 1.5rem;
-    }
-    header.navbar-container .logo img {
-      width: 120px;
-    }
-  
-    main .content .content-image img {
-      width: 62.5%;
-    }
-  
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .footer-col .title {
-      font-size: 100%;
-    }
-  
-    .social-links i {
-      font-size: 17px;
-      width: 30px;
-      height: 30px;
-    }
-  
-    .footer-col h3 {
-      margin-block: 7px;
-    }
+  .title {
+    font-size: 1rem;
   }
-  
-  @media (max-width: 450px) {
-    html {
-      font-size: 55%;
-    }
-    .title {
-      font-size: 1rem;
-    }
-    header.navbar-container .logo img {
-      width: 75px;
-    }
-  
-    main .content .content-image img {
-      width: 55%;
-    }
+  header.navbar-container .logo img {
+    width: 75px;
   }
+
+  main .content .content-image img {
+    width: 55%;
+  }
+}
