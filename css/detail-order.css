@@ -73,145 +73,268 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .row {
-  min-height: 100vh;
-  max-width: 300px;
+  max-height: 500px;
+  max-width: 600px;
   width: 100%;
-  margin: 20px 10px;
+  margin: 40px 20px;
 }
 
-
-#body {
-  margin-top:15px;
-  display: flex;
-  float: left;
-  justify-content: left;
-  align-items: left;
-  position: relative;
-  flex: 1;
-  max-width: 800px;
-  width: 70%;
-  height: 250px;
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: #FDFAF2;
-  
-  /* background-color: grey; */
-  }
-
-
-#sidebar {
-  margin-top: 15px;
-  float: left;
-  max-width: 500px;
-  width: 30%;
-  height: 500px;
-  border: 2px solid black;
-  border-radius: 10px;
-  background-color: #FFF1CD;
-  /* background-color: cyan; */
-  }
-
-
-
-  .pesanan{
-    justify-content:left;
-    align-items: left;
-    font-size: 24px;
-    margin: 10px;
-    margin-left:130px;
-    color:#b2533e;
-  }
-
-  .package{
-  width: 16vw;
-    height: 16vw;
-    margin-top: -14px;
-    margin-bottom: -14px;
-    margin-left: 5vw;
-    display: flex;
-  }
-
-  .item{
-    width: 16vw;
-    height: 16vw;
-    margin-top: -14px;
-    margin-bottom: -14px;
-    margin-left: 5vw;
-    display: flex;
-   
-  }
-
-  .img{
-    width: 200px;
-    height: 100px;
-    margin-top: 50px;
-    /* margin-bottom: -14px; */
-    margin-left: -120px;
-  }
-
-  .item-card{
-   margin-top:30px;
-   margin-left: 50px;
-  }
-
-  .cart-text{
-    width: 200px;
-    height: 100px;
-    line-height: 50px;
-    margin-left: -30px;
-  }
-
-  .cart-text-p{
-    margin-top: -85px;
-    margin-bottom: 100px;
-    font-size: 12px;
-    
-    margin-left: -30px;
-  }
-
-/* .side-bar {
-  display: flex;
-  justify-content: right;
+.side-bar {
   align-items: right;
   position: relative;
   flex: 1;
   max-width: 600px;
   width: 100%;
   height: 300px;
-  margin-right: 100px;
-  margin-bottom:50px;
-  margin-top: 50px;
-  border: 2px solid black;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: #fdfaf2;
+}
+
+.order-menu {
+  display: flex;
+  max-width: 600px;
+  width: 100%;
+  max-height: 170px;
+  height: 100%;
+}
+
+.side-bar img {
+  max-width: 150px;
+  width: 100%;
+  max-height: 150px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.jenis-order {
+  max-width: 300px;
+  width: 100%;
+  padding: 10px;
+}
+
+.jumlah-order {
+  display: flex;
+  max-height: 50px;
+  height: 100%;
+  padding-block: 10px;
+}
+
+.jumlah-order p {
+  font-size: 21px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.jumlah-order .minus {
+  background-color: white;
+  border: 1px solid #186f65;
+  border-radius: 5px;
+}
+.jumlah-order .num {
+  background-color: white;
+  border-radius: 5px;
+}
+.jumlah-order .plus {
+  color: white;
+  background-color: #186f65;
+  border-radius: 5px;
+}
+
+.jenis-order h3 {
+  justify-content: end;
+}
+
+.harga {
+  max-width: 150px;
+  width: 100%;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.pesanan {
+  max-height: 100px;
+  color: #b2533e;
+  margin-left: 120px;
+  font-size: 20px;
+  margin-top: -20px;
+  font-family: "Poppins";
+}
+
+.pesanan hr {
+  max-width: 130px;
+  width: 100%;
+  height: 5px;
+  border-radius: 15px;
+  background-color: #b2533e;
+}
+
+.pesanan-lainnya {
+  max-height: 130px;
+  height: 100%;
+  padding: 10px;
+}
+
+.pesanan-lainnya a {
+  color: #b2533e;
+  padding-bottom: 10px;
+  margin-bottom: 50px;
+
+}
+
+.pesanan-lainnya input {
+  max-width: 500px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #186f65;
   border-radius: 10px;
 }
 
-
-
-
 .row-konten {
   min-height: 100vh;
-  max-width: 500px;
+  max-width: 600px;
   width: 100%;
-  margin: 50px 30px;
+  margin: 50px 20px;
   align-items: left;
   justify-content: left;
 }
 
 .konten {
-  display: flex;
+  flex-direction: column;
   position: relative;
-  justify-content: left;
-  align-items: left;
+  background-color: #fff1cd;
+  max-width: 600px;
+  width: 100%;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
+}
 
+.info-pengiriman {
+  color: #b2533e;
+  padding: 10px 20px;
+}
+
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
+  justify-content: center;
+}
+
+.form .nama,
+.nama-belakang,
+.email,
+.no-telp {
+  max-width: 250px;
+  width: 100%;
+  max-height: 50px;
+  height: 100%;
+  margin: 10px 20px;
+}
+
+.form .nama input,
+.nama-belakang input,
+.email input,
+.no-telp input {
+  border: 1px solid #b2533e;
+  border-radius: 10px;
+  max-height: 35px;
+  height: 100%;
+  background-color: #fdfaf2;
+}
+
+.form .alamat {
+  display: flex;
+  flex-direction: column;
+  max-width: 540px;
+  width: 100%;
+  max-height: 130px;
+  height: 100%;
+  margin: 10px 20px;
+}
+
+.form .alamat input {
+  max-width: 550px;
+  width: 100%;
+  max-height: 100px;
+  height: 100%;
+  border: 1px solid #b2533e;
+  border-radius: 10px;
+  background-color: #fdfaf2;
+}
+
+.form input {
+  max-width: 250px;
+  width: 100%;
+}
+
+.subtotal {
+  max-height: 100px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subtotal-item {
+  display: flex;
+  border-radius: 10px;
+  background-color: #fce09b;
   max-width: 500px;
   width: 100%;
-  height: 300px;
+  max-height: 100px;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  border: 2px solid black;
+.subtotal-left,
+.subtotal-right {
+  max-width: 100px;
+  width: 100%;
+  margin: 10px;
+}
+
+.subtotal-right {
+  text-align: right;
+}
+
+.konfir-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.konfir-btn button {
+  max-width: 530px;
+  width: 100%;
+  justify-content: center;
+  padding: 0.8rem 2.5rem;
+  margin-block: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  border: 3px solid transparent;
   border-radius: 10px;
-} */
+  background-color: #b2533e;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
 
-
+.konten p {
+  max-width: 150px;
+}
 
 /* Footer */
 
