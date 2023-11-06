@@ -60,8 +60,8 @@ header.navbar-container .nav-list li a {
 }
 
 header.navbar-container .nav-list li:hover a {
-  background-color: #425c77;
-  color: white;
+  background-color: #a6cf98;
+  color: #1a5d1a;
 }
 
 .container {
@@ -175,26 +175,21 @@ header.navbar-container .nav-list li:hover a {
   background-color: #b2533e;
 }
 
-.pesanan-lainnya{
+.pesanan-lainnya {
   max-height: 130px;
   height: 100%;
   padding: 10px;
-  
 }
 
-.pesanan-lainnya h4{
+.pesanan-lainnya h4 {
   margin-bottom: 10px;
-  
 }
-
-
 
 .pesanan-lainnya a {
   color: #b2533e;
   padding-bottom: 10px;
   margin-bottom: 50px;
   text-decoration: none;
-
 }
 
 .pesanan-lainnya input {
@@ -308,7 +303,7 @@ header.navbar-container .nav-list li:hover a {
   padding-top: 10px;
 }
 
-.subtotal-item h3{
+.subtotal-item h3 {
   margin-block: 10px;
 }
 

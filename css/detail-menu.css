@@ -60,8 +60,8 @@ header.navbar-container .nav-list li a {
 }
 
 header.navbar-container .nav-list li:hover a {
-  background-color: #425c77;
-  color: white;
+  background-color: #a6cf98;
+  color: #1a5d1a;
 }
 
 .container {
@@ -91,7 +91,7 @@ header.navbar-container .nav-list li:hover a {
   margin-bottom: 20px;
   border: 2px solid black;
   border-radius: 10px;
-  background-color: #FCE09B;
+  background-color: #fce09b;
 }
 
 .artikel {
@@ -106,7 +106,7 @@ header.navbar-container .nav-list li:hover a {
   margin-bottom: 20px;
   border: 2px solid black;
   border-radius: 10px;
-  background-color: #B2533E;
+  background-color: #b2533e;
 }
 
 .title {
@@ -120,12 +120,12 @@ header.navbar-container .nav-list li:hover a {
   font-size: 24px;
 }
 
-.title-hr{
+.title-hr {
   height: 5px;
-  background-color: #FCE09B;
+  background-color: #fce09b;
 }
 
-.artikel p  {
+.artikel p {
   text-align: left;
   color: white;
   position: relative;
@@ -138,25 +138,25 @@ header.navbar-container .nav-list li:hover a {
   font-size: 18px;
 }
 
-.artikel a{
+.artikel a {
   text-align: center;
   margin-left: 60px;
   margin-right: 10px;
   padding-right: 10px;
   padding-left: 10px;
   color: white;
-  background-color: #D7996C;
-  border: 1px solid #B2533E;
+  background-color: #d7996c;
+  border: 1px solid #b2533e;
   font-size: 16px;
   text-decoration: none;
   font-style: italic;
 }
 
-.artikel i{
+.artikel i {
   margin-left: 10px;
 }
 
-.artikel-hr{
+.artikel-hr {
   margin-block: 30px;
 }
 

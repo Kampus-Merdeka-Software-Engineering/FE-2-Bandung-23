@@ -59,8 +59,8 @@ header.navbar-container .nav-list li a {
 }
 
 header.navbar-container .nav-list li:hover a {
-  background-color: #425c77;
-  color: white;
+  background-color: #a6cf98;
+  color: #1a5d1a;
 }
 
 main {
