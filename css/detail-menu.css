@@ -156,6 +156,10 @@ header.navbar-container .nav-list li:hover a {
   margin-left: 10px;
 }
 
+.artikel-hr{
+  margin-block: 30px;
+}
+
 .row-konten {
   min-height: 100vh;
   max-width: 700px;
@@ -177,10 +181,6 @@ header.navbar-container .nav-list li:hover a {
 
   border: 2px solid black;
   border-radius: 10px;
-}
-
-.artikel-hr{
-  margin-block: 30px;
 }
 
 .review {

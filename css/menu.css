@@ -79,7 +79,7 @@ header.navbar-container .nav-list li:hover a {
   margin: 20px 10px;
 }
 
-.side-bar-a {
+.kategori {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,129 +94,70 @@ header.navbar-container .nav-list li:hover a {
   background-color: #FCE09B;
 }
 
-.side-bar-b {
+.artikel {
   /* display: flex; */
-  /* justify-content: center;
-  align-items: center; */
+  justify-content: center;
+  align-items: center;
   position: relative;
   /* flex: 1; */
   max-width: 400px;
   width: 100%;
-  height: 840px;
+  height: 775px;
   margin-bottom: 20px;
   border: 2px solid black;
   border-radius: 10px;
   background-color: #B2533E;
 }
 
-.artikel {
+.title {
   text-align: center;
   color: white;
   position: relative;
   width: 100%;
   height: 25px;
   margin-top: 20px;
-  font-size: 28px;
+  margin-bottom: 70px;
+  font-size: 24px;
 }
 
-p.artikel-1{
+.title-hr{
+  height: 5px;
+  background-color: #FCE09B;
+}
+
+.artikel p  {
   text-align: left;
   color: white;
   position: relative;
   /* height: 25px; */
-  margin-top: 70px;
+  margin-top: 10px;
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 10px;
-  font-size: 20px;
+  padding-left: 15px;
+  font-size: 18px;
 }
 
-a.artikel-1{
+.artikel a{
   text-align: center;
   margin-left: 60px;
   margin-right: 10px;
   padding-right: 10px;
   padding-left: 10px;
   color: white;
-  background-color: #FCE09B;
+  background-color: #D7996C;
   border: 1px solid #B2533E;
-  font-size: 18px;
+  font-size: 16px;
+  text-decoration: none;
+  font-style: italic;
 }
 
-p.artikel-2{
-  text-align: left;
-  color: white;
-  position: relative;
-  /* height: 25px; */
-  margin-top: 40px;
+.artikel i{
   margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-size: 20px;
 }
 
-a.artikel-2{
-  text-align: center;
-  margin-left: 60px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  color: white;
-  background-color: #FCE09B;
-  border: 1px solid #B2533E;
-  font-size: 18px;
-}
-
-p.artikel-3{
-  text-align: left;
-  color: white;
-  position: relative;
-  /* height: 25px; */
-  margin-top: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-a.artikel-3{
-  text-align: center;
-  margin-left: 60px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  color: white;
-  background-color: #FCE09B;
-  border: 1px solid #B2533E;
-  font-size: 18px;
-}
-
-p.artikel-4{
-  text-align: left;
-  color: white;
-  position: relative;
-  /* height: 25px; */
-  margin-top: 40px;
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  font-size: 20px;
-}
-
-a.artikel-4{
-  text-align: center;
-  margin-left: 60px;
-  margin-right: 10px;
-  padding-right: 10px;
-  padding-left: 10px;
-  color: white;
-  background-color: #FCE09B;
-  border: 1px solid #B2533E;
-  font-size: 18px;
-}
-
-.side-bar ul li a {
-  color: black;
+.artikel-hr{
+  margin-block: 30px;
 }
 
 .row-konten {
