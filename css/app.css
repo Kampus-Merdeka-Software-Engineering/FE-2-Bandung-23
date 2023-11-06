@@ -214,6 +214,10 @@ main .content .content-image img {
   background: linear-gradient(to top, #fdfaf2, white);
 }
 
+.offer-des {
+  margin-top: 30px;
+}
+
 .offer-des .title {
   text-align: center;
   font-size: 2.5rem;
@@ -246,6 +250,7 @@ main .content .content-image img {
   grid-gap: 50px;
   align-items: center;
   justify-content: center;
+  margin-block: 20px;
 }
 
 .grid img {
