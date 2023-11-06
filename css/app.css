@@ -60,18 +60,8 @@ header.navbar-container .nav-list li a {
 }
 
 header.navbar-container .nav-list li:hover a {
-  background-color: #425c77;
-  color: white;
-}
-
-.hamburger {
-  display: none;
-}
-
-.hamburger i {
-  font-size: 2.2rem;
-  color: white;
-  display: none;
+  background-color: #a6cf98;
+  color: #1a5d1a;
 }
 
 main {
@@ -85,9 +75,10 @@ main {
 .content {
   width: 100%;
   flex: 1;
-
   display: flex;
   align-items: center;
+  background-color: white;
+  background: linear-gradient(to right, #fdfaf2, white);
 }
 
 main .content .content-description {
@@ -148,6 +139,7 @@ main .content .content-image img {
   display: flex;
   align-items: center;
   background-color: #fdfaf2;
+  background: linear-gradient(to left, #f7e1ae, #fdfaf2);
 }
 
 .about-sr .about-description {
@@ -218,6 +210,8 @@ main .content .content-image img {
   align-items: center;
   margin: auto;
   justify-content: center;
+  background-color: white;
+  background: linear-gradient(to top, #fdfaf2, white);
 }
 
 .offer-des .title {
@@ -296,6 +290,7 @@ main .content .content-image img {
   height: 100%;
   width: 100%;
   background-color: #fdfaf2;
+  background: linear-gradient(to top, #f7e1ae, #fdfaf2);
 }
 
 .order .order-des {
