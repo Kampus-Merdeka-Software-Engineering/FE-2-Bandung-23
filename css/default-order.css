@@ -81,28 +81,39 @@ header.navbar-container .nav-list li:hover a {
     margin-right: 150px;
 }
 
+.konten-hr{
+  margin-block: 30px;
+  height: 5px;
+  background-color: #B2533E;
+  width: 203px;
+  margin-left: 150px;
+  margin-top: 0;
+}
+
 p.konten{
     color: black;
-    font-size: 18px;
+    font-size: 21px;
     text-align: center;
     display: block;
-    margin-top: 15px;
+    margin-top: 230px;
     margin-left: 150px;
     margin-right: 150px;
 }
 
 a.konten{
     color: white;
-    font-size: 20px;
+    font-size: 21px;
+    text-decoration: none;
     text-align: center;
     display: block;
+    width: 210px;
     background-color: #186F65;
     border-radius: 20px;
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 40px;
-    margin-left: 700px;
-    margin-right: 700px; 
+    margin-left: 720px;
+    margin-right: 720px; 
 }
 /* Footer */
 
