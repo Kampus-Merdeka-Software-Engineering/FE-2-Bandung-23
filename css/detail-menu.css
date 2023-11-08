@@ -125,6 +125,7 @@ header.navbar-container .nav-list li:hover a {
   justify-content: center;
   text-decoration: none;
   font-weight: bold;
+  text-align: left;
 }
 
 .list-hr {
