@@ -92,32 +92,6 @@ header.navbar-container .nav-list li:hover a {
   margin-top: 0;
 }
 
-.konten2 p {
-    color: black;
-    font-size: 21px;
-    text-align: center;
-    display: block;
-    margin-top: 230px;
-    margin-left: 150px;
-    margin-right: 150px;
-}
-
-.konten2 button {
-  color: white;
-  font-size: 21px;
-  text-decoration: none;
-  text-align: center;
-  display: block;
-  width: 210px;
-  background-color: #186f65;
-  border-radius: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-top: 40px;
-  margin-left: 720px;
-  margin-right: 720px;
-}
-
 .konten2 {
   max-width: 700px;
   width: 100%;
@@ -127,6 +101,7 @@ header.navbar-container .nav-list li:hover a {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
 }
 
 .konten2 button {
