@@ -67,12 +67,15 @@ header.navbar-container .nav-list li:hover a {
 .container {
   min-height: 100vh;
   width: 100%;
-  /* display: flex;
-  flex-wrap: wrap; */
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .konten {
+  width: 100%;
+  max-height: 300px;
+  height: 100%;
   color: #b2533e;
   font-size: 28px;
   display: block;
@@ -86,7 +89,6 @@ header.navbar-container .nav-list li:hover a {
   height: 5px;
   background-color: #b2533e;
   width: 203px;
-  margin-left: 150px;
   margin-top: 0;
 }
 
@@ -115,6 +117,40 @@ a.konten {
   margin-left: 720px;
   margin-right: 720px;
 }
+
+.konten2 {
+  max-width: 700px;
+  width: 100%;
+  max-height: 150px;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.konten2 button {
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  color: white;
+
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #186f65;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+.konten2 button:hover {
+  border: 3px solid #186f65;
+  color: #2d3e50;
+  background-color: transparent;
+}
+
 /* Footer */
 
 .footer {
