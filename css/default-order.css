@@ -92,17 +92,17 @@ header.navbar-container .nav-list li:hover a {
   margin-top: 0;
 }
 
-p.konten {
-  color: black;
-  font-size: 21px;
-  text-align: center;
-  display: block;
-  margin-top: 230px;
-  margin-left: 150px;
-  margin-right: 150px;
+.konten2 p {
+    color: black;
+    font-size: 21px;
+    text-align: center;
+    display: block;
+    margin-top: 230px;
+    margin-left: 150px;
+    margin-right: 150px;
 }
 
-a.konten {
+.konten2 button {
   color: white;
   font-size: 21px;
   text-decoration: none;
