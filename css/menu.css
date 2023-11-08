@@ -65,7 +65,7 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .container {
-  min-height: 240vh;
+  min-height: 222vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
