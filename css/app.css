@@ -355,7 +355,7 @@ footer {
   flex-wrap: wrap;
   background-color: #186f65;
   max-height: 400px;
-
+  justify-content: center;
   width: 100%;
 }
 
@@ -372,26 +372,48 @@ footer {
   align-items: center;
 }
 
-ul {
+.footer-col-com ul,
+.footer-col ul {
+  display: inline-flex;
   list-style: none;
   padding: 0;
+  margin-inline: auto;
+  justify-content: center;
+  width: 100%;
 }
 
 .footer-col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   color: white;
-  padding: 20px;
-  margin: auto;
+  padding-block: 20px;
+  margin-inline: 10px;
   width: 25%;
 }
 
+.footer-col-com {
+  color: white;
+  margin-block: auto;
+  width: 35%;
+}
+
+.footer-col-com h3,
 .footer-col h3 {
   text-align: center;
   position: relative;
   margin-bottom: 20px;
 }
 
+.footer-col-com a,
+.footer-col a {
+  max-width: 130px;
+  text-align: left;
+  margin-inline: 10px;
+}
+
 ul li a {
-  text-align: center;
   display: block;
   color: white;
   text-decoration: none;
@@ -427,8 +449,8 @@ ul li a {
     width: 75%;
   }
 
-  .card{
-    width: 75%;
+  .card {
+    max-width: 75%;
   }
 
   hr {
@@ -455,8 +477,8 @@ ul li a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .card{
-    width: 62.5%;
+  .grid .card {
+    max-width: 100px;
   }
 
   .footer-col .title {
@@ -472,7 +494,7 @@ ul li a {
   .footer-col h3 {
     margin-block: 7px;
   }
-  
+
   hr {
     width: 62.5%;
   }
@@ -493,8 +515,8 @@ ul li a {
     width: 55%;
   }
 
-  .card{
-    width: 55%;
+  .grid .card {
+    width: 100px;
   }
 
   hr {
