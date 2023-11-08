@@ -65,7 +65,7 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .container {
-  min-height: 100vh;
+  min-height: 240vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -81,7 +81,7 @@ header.navbar-container .nav-list li:hover a {
   min-height: 100vh;
   max-width: 300px;
   width: 100%;
-  margin: 20px 10px;
+  margin: 30px 10px;
 }
 
 /* Start Kategori */
@@ -261,14 +261,14 @@ header.navbar-container .nav-list li:hover a {
   font-size: 20px;
   border: transparent;
   background-color: transparent;
-  margin-left: 30px;
+  margin-left: 40px;
   outline: none;
 }
 
 .search-bar button {
   padding: 6px 10px;
   font-size: 17px;
-  margin-left: 30px;
+  margin-left: 20px;
   border: transparent;
   background-color: transparent;
 }
@@ -293,14 +293,14 @@ header.navbar-container .nav-list li:hover a {
   width: 100%;
   text-align: center;
   justify-content: center;
-  margin-left: 13px;
-  margin-top: 20px;
+  margin-left: 10px;
+  margin-top: 5px;
 }
 
 .card img {
-  max-width: 400px;
+  max-width: 375px;
   width: 100%;
-  max-height: 300px;
+  max-height: 260px;
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
@@ -309,12 +309,12 @@ header.navbar-container .nav-list li:hover a {
 
 .nama-menu {
   position: relative;
-  bottom: 40px;
+  bottom: 25px;
   border-radius: 15px;
   background-color: #fce09b;
-  max-height: 120px;
+  max-height: 110px;
   height: 100%;
-  max-width: 350px;
+  max-width: 320px;
   width: 100%;
   padding: 10px;
   color: #186f65;
