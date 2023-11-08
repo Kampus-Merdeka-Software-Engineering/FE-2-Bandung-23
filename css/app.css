@@ -89,7 +89,7 @@ main .content .content-description {
 
 main .content .content-description .title {
   font-size: 3.5rem;
-  margin-block: 1rem;
+  /* margin-block: 1rem; */
 }
 
 main .content .content-description p {
@@ -103,7 +103,7 @@ main .content .content-description button {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1rem;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: white;
 
   border: 3px solid transparent;
@@ -157,10 +157,12 @@ main .content .content-image img {
   margin-block: 1rem;
   line-height: 1.7rem;
   font-size: 1.2rem;
+  padding-right: 10px;
 }
 
 .about-sr .about-description hr {
-  width: 100px;
+  max-width: 400px;
+  width: 100%;
   height: 5px;
   margin-left: 0;
   border-radius: 15px;
@@ -173,7 +175,7 @@ main .content .content-image img {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 1rem;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: white;
 
   border: 3px solid transparent;
@@ -226,10 +228,19 @@ main .content .content-image img {
   margin-bottom: 0;
 }
 
+.offer-des hr {
+  max-width: 265px;
+  width: 100%;
+  height: 5px;
+  margin: auto;
+  border-radius: 15px;
+  background-color: #b2533e;
+}
+
 .offer-des p {
   text-align: center;
   font-size: 1.3rem;
-  margin-top: 0;
+  margin-top: 20px;
 }
 
 .grid .card {
@@ -250,7 +261,7 @@ main .content .content-image img {
   grid-gap: 50px;
   align-items: center;
   justify-content: center;
-  margin-block: 20px;
+  margin-block: 5px;
 }
 
 .grid img {
@@ -260,6 +271,11 @@ main .content .content-image img {
 
   object-fit: cover;
   border-radius: 20px;
+}
+
+.card p {
+  margin-block: 7px;
+  font-size: 1.2rem;
 }
 
 .offer-button {
@@ -273,7 +289,7 @@ main .content .content-image img {
   margin-block: 1.5rem;
   font-weight: 700;
   font-size: 1rem;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: white;
   border: 3px solid transparent;
   border-radius: 999px;
@@ -309,7 +325,8 @@ main .content .content-image img {
 }
 
 .order-des hr {
-  width: 630px;
+  max-width: 600px;
+  width: 100%;
   height: 5px;
   margin: auto;
   border-radius: 15px;
@@ -320,6 +337,7 @@ main .content .content-image img {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 100px;
 }
 
 .order .grid-order .card {
@@ -408,6 +426,14 @@ ul li a {
   main .content .content-image img {
     width: 75%;
   }
+
+  .card{
+    width: 75%;
+  }
+
+  hr {
+    width: 75%;
+  }
 }
 
 @media (max-width: 768px) {
@@ -429,6 +455,10 @@ ul li a {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .card{
+    width: 62.5%;
+  }
+
   .footer-col .title {
     font-size: 100%;
   }
@@ -441,6 +471,10 @@ ul li a {
 
   .footer-col h3 {
     margin-block: 7px;
+  }
+  
+  hr {
+    width: 62.5%;
   }
 }
 
@@ -456,6 +490,14 @@ ul li a {
   }
 
   main .content .content-image img {
+    width: 55%;
+  }
+
+  .card{
+    width: 55%;
+  }
+
+  hr {
     width: 55%;
   }
 }
