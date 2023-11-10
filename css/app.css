@@ -399,8 +399,7 @@ footer {
   width: 35%;
 }
 
-.footer-col-com h3,
-.footer-col h3 {
+.footer-col-com h3 {
   text-align: center;
   position: relative;
   margin-bottom: 20px;
@@ -421,13 +420,13 @@ ul li a {
 
 .social-links {
   text-align: center;
-  height: 40px;
+  height: 30px;
 }
 
 .social-links i {
   font-size: 25px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .social-links i fa-brands::before {
