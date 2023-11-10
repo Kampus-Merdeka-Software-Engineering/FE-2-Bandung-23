@@ -84,6 +84,11 @@ header.navbar-container .nav-list li:hover a {
   margin: 30px 10px;
 }
 
+.nav-link.active {
+  background-color: #439c91;
+  color: #186f65;
+}
+
 /* Start Kategori */
 .kategori {
   display: flex;
