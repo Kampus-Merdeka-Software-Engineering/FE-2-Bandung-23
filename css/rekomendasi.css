@@ -97,6 +97,7 @@ main {
   width: 100%;
   justify-content: center;
   align-items: center;
+  margin-block: 20px;
 }
 
 .detail-menu {
