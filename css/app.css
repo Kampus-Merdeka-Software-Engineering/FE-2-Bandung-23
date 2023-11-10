@@ -80,9 +80,12 @@ header.navbar-container .nav-list li:hover a {
   color: #1a5d1a;
 }
 
-.active.active {
-  background-color: #439c91;
+.nav-link.active {
+  background-color: #a6cf98;
+  color: #186f65;
 }
+
+/* End of Header */
 
 main {
   width: 100%;

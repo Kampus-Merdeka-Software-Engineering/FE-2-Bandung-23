@@ -18,11 +18,13 @@ main {
   padding: 0;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* Header */
 
 header.navbar-container {
+  position: fixed;
   width: 100%;
   height: 80px;
   margin: auto;
@@ -38,6 +40,21 @@ header.navbar-container .logo img {
   width: 200px;
 }
 
+.nav-list {
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-list.open {
+  transform: translate(0, 0);
+}
+
+#hamburger {
+  display: none;
+  font-size: 32px;
+  text-decoration: none;
+  color: white;
+}
+
 header.navbar-container .nav-list ul {
   padding-left: 0;
   display: flex;
@@ -49,7 +66,7 @@ header.navbar-container .nav-list li {
   list-style-type: none;
 }
 
-header.navbar-container .nav-list li a {
+.nav-link {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: 500;
@@ -65,7 +82,7 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .container {
-  min-height: 300vh;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -78,18 +95,23 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .row {
-  min-height: 100vh;
+  max-height: 180vh;
   max-width: 300px;
   width: 100%;
   margin: 30px 10px;
 }
 
 .nav-link.active {
-  background-color: #439c91;
+  background-color: #a6cf98;
   color: #186f65;
 }
 
+.list-kat a.active {
+  background-color: #a6cf98;
+  color: #186f65;
+}
 /* Start Kategori */
+
 .kategori {
   display: flex;
   justify-content: center;
@@ -218,24 +240,29 @@ header.navbar-container .nav-list li:hover a {
 /* End of Artikel */
 
 .row-konten {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  height: 700px;
-  max-width: 900px;
+  height: 100%;
+  max-width: 850px;
   width: 100%;
   margin: 20px 10px;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
+  top: 0;
 }
 
 .konten {
+  display: flex;
+  flex-wrap: wrap;
   position: relative;
   justify-content: center;
   align-items: center;
 
-  max-width: 850px;
+  max-width: 1200px;
   width: 100%;
-  height: 1000px;
+  height: 100%;
 
   border-radius: 10px;
 }
@@ -283,7 +310,6 @@ header.navbar-container .nav-list li:hover a {
   position: relative;
   max-width: 850px;
   width: 100%;
-  max-height: 700px;
   height: 100%;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
@@ -344,9 +370,9 @@ header.navbar-container .nav-list li:hover a {
 /* Footer */
 
 .footer {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
-  flex: 1;
   background-color: #186f65;
   max-height: 400px;
   width: 100%;
@@ -403,4 +429,64 @@ ul {
 
 .social-links i fa-brands::before {
   size: 40px;
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  header.navbar-container .logo img {
+    width: 150px;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  header.navbar-container .logo img {
+    width: 120px;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    top: 80px;
+    flex-direction: column;
+    background-color: #439c91;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 170px;
+  }
+
+  .nav-item {
+  }
+
+  .nav-list.active {
+    right: 0;
+  }
 }

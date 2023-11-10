@@ -1,17 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var links = document.querySelectorAll(".nav-link");
+// Ambil URL saat ini
+const currentUrl = window.location.href;
 
-  links.forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      // Menghapus kelas 'active' dari semua link
-      links.forEach(function (otherLink) {
-        otherLink.classList.remove("active");
-      });
+// Ambil semua elemen link di dalam navigasi
+const links = document.querySelectorAll(".nav-link");
 
-      // Menambahkan kelas 'active' ke link yang sedang diklik
-      link.classList.add("active");
+// Loop melalui setiap link untuk memeriksa URL
+links.forEach((link) => {
+  const linkUrl = link.href;
 
-      // Menghentikan tindakan bawaan dari link (jika ada)
-    });
-  });
+  // Periksa apakah URL saat ini mengandung URL link
+  if (currentUrl.includes(linkUrl)) {
+    // Tambahkan class "active" pada link yang sesuai
+    link.classList.add("active");
+  }
+});
+
+const hamburgerButtonElement = document.querySelector("#hamburger");
+const drawerElement = document.querySelector(".nav-list");
+
+hamburgerButtonElement.addEventListener("click", () => {
+  hamburgerButtonElement.classList.toggle("active");
+  drawerElement.classList.toggle("active");
 });
