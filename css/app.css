@@ -383,14 +383,18 @@ footer {
 }
 
 .footer-col {
-  display: flex;
-  flex-wrap: wrap;
+  display: inline;
   justify-content: center;
   align-items: center;
   color: white;
   padding-block: 20px;
   margin-inline: 10px;
   width: 25%;
+}
+
+.footer-col .title {
+  text-align: center;
+  margin-block: 15px;
 }
 
 .footer-col-com {
