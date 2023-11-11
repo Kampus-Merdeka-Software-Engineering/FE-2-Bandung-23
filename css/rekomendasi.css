@@ -301,8 +301,14 @@ ul li a {
   .title {
     font-size: 1.5rem;
   }
+
+  .navbar-container {
+    max-height: 60px;
+    height: 100%;
+  }
+
   header.navbar-container .logo img {
-    width: 120px;
+    width: 140px;
   }
 
   #hamburger {
@@ -315,7 +321,7 @@ ul li a {
     justify-content: center;
     align-items: center;
     right: -100%;
-    top: 80px;
+    top: 60px;
     flex-direction: column;
     background-color: #439c91;
     border-bottom-left-radius: 20px;
