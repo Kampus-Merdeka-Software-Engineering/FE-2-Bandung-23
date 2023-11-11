@@ -18,13 +18,13 @@ main {
   padding: 0;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
 /* Header */
 
 header.navbar-container {
   position: fixed;
+  top: 0;
   width: 100%;
   height: 80px;
   margin: auto;
@@ -66,9 +66,9 @@ header.navbar-container .nav-list li {
   list-style-type: none;
 }
 
-.nav-link {
+header.navbar-container .nav-list li a {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: White;
   padding: 0.5rem 1.5rem;
@@ -81,8 +81,22 @@ header.navbar-container .nav-list li:hover a {
   color: #1a5d1a;
 }
 
+.nav-link.active {
+  background-color: #a6cf98;
+  color: #186f65;
+}
+
+/* End of Header */
+
+main {
+  width: 100%;
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+}
+
 .container {
-  height: 100%;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -92,9 +106,12 @@ header.navbar-container .nav-list li:hover a {
     #f6e8c9,
     #ffffff
   );
+  margin-top: 80px;
 }
 
 .row {
+  display: flex;
+  flex-wrap: wrap;
   max-height: 180vh;
   max-width: 300px;
   width: 100%;
@@ -116,7 +133,6 @@ header.navbar-container .nav-list li:hover a {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   flex: 1;
   max-width: 400px;
   width: 100%;
@@ -175,7 +191,6 @@ header.navbar-container .nav-list li:hover a {
   /* display: flex; */
   justify-content: center;
   align-items: center;
-  position: relative;
   /* flex: 1; */
   max-width: 400px;
   width: 100%;
@@ -190,7 +205,6 @@ header.navbar-container .nav-list li:hover a {
 .title {
   text-align: center;
   color: white;
-  position: relative;
   width: 100%;
   height: 25px;
   margin-top: 20px;
@@ -206,7 +220,6 @@ header.navbar-container .nav-list li:hover a {
 .artikel p {
   text-align: left;
   color: white;
-  position: relative;
   /* height: 25px; */
   margin-top: 10px;
   margin-left: 10px;
@@ -240,7 +253,6 @@ header.navbar-container .nav-list li:hover a {
 /* End of Artikel */
 
 .row-konten {
-  position: relative;
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -256,7 +268,6 @@ header.navbar-container .nav-list li:hover a {
 .konten {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
   justify-content: center;
   align-items: center;
 
@@ -271,7 +282,6 @@ header.navbar-container .nav-list li:hover a {
   display: flex;
   max-height: 50px;
   height: 100%;
-  position: relative;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -307,7 +317,6 @@ header.navbar-container .nav-list li:hover a {
 
 .list-menu {
   display: grid;
-  position: relative;
   max-width: 850px;
   width: 100%;
   height: 100%;
@@ -339,7 +348,6 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .nama-menu {
-  position: relative;
   bottom: 25px;
   border-radius: 15px;
   background-color: #fce09b;
@@ -473,6 +481,7 @@ ul {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     width: 100%;
+    height: auto;
     text-align: center;
     transition: 0.3s;
   }
@@ -481,6 +490,7 @@ ul {
     display: flex;
     flex-wrap: wrap;
     max-width: 170px;
+    margin-block: 20px;
   }
 
   .nav-item {

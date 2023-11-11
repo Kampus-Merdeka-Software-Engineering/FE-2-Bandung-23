@@ -23,6 +23,7 @@ main {
 /* Header */
 
 header.navbar-container {
+  position: fixed;
   width: 100%;
   height: 80px;
   margin: auto;
@@ -38,6 +39,21 @@ header.navbar-container .logo img {
   width: 200px;
 }
 
+.nav-list {
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-list.open {
+  transform: translate(0, 0);
+}
+
+#hamburger {
+  display: none;
+  font-size: 32px;
+  text-decoration: none;
+  color: white;
+}
+
 header.navbar-container .nav-list ul {
   padding-left: 0;
   display: flex;
@@ -51,7 +67,7 @@ header.navbar-container .nav-list li {
 
 header.navbar-container .nav-list li a {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: White;
   padding: 0.5rem 1.5rem;
@@ -64,12 +80,20 @@ header.navbar-container .nav-list li:hover a {
   color: #1a5d1a;
 }
 
+.nav-link.active {
+  background-color: #a6cf98;
+  color: #186f65;
+}
+
+/* End of Header */
+
 .container {
   min-height: 100vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 80px;
 }
 
 .konten {
@@ -189,4 +213,66 @@ ul li a {
 
 .social-links i fa-brands::before {
   size: 40px;
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  header.navbar-container .logo img {
+    width: 150px;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  header.navbar-container .logo img {
+    width: 120px;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    top: 80px;
+    flex-direction: column;
+    background-color: #439c91;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 170px;
+    margin-block: 20px;
+  }
+
+  .nav-item {
+  }
+
+  .nav-list.active {
+    right: 0;
+  }
 }
