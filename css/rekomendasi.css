@@ -186,6 +186,7 @@ main {
 }
 
 .menu-detail p {
+  font-size: 1.2rem;
   margin-top: 15px;
 }
 
@@ -366,14 +367,15 @@ main .content .content-image img {
 }
 
 @media (max-width: 450px) {
-  html {
-    font-size: 55%;
-  }
   .title {
     font-size: 1rem;
   }
   header.navbar-container .logo img {
-    width: 75px;
+    width: 130px;
+  }
+
+  .detail-menu p {
+    font-size: 1.3rem;
   }
 
   main .content .content-image img {
