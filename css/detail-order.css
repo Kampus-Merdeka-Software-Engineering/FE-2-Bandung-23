@@ -23,6 +23,7 @@ main {
 /* Header */
 
 header.navbar-container {
+  position: fixed;
   width: 100%;
   height: 80px;
   margin: auto;
@@ -38,6 +39,21 @@ header.navbar-container .logo img {
   width: 200px;
 }
 
+.nav-list {
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-list.open {
+  transform: translate(0, 0);
+}
+
+#hamburger {
+  display: none;
+  font-size: 32px;
+  text-decoration: none;
+  color: white;
+}
+
 header.navbar-container .nav-list ul {
   padding-left: 0;
   display: flex;
@@ -51,7 +67,7 @@ header.navbar-container .nav-list li {
 
 header.navbar-container .nav-list li a {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: White;
   padding: 0.5rem 1.5rem;
@@ -63,6 +79,13 @@ header.navbar-container .nav-list li:hover a {
   background-color: #a6cf98;
   color: #1a5d1a;
 }
+
+.nav-link.active {
+  background-color: #a6cf98;
+  color: #186f65;
+}
+
+/* End of Header */
 
 .container {
   min-height: 100vh;
@@ -77,6 +100,7 @@ header.navbar-container .nav-list li:hover a {
   max-width: 600px;
   width: 100%;
   margin: 40px 20px;
+  justify-content: left;
 }
 
 .side-bar {
@@ -85,26 +109,42 @@ header.navbar-container .nav-list li:hover a {
   flex: 1;
   max-width: 600px;
   width: 100%;
-  height: 300px;
-  margin-bottom: 50px;
-  margin-top: 20px;
+  height: 150px;
+  margin-bottom: 10px;
+  margin-top: 10px;
   box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
   border-radius: 10px;
   background-color: #fdfaf2;
+  
+}
+
+.side-bar2 {
+  align-items: right;
+  position: relative;
+  flex: 1;
+  max-width: 600px;
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: #fdfaf2;
+  
 }
 
 .order-menu {
   display: flex;
   max-width: 600px;
   width: 100%;
-  max-height: 170px;
+  max-height: 150px;
   height: 100%;
 }
 
 .side-bar img {
-  max-width: 150px;
+  max-width: 100px;
   width: 100%;
-  max-height: 150px;
+  max-height: 100px;
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
@@ -114,7 +154,7 @@ header.navbar-container .nav-list li:hover a {
 .jenis-order {
   max-width: 300px;
   width: 100%;
-  padding: 10px;
+  padding: 15px;
 }
 
 .jumlah-order {
@@ -122,6 +162,7 @@ header.navbar-container .nav-list li:hover a {
   max-height: 50px;
   height: 100%;
   padding-block: 10px;
+  margin-top: 30px;
 }
 
 .jumlah-order p {
@@ -152,10 +193,11 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .harga {
-  max-width: 150px;
+  max-width: 120px;
   width: 100%;
-  text-align: center;
-  padding-top: 40px;
+  text-align: left;
+  padding-top: 3px;
+  font-size: small;
 }
 
 .pesanan {
@@ -192,9 +234,9 @@ header.navbar-container .nav-list li:hover a {
   text-decoration: none;
 }
 
-.pesanan-lainnya input {
-  max-width: 500px;
-  width: 100%;
+.harga input {
+  max-width: 520px;
+  width: 330%;
   padding: 10px;
   border: 1px solid #186f65;
   border-radius: 10px;
@@ -407,4 +449,72 @@ ul li a {
 
 .social-links i fa-brands::before {
   size: 40px;
+}
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  header.navbar-container .logo img {
+    width: 150px;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .navbar-container {
+    max-height: 60px;
+    height: 100%;
+  }
+
+  header.navbar-container .logo img {
+    width: 140px;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    top: 60px;
+    flex-direction: column;
+    background-color: #439c91;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 170px;
+    margin-block: 20px;
+  }
+
+  /* .nav-item {
+  } */
+
+  .nav-list.active {
+    right: 0;
+  }
 }
