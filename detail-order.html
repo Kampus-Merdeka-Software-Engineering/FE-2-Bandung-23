@@ -18,23 +18,38 @@
     />
   </head>
   <body>
-    <!-- Header -->
+   <!-- Header -->
 
-    <header class="navbar-container">
-      <div class="logo">
-        <a href="index.html"
-          ><img src="img/Logo Putih.png" alt="Seribu Rasa"
-        /></a>
-      </div>
-      <nav class="nav-list">
-        <ul>
-          <li><a href="menu.html">Menu</a></li>
-          <li><a href="rekomendasi.html">Rekomendasi</a></li>
-          <li><a href="default-order.html">Pesan</a></li>
-          <li><a href="about_us.html">Tentang Kami</a></li>
-        </ul>
-      </nav>
-    </header>
+   <header class="navbar-container">
+    <div class="logo">
+      <a href="index.html"
+        ><img src="img/Logo Putih.png" alt="Seribu Rasa"
+      /></a>
+    </div>
+    <nav class="nav-list" id="drawer">
+      <ul>
+        <li class="nav-item">
+          <a href="menu.html" class="nav-link"><strong>Menu</strong></a>
+        </li>
+        <li class="nav-item">
+          <a href="rekomendasi.html" class="nav-link"
+            ><strong>Rekomendasi</strong></a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="default-order.html" class="nav-link"
+            ><strong>Pesan</strong></a
+          >
+        </li>
+        <li class="nav-item">
+          <a href="about_us.html" class="nav-link"
+            ><strong>Tentang Kami</strong></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <a id="hamburger" href="#">☰</a>
+  </header>
 
     <!-- Main -->
     <main>
@@ -49,28 +64,59 @@
               <img src="img/Ayam Taliwang.jpg" alt="Ayam Taliwang" />
               <div class="jenis-order">
                 <h3>Ayam Taliwang</h3>
-                <p>
-                  Masakan nusantara ini berbahan dasar jagung, biasanya
-                  disajikan sebagai penutup makanan.
-                </p>
+                <div class="harga">
+                  <p>Rp65.000,00</p>
+                  <p>Catatan Khusus</p>
+                    <input type="text " placeholder="Tambahkan catatan mengenai pesanan anda disini..."/>
+                </div>
+              </div>
+              <div class="jumlah-order">
+                <p class="minus">-</p>
+                <p class="num">1</p>
+                <p class="plus">+</p>
+              </div>
+            </div>
+
+            <div class="side-bar2">
+              <div class="order-menu">
+                <img src="img/Ayam Taliwang.jpg" alt="Ayam Taliwang" />
+                <div class="jenis-order">
+                  <h3>Ayam Taliwang</h3>
+                  <div class="harga">
+                    <p>Rp65.000,00</p>
+                    <p>Catatan Khusus</p>
+                      <input type="text " placeholder="Tambahkan catatan mengenai pesanan anda disini..."/>
+                  </div>
+                </div>
                 <div class="jumlah-order">
                   <p class="minus">-</p>
                   <p class="num">1</p>
                   <p class="plus">+</p>
                 </div>
               </div>
-              <div class="harga">
-                <h3>Rp 65.000</h3>
-              </div>
-            </div>
-            <div class="pesanan-lainnya">
+
+              <div class="side-bar2">
+                <div class="order-menu">
+                  <img src="img/Ayam Taliwang.jpg" alt="Ayam Taliwang" />
+                  <div class="jenis-order">
+                    <h3>Ayam Taliwang</h3>
+                    <div class="harga">
+                      <p>Rp65.000,00</p>
+                      <p>Catatan Khusus</p>
+                        <input type="text " placeholder="Tambahkan catatan mengenai pesanan anda disini..."/>
+                    </div>
+                  </div>
+                  <div class="jumlah-order">
+                    <p class="minus">-</p>
+                    <p class="num">1</p>
+                    <p class="plus">+</p>
+                  </div>
+                </div>
+            <!-- <div class="pesanan-lainnya">
               <h4><a href="menu.html">Pesanan Lainnya</a></h4>
-              <p>Catatan Khusus</p>
-              <input
-                type="text"
-                placeholder="Tambahkan catatan mengenai pesanan anda disini..."
-              />
-            </div>
+              
+              
+            </div> -->
           </div>
         </div>
 
@@ -121,43 +167,44 @@
       </div>
     </main>
 
-    <!--Footer-->
-    <div class="footer">
-      <div class="footer-col">
-        <div class="footer-logo">
-          <img src="img/Logo Putih.png" alt="Seribu Rasa" />
-          <p>Copyright © 2023 Group 23 RevoU</p>
-          <p>All rights reserved</p>
+      <!--Footer-->
+      <div class="footer">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <img src="img/Logo Putih.png" alt="Seribu Rasa" />
+            <p>Copyright © 2023 Group 23 RevoU</p>
+            <p>All rights reserved</p>
+          </div>
+        </div>
+  
+        <div class="footer-col">
+          <h3 class="title">Company</h3>
+          <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Favorite</a></li>
+            <li><a href="#">Order</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col">
+          <h3 class="title">Social Media</h3>
+          <div class="social-links">
+            <a href="#"
+              ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-linkedin" style="color: #ffffff"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-youtube" style="color: #ffffff"></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-facebook" style="color: #ffffff"></i
+            ></a>
+          </div>
         </div>
       </div>
-
-      <div class="footer-col">
-        <h3 class="title">Menu</h3>
-        <ul>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Rekomendasi</a></li>
-          <li><a href="#">Pesan</a></li>
-          <li><a href="#">Tentang Kami</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3 class="title">Ikuti Kami</h3>
-        <div class="social-links">
-          <a href="#"
-            ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
-          ></a>
-          <a href="#"
-            ><i class="fa-brands fa-linkedin" style="color: #ffffff"></i
-          ></a>
-          <a href="#"
-            ><i class="fa-brands fa-youtube" style="color: #ffffff"></i
-          ></a>
-          <a href="#"
-            ><i class="fa-brands fa-facebook" style="color: #ffffff"></i
-          ></a>
-        </div>
-      </div>
-    </div>
+      <script src="menu.js"></script>
   </body>
 </html>
