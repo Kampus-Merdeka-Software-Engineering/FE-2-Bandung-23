@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 *,
 *::before,
@@ -137,6 +137,9 @@ main {
 }
 
 .menu-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 400px;
   width: 100%;
   max-height: 500px;
@@ -183,6 +186,7 @@ main {
   margin-left: 20px;
   margin-top: 10px;
   color: #186f65;
+  font-weight: 500;
 }
 
 .menu-detail p {
@@ -190,20 +194,14 @@ main {
   margin-top: 15px;
 }
 
-/* Footer */
-
+/*Footer*/
 footer {
   display: flex;
-  flex-wrap: wrap;
   background-color: #186f65;
   max-height: 400px;
   justify-content: center;
   width: 100%;
 }
-
-/* .footer-logo {
-    margin-left: 50px;
-  } */
 
 .footer-col img {
   position: relative;
@@ -225,12 +223,10 @@ footer {
 }
 
 .footer-col {
-  display: inline;
   justify-content: center;
   align-items: center;
   color: white;
   padding-block: 20px;
-  margin-inline: 10px;
   width: 25%;
 }
 
@@ -247,7 +243,6 @@ footer {
 
 .footer-col-com h3 {
   text-align: center;
-  position: relative;
   margin-bottom: 20px;
 }
 
@@ -278,6 +273,8 @@ ul li a {
 .social-links i fa-brands::before {
   size: 40px;
 }
+
+/* End of Footer */
 
 @media (max-width: 1366px) {
   html {
@@ -346,24 +343,40 @@ ul li a {
   .nav-list.active {
     right: 0;
   }
-}
 
-main .content .content-image img {
-  width: 62.5%;
-}
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
 
-.footer-col .title {
-  font-size: 100%;
-}
+  .footer-col,
+  .footer-col-com {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 
-.social-links i {
-  font-size: 17px;
-  width: 30px;
-  height: 30px;
-}
+  .footer-col img {
+    width: 80%;
+  }
 
-.footer-col h3 {
-  margin-block: 7px;
+  .footer-col .title,
+  .footer-col-com .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-links i {
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-col h3 {
+    margin-block: 7px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -380,5 +393,31 @@ main .content .content-image img {
 
   main .content .content-image img {
     width: 55%;
+  }
+
+  .konten-rekomen {
+    margin-top: 60px;
+  }
+
+  .detail-menu {
+    max-width: 350px;
+  }
+
+  .menu-img img {
+    max-width: 325px;
+    max-height: 275px;
+  }
+
+  .menu-detail {
+    margin-inline: 15px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h4 {
+    font-size: 1.7rem;
+    font-weight: 400;
   }
 }

@@ -101,7 +101,7 @@ header.navbar-container .nav-list li:hover a {
   max-height: 300px;
   height: 100%;
   color: #b2533e;
-  font-size: 28px;
+  font-size: 2rem;
   display: block;
   margin-top: 15px;
   margin-left: 150px;
@@ -151,50 +151,66 @@ header.navbar-container .nav-list li:hover a {
   background-color: transparent;
 }
 
-/* Footer */
-
-.footer {
+/*Footer*/
+footer {
   display: flex;
-  flex-wrap: wrap;
-  flex: 1;
   background-color: #186f65;
   max-height: 400px;
+  justify-content: center;
   width: 100%;
-}
-
-.footer-logo {
-  margin-left: 80px;
 }
 
 .footer-col img {
   position: relative;
   justify-content: center;
   display: flex;
-  max-width: 170px;
+  max-width: 180px;
   width: 100%;
   align-items: center;
 }
 
-ul {
+.footer-col-com ul,
+.footer-col ul {
+  display: inline-flex;
   list-style: none;
   padding: 0;
+  margin-inline: auto;
+  justify-content: center;
+  width: 100%;
 }
 
 .footer-col {
+  justify-content: center;
+  align-items: center;
   color: white;
-  padding: 20px;
-  margin: auto;
+  padding-block: 20px;
   width: 25%;
 }
 
-.footer-col h3 {
+.footer-col .title {
   text-align: center;
-  position: relative;
+  margin-block: 15px;
+}
+
+.footer-col-com {
+  color: white;
+  margin-block: auto;
+  width: 35%;
+}
+
+.footer-col-com h3 {
+  text-align: center;
   margin-bottom: 20px;
 }
 
+.footer-col-com a,
+.footer-col a {
+  max-width: 130px;
+  text-align: left;
+  margin-inline: 10px;
+}
+
 ul li a {
-  text-align: center;
   display: block;
   color: white;
   text-decoration: none;
@@ -202,26 +218,30 @@ ul li a {
 
 .social-links {
   text-align: center;
-  height: 40px;
+  height: 30px;
 }
 
 .social-links i {
   font-size: 25px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .social-links i fa-brands::before {
   size: 40px;
 }
 
+/* End of Footer */
+
 @media (max-width: 1366px) {
-  html {
+  html p {
     font-size: 75%;
   }
-  .title {
-    font-size: 1.75rem;
+
+  p {
+    text-align: center;
   }
+
   header.navbar-container .logo img {
     width: 150px;
   }
@@ -275,10 +295,60 @@ ul li a {
     margin-block: 20px;
   }
 
-  /* .nav-item {
-  } */
-
   .nav-list.active {
     right: 0;
+  }
+
+  .container {
+    margin-top: 60px;
+  }
+
+  .konten {
+    margin-inline: 30px;
+  }
+
+  hr {
+    max-width: 145px;
+    max-height: 3px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-col,
+  .footer-col-com {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-col img {
+    width: 80%;
+  }
+
+  .footer-col .title,
+  .footer-col-com .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-links i {
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-col h3 {
+    margin-block: 7px;
+  }
+}
+
+@media (max-width: 450px) {
+  header.navbar-container .logo img {
+    width: 130px;
   }
 }

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 *,
 *::before,
@@ -156,6 +156,7 @@ main {
   max-height: 500px;
   height: 100%;
   justify-content: center;
+  list-style: none;
 }
 
 .list-kat li {
@@ -202,7 +203,7 @@ main {
   box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
 }
 
-.title {
+.art-title {
   text-align: center;
   color: white;
   width: 100%;
@@ -303,14 +304,12 @@ main {
   font-size: 20px;
   border: transparent;
   background-color: transparent;
-  margin-left: 40px;
   outline: none;
 }
 
 .search-bar button {
   padding: 6px 10px;
   font-size: 17px;
-  margin-left: 20px;
   border: transparent;
   background-color: transparent;
 }
@@ -362,7 +361,7 @@ main {
 }
 
 .nama-menu h4 {
-  font-weight: 100;
+  font-weight: 400;
 }
 
 .nama-menu a {
@@ -375,50 +374,66 @@ main {
   margin-left: 10px;
 }
 
-/* Footer */
-
-.footer {
-  position: relative;
+/*Footer*/
+footer {
   display: flex;
-  flex-wrap: wrap;
   background-color: #186f65;
   max-height: 400px;
+  justify-content: center;
   width: 100%;
-}
-
-.footer-logo {
-  margin-left: 80px;
 }
 
 .footer-col img {
   position: relative;
   justify-content: center;
   display: flex;
-  max-width: 170px;
+  max-width: 180px;
   width: 100%;
   align-items: center;
 }
 
-ul {
+.footer-col-com ul,
+.footer-col ul {
+  display: inline-flex;
   list-style: none;
   padding: 0;
+  margin-inline: auto;
+  justify-content: center;
+  width: 100%;
 }
 
 .footer-col {
+  justify-content: center;
+  align-items: center;
   color: white;
-  padding: 20px;
-  margin: auto;
+  padding-block: 20px;
   width: 25%;
 }
 
-.footer-col h3 {
+.footer-col .title {
   text-align: center;
-  position: relative;
+  margin-block: 15px;
+}
+
+.footer-col-com {
+  color: white;
+  margin-block: auto;
+  width: 35%;
+}
+
+.footer-col-com h3 {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.footer-col ul li a {
-  text-align: center;
+.footer-col-com a,
+.footer-col a {
+  max-width: 130px;
+  text-align: left;
+  margin-inline: 10px;
+}
+
+ul li a {
   display: block;
   color: white;
   text-decoration: none;
@@ -426,18 +441,20 @@ ul {
 
 .social-links {
   text-align: center;
-  height: 40px;
+  height: 30px;
 }
 
 .social-links i {
   font-size: 25px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .social-links i fa-brands::before {
   size: 40px;
 }
+
+/* End of Footer */
 
 @media (max-width: 1366px) {
   html {
@@ -457,9 +474,6 @@ ul {
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
-  }
-  .title {
-    font-size: 1.5rem;
   }
 
   .navbar-container {
@@ -505,6 +519,62 @@ ul {
   .nav-list.active {
     right: 0;
   }
+
+  .kategori {
+    max-height: 450px;
+    height: 100%;
+  }
+
+  .list-kat {
+    max-height: 450px;
+    height: 100%;
+  }
+
+  .kategori ul li a {
+    font-size: 1.4rem;
+  }
+
+  .art-title {
+    font-size: 24px;
+  }
+
+  .artikel p {
+    font-size: 16px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-col,
+  .footer-col-com {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-col img {
+    width: 80%;
+  }
+
+  .footer-col .title,
+  .footer-col-com .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-links i {
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-col h3 {
+    margin-block: 7px;
+  }
 }
 
 @media (max-width: 450px) {
@@ -513,5 +583,27 @@ ul {
   }
   header.navbar-container .logo img {
     width: 130px;
+  }
+
+  .search-box {
+    display: flex;
+    max-width: 350px;
+    width: 100%;
+  }
+
+  input {
+    width: 350px;
+  }
+
+  .konten {
+    margin-top: 20px;
+  }
+
+  .card {
+    max-width: 150px;
+  }
+
+  .nama-menu {
+    font-size: 1.4rem;
   }
 }

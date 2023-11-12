@@ -389,10 +389,6 @@ footer {
   width: 100%;
 }
 
-/* .footer-logo {
-  margin-left: 50px;
-} */
-
 .footer-col img {
   position: relative;
   justify-content: center;
@@ -463,6 +459,8 @@ ul li a {
 .social-links i fa-brands::before {
   size: 40px;
 }
+
+/* End of Footer */
 
 @media (max-width: 1366px) {
   html p {
