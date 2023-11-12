@@ -174,7 +174,6 @@ main .content .content-image img {
 
 .about-sr .about-description .title {
   font-size: 2.5rem;
-
   color: #b2533e;
 }
 
@@ -329,7 +328,11 @@ main .content .content-image img {
 
 /*Order*/
 .order {
-  max-height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-height: 500px;
   height: 100%;
   width: 100%;
   background-color: #fdfaf2;
@@ -360,16 +363,21 @@ main .content .content-image img {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-bottom: 100px;
+  margin-bottom: 30px;
 }
 
-/* .order .grid-order .card {
-  width: 100px;
-} */
+.card-order img {
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}
 
 .card-order {
+  width: 100%;
   text-align: center;
   margin-block: 50px;
+  font-weight: 700;
 }
 
 /*Footer*/
@@ -405,12 +413,10 @@ footer {
 }
 
 .footer-col {
-  display: inline;
   justify-content: center;
   align-items: center;
   color: white;
   padding-block: 20px;
-  margin-inline: 10px;
   width: 25%;
 }
 
@@ -427,7 +433,6 @@ footer {
 
 .footer-col-com h3 {
   text-align: center;
-  position: relative;
   margin-bottom: 20px;
 }
 
@@ -460,11 +465,12 @@ ul li a {
 }
 
 @media (max-width: 1366px) {
-  html {
+  html p {
     font-size: 75%;
   }
-  .title {
-    font-size: 1.75rem;
+
+  h1 {
+    font-size: 40%;
   }
   header.navbar-container .logo img {
     width: 150px;
@@ -485,10 +491,14 @@ ul li a {
 
 @media (max-width: 768px) {
   html {
-    font-size: 62.5%;
+    font-size: 60%;
   }
-  .title {
-    font-size: 1.5rem;
+  .content {
+    margin-top: 60px;
+  }
+
+  h1 {
+    font-size: 1rem;
   }
 
   .navbar-container {
@@ -543,7 +553,30 @@ ul li a {
   }
 
   .grid .card {
-    max-width: 100px;
+    max-width: 150px;
+    max-height: 200px;
+  }
+
+  .grid-order {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 250px;
+    max-height: 300px;
+  }
+
+  .grid-order img {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .card-order {
+    margin-block: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .card img {
+    max-width: 150px;
+    max-height: 150px;
   }
 
   footer {
@@ -558,6 +591,10 @@ ul li a {
     width: 100%;
     justify-content: center;
     align-items: center;
+  }
+
+  .footer-col img {
+    width: 80%;
   }
 
   .footer-col .title,
@@ -582,8 +619,8 @@ ul li a {
 }
 
 @media (max-width: 450px) {
-  h1 {
-    font-size: 0.6rem;
+  .about-description .title {
+    font-size: 1rem;
   }
 
   hr {
@@ -619,15 +656,7 @@ ul li a {
     width: 350px;
   }
 
-  .card-order {
-    width: 75px;
-  }
-
   .footer-col {
     width: auto;
-  }
-
-  hr {
-    width: 55%;
   }
 }
