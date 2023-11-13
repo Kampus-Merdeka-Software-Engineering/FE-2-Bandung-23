@@ -535,8 +535,8 @@ ul li a {
     margin-block: 20px;
   }
 
-  .nav-item {
-  }
+  /* .nav-item {
+  } */
 
   .nav-list.active {
     right: 0;
