@@ -189,6 +189,11 @@ main {
 
 .list-kat .active {
   background-color: #d7996c;
+  color: white;
+}
+
+.active li a {
+  color: white;
 }
 /* End of Kategori */
 

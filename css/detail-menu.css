@@ -23,6 +23,8 @@ main {
 /* Header */
 
 header.navbar-container {
+  position: fixed;
+  top: 0;
   width: 100%;
   height: 80px;
   margin: auto;
@@ -38,6 +40,21 @@ header.navbar-container .logo img {
   width: 200px;
 }
 
+.nav-list {
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-list.open {
+  transform: translate(0, 0);
+}
+
+#hamburger {
+  display: none;
+  font-size: 32px;
+  text-decoration: none;
+  color: white;
+}
+
 header.navbar-container .nav-list ul {
   padding-left: 0;
   display: flex;
@@ -51,7 +68,7 @@ header.navbar-container .nav-list li {
 
 header.navbar-container .nav-list li a {
   text-decoration: none;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: White;
   padding: 0.5rem 1.5rem;
@@ -64,7 +81,15 @@ header.navbar-container .nav-list li:hover a {
   color: #1a5d1a;
 }
 
+.nav-link.active {
+  background-color: #a6cf98;
+  color: #186f65;
+}
+
+/* End of Header */
+
 .container {
+  margin-top: 80px;
   min-height: 100vh;
   width: 100%;
   display: flex;
@@ -85,15 +110,15 @@ header.navbar-container .nav-list li:hover a {
 }
 
 /* Start Kategori */
+
 .kategori {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   flex: 1;
   max-width: 400px;
   width: 100%;
-  height: 400px;
+  height: 500px;
   margin-bottom: 20px;
   border-radius: 10px;
   background-color: #fce09b;
@@ -104,17 +129,20 @@ header.navbar-container .nav-list li:hover a {
 .list-kat {
   max-width: 400px;
   width: 100%;
-  max-height: 400px;
+  max-height: 500px;
   height: 100%;
 }
 
 .list-kat ul {
   padding: 0;
+  max-height: 500px;
+  height: 100%;
+  justify-content: center;
+  list-style: none;
 }
 
 .list-kat li {
-  margin: 8px;
-  list-style: none;
+  border-radius: inherit;
 }
 
 .kategori ul li a {
@@ -125,7 +153,13 @@ header.navbar-container .nav-list li:hover a {
   justify-content: center;
   text-decoration: none;
   font-weight: bold;
-  text-align: left;
+  height: 53px;
+  padding: 12px 20px;
+}
+
+.kategori i {
+  font-size: 10px;
+  align-items: center;
 }
 
 .list-hr {
@@ -134,27 +168,36 @@ header.navbar-container .nav-list li:hover a {
   width: 100%;
   background-color: #186f65;
 }
+
+.list-kat .active {
+  background-color: #d7996c;
+  color: white;
+}
+
+.active li a {
+  color: white;
+}
 /* End of Kategori */
 
+/* Start Artikel */
 .artikel {
   /* display: flex; */
   justify-content: center;
   align-items: center;
-  position: relative;
   /* flex: 1; */
   max-width: 400px;
   width: 100%;
   height: 775px;
   margin-bottom: 20px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 10px;
   background-color: #b2533e;
+  box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
 }
 
-.title {
+.art-title {
   text-align: center;
   color: white;
-  position: relative;
   width: 100%;
   height: 25px;
   margin-top: 20px;
@@ -170,7 +213,6 @@ header.navbar-container .nav-list li:hover a {
 .artikel p {
   text-align: left;
   color: white;
-  position: relative;
   /* height: 25px; */
   margin-top: 10px;
   margin-left: 10px;
@@ -201,6 +243,7 @@ header.navbar-container .nav-list li:hover a {
 .artikel-hr {
   margin-block: 30px;
 }
+/* End of Artikel */
 
 .row-konten {
   min-height: 100vh;
@@ -214,7 +257,6 @@ header.navbar-container .nav-list li:hover a {
 .konten {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
   justify-content: center;
   align-items: center;
 
@@ -229,7 +271,6 @@ header.navbar-container .nav-list li:hover a {
   flex-wrap: wrap;
   max-height: 40px;
   height: 100%;
-  position: relative;
   align-items: center;
   justify-content: center;
   width: 100%;
@@ -325,7 +366,6 @@ header.navbar-container .nav-list li:hover a {
 .review1 {
   display: flex;
   flex-wrap: wrap;
-  position: relative;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
@@ -358,7 +398,6 @@ header.navbar-container .nav-list li:hover a {
   margin: 10px;
   background-color: white;
   color: #186f65;
-  position: relative;
   box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
 }
 
@@ -370,50 +409,66 @@ header.navbar-container .nav-list li:hover a {
   font-size: 24px;
 }
 
-/* Footer */
-
-.footer {
+/*Footer*/
+footer {
   display: flex;
-  flex-wrap: wrap;
-  flex: 1;
   background-color: #186f65;
   max-height: 400px;
+  justify-content: center;
   width: 100%;
-}
-
-.footer-logo {
-  margin-left: 80px;
 }
 
 .footer-col img {
   position: relative;
   justify-content: center;
   display: flex;
-  max-width: 170px;
+  max-width: 180px;
   width: 100%;
   align-items: center;
 }
 
-ul {
+.footer-col-com ul,
+.footer-col ul {
+  display: inline-flex;
   list-style: none;
   padding: 0;
+  margin-inline: auto;
+  justify-content: center;
+  width: 100%;
 }
 
 .footer-col {
+  justify-content: center;
+  align-items: center;
   color: white;
-  padding: 20px;
-  margin: auto;
+  padding-block: 20px;
   width: 25%;
 }
 
-.footer-col h3 {
+.footer-col .title {
   text-align: center;
-  position: relative;
+  margin-block: 15px;
+}
+
+.footer-col-com {
+  color: white;
+  margin-block: auto;
+  width: 35%;
+}
+
+.footer-col-com h3 {
+  text-align: center;
   margin-bottom: 20px;
 }
 
+.footer-col-com a,
+.footer-col a {
+  max-width: 130px;
+  text-align: left;
+  margin-inline: 10px;
+}
+
 ul li a {
-  text-align: center;
   display: block;
   color: white;
   text-decoration: none;
@@ -421,15 +476,138 @@ ul li a {
 
 .social-links {
   text-align: center;
-  height: 40px;
+  height: 30px;
 }
 
 .social-links i {
   font-size: 25px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .social-links i fa-brands::before {
   size: 40px;
+}
+
+/* End of Footer */
+
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  header.navbar-container .logo img {
+    width: 150px;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  .navbar-container {
+    max-height: 60px;
+    height: 100%;
+  }
+
+  header.navbar-container .logo img {
+    width: 140px;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    top: 60px;
+    flex-direction: column;
+    background-color: #439c91;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 170px;
+    margin-block: 20px;
+  }
+
+  /* .nav-item {
+  } */
+
+  .nav-list.active {
+    right: 0;
+  }
+
+  .kategori {
+    max-height: 450px;
+    height: 100%;
+  }
+
+  .list-kat {
+    max-height: 450px;
+    height: 100%;
+  }
+
+  .kategori ul li a {
+    font-size: 1.4rem;
+  }
+
+  .art-title {
+    font-size: 24px;
+  }
+
+  .artikel p {
+    font-size: 16px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-col,
+  .footer-col-com {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-col img {
+    width: 80%;
+  }
+
+  .footer-col .title,
+  .footer-col-com .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-links i {
+    font-size: 17px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-col h3 {
+    margin-block: 7px;
+  }
 }

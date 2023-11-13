@@ -103,6 +103,21 @@ header.navbar-container .nav-list li:hover a {
   justify-content: left;
 }
 
+.scroll {
+  overflow: auto;
+  max-height: 600px;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.tambah-pesan {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fce09b;
+  padding: 20px 10px;
+}
+
 .side-bar {
   align-items: right;
   flex: 1;
@@ -420,18 +435,6 @@ header.navbar-container .nav-list li:hover a {
   padding: 15px;
   border: none;
   border-radius: 30px;
-}
-
-.tambah-pesan p{
-  max-height: 100%;
-  margin-top:700px;
-  text-align: left;
-  color: #b2533e;
-  padding-top: 10px;
-  text-decoration: none;
-  justify-content: center;
-  align-items: center;
-  
 }
 
 /* Footer */

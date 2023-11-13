@@ -21,30 +21,37 @@
 
   <body>
     <!-- Header -->
-
     <header class="navbar-container">
       <div class="logo">
         <a href="index.html"
           ><img src="img/Logo Putih.png" alt="Seribu Rasa"
         /></a>
       </div>
-      <nav class="nav-list">
+      <nav class="nav-list" id="drawer">
         <ul>
-          <li>
-            <a href="menu.html"><strong>Menu</strong></a>
+          <li class="nav-item">
+            <a href="detail-menu.html" class="nav-link"><strong>Menu</strong></a>
           </li>
-          <li>
-            <a href="rekomendasi.html"><strong>Rekomendasi</strong></a>
+          <li class="nav-item">
+            <a href="rekomendasi.html" class="nav-link"
+              ><strong>Rekomendasi</strong></a
+            >
           </li>
-          <li>
-            <a href="default-order.html"><strong>Pesan</strong></a>
+          <li class="nav-item">
+            <a href="default-order.html" class="nav-link"
+              ><strong>Pesan</strong></a
+            >
           </li>
-          <li>
-            <a href="about_us.html"><strong>Tentang Kami</strong></a>
+          <li class="nav-item">
+            <a href="about_us.html" class="nav-link"
+              ><strong>Tentang Kami</strong></a
+            >
           </li>
         </ul>
       </nav>
+      <a id="hamburger" href="#">☰</a>
     </header>
+    <!-- End of Header -->
 
     <!-- Main -->
 
@@ -75,7 +82,7 @@
             </div>
           </div>
           <div class="artikel">
-            <div class="title">
+            <div class="art-title">
               <h3 class="title">Ayo eksplor pengetahuanmu!</h3>
               <hr class="title-hr" />
             </div>
@@ -191,7 +198,7 @@
             <h1>Review</h1>
             <div class="review-container">
               <div class="review">
-                <h3>Username<span class="star">★★★★★</span></h3>
+                <!-- <h3>Username<span class="star">★★★★★</span></h3> -->
                 <h5>2023-01-01</h5>
                 <p>
                   Sayur asem adalah menu sayuran yang berisi sayur-mayur lokal khas
@@ -201,7 +208,7 @@
               </div>
         
               <div class="review">
-                <h3>Username <span class="star">★★★★★</span></h3>
+                <!-- <h3>Username <span class="star">★★★★★</span></h3> -->
                 <h5>2023-01-01</h5>
                 <p>
                   Sayur asem adalah menu sayuran yang berisi sayur-mayur lokal khas
@@ -211,7 +218,7 @@
               </div>
               <!-- tempat baru -->
               <div class="review">
-                <h3>Username <span class="star">★★★★★</span></h3>
+                <!-- <h3>Username <span class="star">★★★★★</span></h3> -->
                 <h5>2023-01-01</h5>
                 <p>
                   Sayur asem adalah menu sayuran yang berisi sayur-mayur lokal khas
@@ -224,8 +231,7 @@
       </div>
     </main>
 
-    <!--Footer-->
-    <div class="footer">
+    <footer>
       <div class="footer-col">
         <div class="footer-logo">
           <img src="img/Logo Putih.png" alt="Seribu Rasa" />
@@ -234,13 +240,13 @@
         </div>
       </div>
 
-      <div class="footer-col">
+      <div class="footer-col-com">
         <h3 class="title">Company</h3>
         <ul>
-          <li><a href="#">Menu</a></li>
-          <li><a href="#">Favorite</a></li>
-          <li><a href="#">Order</a></li>
-          <li><a href="#">About Us</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="rekomendasi.html">Rekomendasi</a></li>
+          <li><a href="default-order.html">Pesan</a></li>
+          <li><a href="about_us.html">Tentang Kami</a></li>
         </ul>
       </div>
 
@@ -261,6 +267,7 @@
           ></a>
         </div>
       </div>
-    </div>
+    </footer>
+    <script src="index.js"></script>
   </body>
 </html>
