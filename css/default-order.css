@@ -254,9 +254,6 @@ ul li a {
   html {
     font-size: 62.5%;
   }
-  .title {
-    font-size: 1.5rem;
-  }
 
   .navbar-container {
     max-height: 60px;
@@ -350,5 +347,9 @@ ul li a {
 @media (max-width: 450px) {
   header.navbar-container .logo img {
     width: 130px;
+  }
+
+  .footer-logo p {
+    text-align: left;
   }
 }
