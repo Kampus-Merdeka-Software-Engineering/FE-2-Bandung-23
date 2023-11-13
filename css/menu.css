@@ -160,8 +160,7 @@ main {
 }
 
 .list-kat li {
-  margin-left: 15px;
-  margin-block: 13px;
+  border-radius: inherit;
 }
 
 .kategori ul li a {
@@ -172,6 +171,8 @@ main {
   justify-content: center;
   text-decoration: none;
   font-weight: bold;
+  height: 53px;
+  padding: 12px 20px;
 }
 
 .kategori i {
@@ -184,6 +185,10 @@ main {
   max-width: 400px;
   width: 100%;
   background-color: #186f65;
+}
+
+.list-kat .active {
+  background-color: #d7996c;
 }
 /* End of Kategori */
 

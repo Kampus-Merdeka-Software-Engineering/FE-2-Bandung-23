@@ -159,6 +159,7 @@ header.navbar-container .nav-list li:hover a {
   background-color: white;
   border: 1px solid #186f65;
   border-radius: 5px;
+  cursor: pointer;
 }
 .jumlah-order .num {
   background-color: white;
@@ -168,6 +169,7 @@ header.navbar-container .nav-list li:hover a {
   color: white;
   background-color: #186f65;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .jenis-order h3 {
