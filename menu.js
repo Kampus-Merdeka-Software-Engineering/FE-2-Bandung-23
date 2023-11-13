@@ -62,3 +62,55 @@ document.querySelectorAll(".jumlah-order").forEach(function (element) {
     jumlahElement.innerText = jumlah;
   }
 });
+
+// Objek utilitas untuk fungsi statis
+var TeleponUtil = {
+  formatNomorTelepon: function (nomorTeleponElement) {
+    var nomorTelepon = nomorTeleponElement.value;
+
+    // Hapus karakter selain angka
+    nomorTelepon = nomorTelepon.replace(/\D/g, "");
+
+    // Batasi panjang nomor telepon menjadi maksimal 13 karakter
+    nomorTelepon = nomorTelepon.slice(0, 13);
+
+    // Tambahkan kode negara jika belum ada
+    if (!nomorTelepon.startsWith("62")) {
+      nomorTelepon = "62" + nomorTelepon;
+    }
+
+    // Update nilai pada elemen input
+    nomorTeleponElement.value = "+" + nomorTelepon;
+  },
+};
+
+var nomorTeleponElement = document.getElementById("nomorTelepon");
+
+// Event listener untuk setiap perubahan pada input
+nomorTeleponElement.addEventListener("input", function () {
+  TeleponUtil.formatNomorTelepon(nomorTeleponElement);
+});
+
+// Format ulang saat halaman dimuat (opsional)
+TeleponUtil.formatNomorTelepon(nomorTeleponElement);
+
+// Modal
+var konfirmasiBtn = document.getElementById("konfirmasiBtn");
+var tutupBtn = document.getElementById("tutupBtn");
+var modal = document.getElementById("modal");
+
+konfirmasiBtn.addEventListener("click", function () {
+  tampilkanModal();
+});
+
+tutupBtn.addEventListener("click", function () {
+  tutupModal();
+});
+
+function tampilkanModal() {
+  modal.style.display = "flex";
+}
+
+function tutupModal() {
+  window.location.href = "index.html";
+}

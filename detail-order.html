@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
     <link
@@ -159,23 +159,28 @@
             <div class="form">
               <div class="nama">
                 <label>Nama Depan</label>
-                <input type="text" />
+                <input type="text" required />
               </div>
               <div class="nama-belakang">
                 <label>Nama Belakang</label>
-                <input type="text" />
+                <input type="text" required />
               </div>
               <div class="email">
                 <label>Email</label>
-                <input type="email" />
+                <input type="email" required />
               </div>
               <div class="no-telp">
                 <label>Nomor Telepon</label>
-                <input type="text" />
+                <input
+                  type="text"
+                  id="nomorTelepon"
+                  name="nomorTelepon"
+                  required
+                />
               </div>
               <div class="alamat">
                 <label>Alamat Lengkap</label>
-                <input type="text" />
+                <input type="text" required />
               </div>
             </div>
             <div class="subtotal">
@@ -193,7 +198,19 @@
               </div>
             </div>
             <div class="konfir-btn">
-              <button>Konfirmasi Pesanan</button>
+              <button id="konfirmasiBtn">Konfirmasi Pesanan</button>
+            </div>
+            <div id="modal" class="modal">
+              <div class="modal-content">
+                <h1>Terima kasih!</h1>
+                <div class="hr">
+                  <hr class="hr-modal" />
+                </div>
+                <p>Pesanan Anda sedang kami proses.</p>
+                <button class="ttp-Btn" id="tutupBtn">
+                  Kembali ke Beranda
+                </button>
+              </div>
             </div>
           </div>
         </div>
