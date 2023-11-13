@@ -422,6 +422,18 @@ header.navbar-container .nav-list li:hover a {
   border-radius: 30px;
 }
 
+.tambah-pesan p{
+  max-height: 100%;
+  margin-top:700px;
+  text-align: left;
+  color: #b2533e;
+  padding-top: 10px;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 /* Footer */
 
 .footer {
