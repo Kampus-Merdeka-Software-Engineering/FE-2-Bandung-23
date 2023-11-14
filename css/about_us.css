@@ -184,46 +184,62 @@ main .content .content-image img {
 /*Footer*/
 footer {
   display: flex;
-  flex-wrap: wrap;
   background-color: #186f65;
   max-height: 400px;
-
+  justify-content: center;
   width: 100%;
 }
 
-.footer-logo {
-  margin-left: 80px;
-}
-
 .footer-col img {
-  position: relative;
   justify-content: center;
   display: flex;
-  max-width: 170px;
+  max-width: 180px;
   width: 100%;
   align-items: center;
 }
 
-ul {
+.footer-col-com ul,
+.footer-col ul {
+  display: inline-flex;
   list-style: none;
   padding: 0;
+  margin-inline: auto;
+  justify-content: center;
+  width: 100%;
 }
 
 .footer-col {
+  justify-content: center;
+  align-items: center;
   color: white;
-  padding: 20px;
-  margin: auto;
+  padding-block: 20px;
   width: 25%;
 }
 
-.footer-col h3 {
+.footer-col .title {
   text-align: center;
-  position: relative;
+  margin-block: 15px;
+}
+
+.footer-col-com {
+  color: white;
+  margin-block: auto;
+  width: 35%;
+}
+
+.footer-col-com h3 {
+  text-align: center;
   margin-bottom: 20px;
 }
 
+.footer-col-com a,
+.footer-col a {
+  max-width: 130px;
+  text-align: left;
+  margin-inline: 10px;
+}
+
 ul li a {
-  text-align: center;
   display: block;
   color: white;
   text-decoration: none;
@@ -231,18 +247,20 @@ ul li a {
 
 .social-links {
   text-align: center;
-  height: 40px;
+  height: 30px;
 }
 
 .social-links i {
   font-size: 25px;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .social-links i fa-brands::before {
   size: 40px;
 }
+
+/* End of Footer */
 
 @media (max-width: 1366px) {
   html {
@@ -307,27 +325,60 @@ ul li a {
   }
 }
 
-  main .content .content-image img {
-    width: 62.5%;
-  }
+main .content .content-image img {
+  width: 62.5%;
+}
 
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.grid {
+  grid-template-columns: repeat(2, 1fr);
+}
 
-  .footer-col .title {
-    font-size: 100%;
-  }
+.footer-col .title {
+  font-size: 100%;
+}
 
-  .social-links i {
-    font-size: 17px;
-    width: 30px;
-    height: 30px;
-  }
+.social-links i {
+  font-size: 17px;
+  width: 30px;
+  height: 30px;
+}
 
-  .footer-col h3 {
-    margin-block: 7px;
-  }
+.footer-col h3 {
+  margin-block: 7px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-col,
+.footer-col-com {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-col img {
+  width: 80%;
+}
+
+.footer-col .title,
+.footer-col-com .title {
+  width: 100%;
+  text-align: center;
+}
+
+.social-links i {
+  font-size: 17px;
+  width: 30px;
+  height: 30px;
+}
+
+.footer-col h3 {
+  margin-block: 7px;
 }
 
 @media (max-width: 450px) {

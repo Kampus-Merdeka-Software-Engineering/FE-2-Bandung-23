@@ -394,7 +394,6 @@ footer {
 }
 
 .footer-col img {
-  position: relative;
   justify-content: center;
   display: flex;
   max-width: 180px;
@@ -467,7 +466,7 @@ ul li a {
 /* End of Footer */
 
 @media (max-width: 1366px) {
-  html {
+  html p {
     font-size: 75%;
   }
   .title {
@@ -615,5 +614,16 @@ ul li a {
 
   .nama-menu {
     font-size: 1.4rem;
+  }
+
+  .footer-col img {
+    max-width: 144px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .copyright {
+    text-align: center;
+    width: 100%;
   }
 }
