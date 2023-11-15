@@ -317,9 +317,6 @@ ul li a {
     margin-block: 20px;
   }
 
-  .nav-item {
-  }
-
   .nav-list.active {
     right: 0;
   }
@@ -334,16 +331,6 @@ ul li a {
 
   .footer-col .title {
     font-size: 100%;
-  }
-
-  .social-links i {
-    font-size: 17px;
-    width: 30px;
-    height: 30px;
-  }
-
-  .footer-col h3 {
-    margin-block: 7px;
   }
 
   footer {
@@ -423,9 +410,6 @@ ul li a {
     flex-wrap: wrap;
     max-width: 170px;
     margin-block: 20px;
-  }
-
-  .nav-item {
   }
 
   .nav-list.active {

@@ -491,7 +491,7 @@ ul li a {
 /* End of Footer */
 
 @media (max-width: 1366px) {
-  html p {
+  html {
     font-size: 75%;
   }
   .title {

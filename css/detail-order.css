@@ -230,14 +230,14 @@ header.navbar-container .nav-list li:hover a {
   max-height: 100px;
   color: #b2533e;
   margin-inline: 20px;
-  font-size: 20px;
+  font-size: 16px;
   font-family: "Poppins";
 }
 
 .pesanan hr {
-  max-width: 130px;
+  max-width: 172px;
   width: 100%;
-  height: 5px;
+  height: 4px;
   border-radius: 15px;
   background-color: #b2533e;
 }
@@ -414,6 +414,10 @@ header.navbar-container .nav-list li:hover a {
   max-width: 150px;
 }
 
+/* .tambah-pesan {
+  
+} */
+
 .modal {
   display: none;
   position: fixed;
@@ -545,10 +549,12 @@ ul li a {
 /* End of Footer */
 
 @media (max-width: 1366px) {
-  html p {
+  html {
     font-size: 75%;
   }
-
+  .title {
+    font-size: 1.75rem;
+  }
   header.navbar-container .logo img {
     width: 150px;
   }
@@ -556,18 +562,21 @@ ul li a {
   main .content .content-image img {
     width: 75%;
   }
-
   .card {
     max-width: 75%;
   }
 }
 
 @media (max-width: 768px) {
-  .title1 {
-    font-size: 2rem;
+  html {
+    font-size: 62.5%;
   }
 
-  .title2 {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  /* .title2 {
     font-size: 2rem;
     color: #b2533e;
   }
@@ -580,7 +589,7 @@ ul li a {
 
   html {
     font-size: 60%;
-  }
+  } */
 
   .tambah-pesan {
     display: flex;
@@ -773,7 +782,7 @@ ul li a {
   }
 
   header.navbar-container .logo img {
-    width: 150px;
+    width: 120px;
   }
 
   #hamburger {
@@ -845,6 +854,10 @@ ul li a {
     max-height: 150px;
   }
 
+  .footer-col .title {
+    font-size: 100%;
+  }
+
   footer {
     display: flex;
     flex-direction: column;
@@ -881,6 +894,12 @@ ul li a {
 }
 
 @media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .title {
+    font-size: 1rem;
+  }
   .hr2 {
     width: 200px;
     width: 100%;
@@ -894,6 +913,37 @@ ul li a {
 
   header.navbar-container .logo img {
     width: 130px;
+  }
+  #hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    top: 80px;
+    flex-direction: column;
+    background-color: #439c91;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 170px;
+    margin-block: 20px;
+  }
+
+  .nav-list.active {
+    right: 0;
   }
 
   .content-description {

@@ -277,7 +277,7 @@ ul li a {
 /* End of Footer */
 
 @media (max-width: 1366px) {
-  html p {
+  html  {
     font-size: 75%;
   }
   .title {
@@ -335,9 +335,6 @@ ul li a {
     flex-wrap: wrap;
     max-width: 170px;
     margin-block: 20px;
-  }
-
-  .nav-item {
   }
 
   .nav-list.active {
