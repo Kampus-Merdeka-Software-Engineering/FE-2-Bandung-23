@@ -635,6 +635,7 @@ ul li a {
   }
   .content {
     margin-top: 60px;
+    display: block;
   }
 
   .konten {
