@@ -649,6 +649,21 @@ ul li a {
     width: 30%;
   }
 
+  main .content .content-description button {
+    font-size: 9px;
+    padding: 5px 15px;
+  }
+
+  .about-sr .about-description button {
+    font-size: 9px;
+    padding: 5px 15px;
+  }
+
+  .offer-button button {
+    font-size: 9px;
+    padding: 5px 15px;
+  }
+
   .about-description {
     margin-block: 15px;
   }
