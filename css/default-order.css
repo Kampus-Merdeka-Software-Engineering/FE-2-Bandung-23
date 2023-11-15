@@ -112,7 +112,7 @@ header.navbar-container .nav-list li:hover a {
   margin-block: 30px;
   height: 5px;
   background-color: #b2533e;
-  width: 230px;
+  width: 175px;
   margin-top: 0;
 }
 
@@ -133,6 +133,8 @@ header.navbar-container .nav-list li:hover a {
   padding: 0.8rem 2.5rem;
   margin-block-start: 1rem;
   text-transform: uppercase;
+  text-decoration: none;
+  display: block;
   font-weight: 700;
   font-size: 1rem;
   font-family: "Quicksand", sans-serif;
@@ -148,6 +150,10 @@ header.navbar-container .nav-list li:hover a {
   border: 3px solid #186f65;
   color: #2d3e50;
   background-color: transparent;
+}
+
+.konten2 a {
+  text-decoration: none;
 }
 
 /*Footer*/
@@ -232,7 +238,7 @@ ul li a {
 /* End of Footer */
 
 @media (max-width: 1366px) {
-  html p {
+  html {
     font-size: 75%;
   }
 
@@ -259,7 +265,7 @@ ul li a {
   }
 
   header.navbar-container .logo img {
-    width: 140px;
+    width: 120px;
   }
 
   #hamburger {
@@ -343,8 +349,59 @@ ul li a {
 }
 
 @media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  
+  hr {
+    max-width: 130px;
+    max-height: 3px;
+  }
+
+  .navbar-container {
+    max-width: 375px;
+  }
+
   header.navbar-container .logo img {
     width: 130px;
+  }
+  #hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    top: 80px;
+    flex-direction: column;
+    background-color: #439c91;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 170px;
+    margin-block: 20px;
+  }
+
+  .nav-list.active {
+    right: 0;
+  }
+
+  p {
+    font-size: 1.45rem;
   }
 
   .footer-col img {

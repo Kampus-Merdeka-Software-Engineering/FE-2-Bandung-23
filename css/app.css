@@ -317,6 +317,7 @@ main .content .content-image img {
   border: 3px solid transparent;
   border-radius: 999px;
   background-color: #186f65;
+  text-transform: uppercase;
   cursor: pointer;
   transition: all 0.15s ease-in;
 }
@@ -462,7 +463,7 @@ ul li a {
 /* End of Footer */
 
 @media (max-width: 1366px) {
-  html p {
+  html {
     font-size: 75%;
   }
 
@@ -496,7 +497,7 @@ ul li a {
   }
 
   html {
-    font-size: 60%;
+    font-size: 62.5%;
   }
 
   .content {
