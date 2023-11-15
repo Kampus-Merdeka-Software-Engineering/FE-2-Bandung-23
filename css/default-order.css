@@ -355,7 +355,7 @@ ul li a {
   .title {
     font-size: 1rem;
   }
-  
+
   hr {
     max-width: 130px;
     max-height: 3px;
@@ -378,7 +378,7 @@ ul li a {
     justify-content: center;
     align-items: center;
     right: -100%;
-    top: 80px;
+    top: 60px;
     flex-direction: column;
     background-color: #439c91;
     border-bottom-left-radius: 20px;

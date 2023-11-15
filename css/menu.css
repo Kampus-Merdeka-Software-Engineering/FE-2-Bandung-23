@@ -541,6 +541,8 @@ ul li a {
 
   .kategori ul li a {
     font-size: 1.4rem;
+    padding: 12px 15px;
+    height: 47px;
   }
 
   .art-title {
