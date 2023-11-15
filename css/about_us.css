@@ -97,7 +97,7 @@ main {
 
 /* Tentang Kami */
 .content {
-  margin-right: 30px;
+  /*margin-right: 30px;*/
   margin-left: 30px;
   margin-top: 80px;
   flex: 1;
@@ -385,12 +385,13 @@ ul li a {
   html {
     font-size: 55%;
   }
-  .title {
+  .h1 .title {
     font-size: 1rem;
+    text-align:justify;
   }
 
   .navbar-container {
-    max-width: 375px;
+    max-width: 450px;
   }
 
   header.navbar-container .logo img {
@@ -438,11 +439,12 @@ ul li a {
 
   .content .content-description {
     width: 225px;
+    margin-left: 10px;
   }
 
   .content.content-image img {
     width: 225px;
-    /*width: 80%;*/
+    margin-right: 10px;
   }
 
   .aboutus-container {
