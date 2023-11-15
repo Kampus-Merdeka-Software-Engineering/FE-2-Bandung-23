@@ -610,31 +610,41 @@ ul li a {
 
 
   .row {
-    max-width: 500px;
-    width: 100%;
-    max-height: 1000px;
+    width: 500px;
+    max-height: 100px;
     height: 100%;
     justify-content: left;
+
 
   }
   .scroll {
     overflow: auto;
-    max-height: 800px;
+    max-height: 700px;
     height: 100%;
-    width: 100%;
-    max-width: 1000px;
+    width: 150%;
+    max-width: 400px;
     margin-top: 10px;
+    
   }
 
 
   .row-konten {
     width: 500px;
-    
     align-items: left;
     justify-content: left;
   }
   .content {
     margin-top: 60px;
+  }
+
+  .konten {
+    background-color: #fff1cd;
+    max-width: 700px;
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
+    margin-top: 700px;
   }
 
   h1 {
@@ -772,16 +782,7 @@ ul li a {
 
  
   
-  .konten {
-    flex-direction: column;
-    background-color: #fff1cd;
-    max-width: 600px;
-    width: 100%;
-    height: 600px;
-    border-radius: 10px;
-    box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
-    margin-top: 700px;
-  }
+  
 
   .content-description {
     width: 40%;
