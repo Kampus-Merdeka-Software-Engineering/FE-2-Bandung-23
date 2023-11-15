@@ -120,16 +120,13 @@ header.navbar-container .nav-list li:hover a {
   max-width: 665px;
   max-height: 100%;
   height: 75px;
- 
 }
 
 .tambah-pesan h2 {
   font-size: 24px;
 }
 
-
-
-.tambah-pesan button{
+.tambah-pesan button {
   max-width: 150px;
   width: 100%;
   justify-content: center;
@@ -145,7 +142,6 @@ header.navbar-container .nav-list li:hover a {
   cursor: pointer;
   transition: all 0.15s ease-in;
   margin-right: 50px;
-
 }
 
 .side-bar {
@@ -467,7 +463,6 @@ header.navbar-container .nav-list li:hover a {
   border-radius: 30px;
 }
 
-
 /*Footer*/
 footer {
   display: flex;
@@ -593,7 +588,7 @@ ul li a {
     font-family: "Poppins";
     margin-left: 100px;
   }
-  
+
   .pesanan hr {
     max-width: 130px;
     width: 100%;
@@ -602,31 +597,30 @@ ul li a {
     background-color: #b2533e;
   }
 
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .side-bar {
     margin-left: 100px;
     align-items: center;
   }
 
-
   .row {
     width: 500px;
-    max-height: 100px;
+    max-height: 950px;
     height: 100%;
     justify-content: left;
-
-
   }
   .scroll {
     overflow: auto;
     max-height: 700px;
     height: 100%;
-    width: 150%;
+    width: 100%;
     max-width: 400px;
     margin-top: 10px;
-    
   }
-
 
   .row-konten {
     width: 500px;
@@ -640,12 +634,11 @@ ul li a {
 
   .konten {
     background-color: #fff1cd;
-    max-width: 700px;
+    max-width: 450px;
     width: 100%;
     height: 600px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
-    margin-top: 700px;
   }
 
   h1 {
@@ -780,10 +773,6 @@ ul li a {
   header.navbar-container .logo img {
     width: 130px;
   }
-
- 
-  
-  
 
   .content-description {
     width: 40%;
