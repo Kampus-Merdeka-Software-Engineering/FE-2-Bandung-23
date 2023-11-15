@@ -388,11 +388,85 @@ footer {
   .title {
     font-size: 1rem;
   }
-  header.navbar-container .logo img {
-    width: 75px;
+  
+  .navbar-container {
+    max-width: 375px;
   }
 
-  main .content .content-image img {
-    width: 55%;
+  header.navbar-container .logo img {
+    width: 130px;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    top: 80px;
+    flex-direction: column;
+    background-color: #439c91;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 170px;
+    margin-block: 20px;
+  }
+
+  .nav-item {
+  }
+
+  .nav-list.active {
+    right: 0;
+  }
+
+  .content {
+    width: 90%;
+  }
+
+  .content .content-description {
+    width: 225px;
+  }
+  
+  .content.content-image.img {
+    width: 225px;
+    /*width: 80%;*/
+  }
+
+  .aboutus-container {
+    width: 450px;
   }
 }
+
+main .content .content-image img {
+  width: 62.5%;
+}
+
+.grid {
+  grid-template-columns: repeat(2, 1fr);
+  width : 80%
+}
+
+.footer-col img {
+  max-width: 144px;
+  justify-content: center;
+  align-items: center;
+}
+
+.copyright {
+  text-align: center;
+  width: 100%;
+}
+
