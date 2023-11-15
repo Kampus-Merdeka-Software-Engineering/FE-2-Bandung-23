@@ -587,6 +587,55 @@ ul li a {
     font-size: 60%;
   }
 
+  .pesanan {
+    max-height: 50px;
+    font-size: 15px;
+    font-family: "Poppins";
+    margin-left: 100px;
+  }
+  
+  .pesanan hr {
+    max-width: 130px;
+    width: 100%;
+    height: 5px;
+    border-radius: 15px;
+    background-color: #b2533e;
+  }
+
+
+  .side-bar {
+    margin-left: 100px;
+    align-items: center;
+  }
+
+
+  .row {
+    max-width: 800px;
+    width: 200%;
+    max-height: 1000px;
+    height: 100%;
+    justify-content: left;
+
+  }
+  .scroll {
+    overflow: auto;
+    max-height: 800px;
+    height: 100%;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 10px;
+  }
+
+
+     .row-konten {
+    display: flex;
+    min-height: 100vh;
+    max-width: 800px;
+    width: 100%;
+    margin: 50px 20px;
+    align-items: left;
+    justify-content: left;
+  }
   .content {
     margin-top: 60px;
   }
@@ -722,6 +771,19 @@ ul li a {
 
   header.navbar-container .logo img {
     width: 130px;
+  }
+
+ 
+  
+  .konten {
+    flex-direction: column;
+    background-color: #fff1cd;
+    max-width: 600px;
+    width: 100%;
+    height: 600px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
+    margin-top: 700px;
   }
 
   .content-description {
