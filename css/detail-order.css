@@ -582,6 +582,41 @@ ul li a {
     font-size: 60%;
   }
 
+  .tambah-pesan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fce09b;
+    padding: 10px 5px;
+    border-radius: 10px;
+    max-width: 650px;
+    max-height: 100%;
+    height: 75px;
+  }
+  
+  .tambah-pesan h2 {
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  
+  .tambah-pesan button {
+    max-width: 100px;
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 2.5rem;
+    margin-block: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    background-color: #b2533e;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+    margin-right: 30px;
+  }
+
   .pesanan {
     max-height: 50px;
     font-size: 15px;
@@ -603,8 +638,15 @@ ul li a {
   }
 
   .side-bar {
-    margin-left: 100px;
+    margin-left: 50px;
     align-items: center;
+    max-width: 450px;
+    width: 100%;
+    height: 120px;
+    margin: 20px 10px;
+    box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: #fdfaf2;
   }
 
   .row {
@@ -636,9 +678,89 @@ ul li a {
     background-color: #fff1cd;
     max-width: 450px;
     width: 100%;
-    height: 600px;
+    height: 620px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
+  }
+
+  .order-menu {
+    display: flex;
+    max-width: 500px;
+    width: 100%;
+    max-height: 100px;
+    height: 100%;
+    margin-bottom: 30px;
+  }
+
+
+  .pesanan-lainnya {
+    max-height: 130px;
+    height: 100%;
+    padding: 10px;
+  }
+  
+  .pesanan-lainnya h4 {
+    margin-bottom: 10px;
+  }
+  
+  .pesanan-lainnya a {
+    color: #b2533e;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    text-decoration: none;
+  }
+  
+  .catatan input {
+    max-width: 400px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #186f65;
+    border-radius: 10px;
+    margin-top: 15px;
+  }
+
+  .konfir-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 120px;
+  }
+  
+  .konfir-btn button {
+    max-width: 530px;
+    width: 100%;
+    justify-content: center;
+    padding: 0.8rem 2.5rem;
+    margin-block: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    background-color: #b2533e;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+  }
+
+  .subtotal {
+    max-height: 100px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .subtotal-item {
+    display: flex;
+    border-radius: 10px;
+    background-color: #fce09b;
+    max-width: 550px;
+    width: 100%;
+    max-height: 100px;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 230px;
   }
 
   h1 {
