@@ -647,9 +647,9 @@ ul li a {
   }
 
   .side-bar {
-    margin-left: 50px;
+    margin-left: 10px;
     align-items: center;
-    max-width: 450px;
+    max-width: 400px;
     width: 100%;
     height: 120px;
     margin: 20px 10px;
