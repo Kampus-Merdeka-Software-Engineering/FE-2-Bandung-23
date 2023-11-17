@@ -374,13 +374,28 @@ ul li a {
 }
 
 @media (max-width: 450px) {
-  html {
-    font-size: 55%;
+  main .content .content-description p {
+    line-height: 1.3rem;
+    font-size: 10px;
   }
-  .h1 .title {
-    font-size: 1rem;
-    text-align: justify;
+
+  main .content .content-image {
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    height: 200px;
+    width: 150px; /*widthnya belum bisa, jadi gepeng*/
+}
+
+  h1.title1 {
+    font-size: 25px;
   }
+
+  h1.title2 {
+    font-size: 24px;
+    color: #b2533e;
+}
+
 
   header.navbar-container .logo img {
     width: 130px;
@@ -423,14 +438,13 @@ ul li a {
   }
 
   .content .content-description {
-    width: 225px;
+    width: 220px;
     margin-left: 10px;
   }
 
-  .content.content-image img {
-    width: 225px;
-    margin-right: 10px;
-  }
+  /*.content.content-image img {
+    width: 500px;
+  }*/
 
   .aboutus-container {
     width: 450px;
