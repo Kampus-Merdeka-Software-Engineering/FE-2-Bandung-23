@@ -269,7 +269,7 @@ main {
 
 .grid .card {
   text-align: center;
-  max-width: 200px;
+  max-width: 300px;
   width: 100%;
   border-radius: 20px;
   box-shadow: 3px 3px 10px 3px black;
@@ -288,7 +288,7 @@ main {
 }
 
 .grid img {
-  max-width: 200px;
+  max-width: 300px;
   width: 100%;
 
   object-fit: cover;
@@ -536,11 +536,6 @@ ul li a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .grid .card {
-    max-width: 150px;
-    max-height: 200px;
-  }
-
   .grid-order {
     grid-template-columns: repeat(2, 1fr);
     max-width: 250px;
@@ -556,11 +551,6 @@ ul li a {
     margin-block: 10px;
     justify-content: center;
     align-items: center;
-  }
-
-  .card img {
-    max-width: 150px;
-    max-height: 150px;
   }
 
   footer {
@@ -630,10 +620,6 @@ ul li a {
     width: 100%;
   }
 
-  .navbar-container {
-    max-width: 375px;
-  }
-
   header.navbar-container .logo img {
     width: 130px;
   }
@@ -666,11 +652,13 @@ ul li a {
   }
 
   .grid .card {
-    width: 100%x;
+    max-width: 150px;
+    max-height: 200px;
   }
 
   .grid .card img {
     width: 150px;
+    height: 150px;
   }
 
   .grid-order {
