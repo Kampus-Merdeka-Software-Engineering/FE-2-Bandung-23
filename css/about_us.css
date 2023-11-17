@@ -98,8 +98,8 @@ main {
 /* Tentang Kami */
 .content {
   /*margin-right: 30px;*/
-  margin-left: 30px;
-  margin-top: 80px;
+  /*margin-left: 30px;*/
+  margin-top: 60px;
   flex: 1;
   display: flex;
   align-items: center;
@@ -260,6 +260,11 @@ ul li a {
   size: 40px;
 }
 
+.copyright {
+  text-align: left;
+  width: 100%;
+}
+
 /* End of Footer */
 
 @media (max-width: 1366px) {
@@ -360,6 +365,7 @@ ul li a {
   .footer-col-com .title {
     width: 100%;
     text-align: center;
+    font-size: 10px;
   }
 
   .social-links i {
@@ -375,27 +381,34 @@ ul li a {
 
 @media (max-width: 450px) {
   main .content .content-description p {
-    line-height: 1.3rem;
-    font-size: 10px;
+    line-height: 1rem;
+    font-size: 8px;
+    text-align: justify;
+    padding-inline: 8px;
   }
 
-  main .content .content-image {
+  main .content .content-image img{
     flex: 1;
     display: flex;
     justify-content: end;
     height: 200px;
-    width: 150px; /*widthnya belum bisa, jadi gepeng*/
+    width: 100%; /*widthnya belum bisa, jadi gepeng*/
 }
 
   h1.title1 {
-    font-size: 25px;
+    font-size: 20px;
+    margin-bottom: 5px;
   }
 
   h1.title2 {
-    font-size: 24px;
+    font-size: 20px;
     color: #b2533e;
 }
 
+  .our-team hr {
+    width: 100px;
+    height: 3px;
+  }
 
   header.navbar-container .logo img {
     width: 130px;
@@ -439,12 +452,7 @@ ul li a {
 
   .content .content-description {
     width: 220px;
-    margin-left: 10px;
   }
-
-  /*.content.content-image img {
-    width: 500px;
-  }*/
 
   .aboutus-container {
     width: 450px;
@@ -456,8 +464,9 @@ ul li a {
   }
 
   .aboutus-item {
-    max-width: 100px;
+    max-width: 170px;
     width: 100%;
+    margin-inline: 30px;
   }
 
   .aboutus-item img {
@@ -478,3 +487,4 @@ ul li a {
     width: 100%;
   }
 }
+
