@@ -133,7 +133,7 @@ main .content .content-image img {
 }
 
 /*Tim Kami*/
-.tim {
+.team {
   max-height: 900px;
   text-align: center;
   height: 100%;
@@ -141,18 +141,18 @@ main .content .content-image img {
   background-color: #fdfaf2;
 }
 
-.tim .tim-kami {
+.team .our-team {
   margin: 30px;
 }
 
-.tim .tim-kami .title {
+.team .our-team .title {
   justify-content: center;
   text-align: center;
   font-size: 2.5rem;
   color: #b2533e;
 }
 
-.tim-kami hr {
+.our-team hr {
   width: 150px;
   height: 5px;
   margin: auto;
