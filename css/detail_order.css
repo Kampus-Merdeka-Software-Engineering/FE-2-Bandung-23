@@ -21,7 +21,6 @@ main {
 }
 
 /* Header */
-
 header.navbar-container {
   position: fixed;
   width: 100%;
@@ -84,14 +83,11 @@ header.navbar-container .nav-list li:hover a {
   background-color: #a6cf98;
   color: #186f65;
 }
-
 /* End of Header */
 
-
 /* Main Content */
-
 .container {
-  min-height: 100vh;
+  height: 700px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -99,7 +95,6 @@ header.navbar-container .nav-list li:hover a {
 }
 
 /* Order List */
-
 .row {
   max-width: 700px;
   width: 100%;
@@ -114,6 +109,7 @@ header.navbar-container .nav-list li:hover a {
   margin-inline: 20px;
   font-size: 16px;
   font-family: "Poppins";
+  margin-top: 20px;
 }
 
 .order hr {
@@ -123,9 +119,9 @@ header.navbar-container .nav-list li:hover a {
   border-radius: 15px;
   background-color: #b2533e;
 }
+/* End of Order List */
 
 /* Card Menu */
-
 .scroll {
   overflow: auto;
   max-height: 600px;
@@ -225,14 +221,13 @@ header.navbar-container .nav-list li:hover a {
   border-radius: 5px;
   cursor: pointer;
 }
+/* End of Card Menu */
 
 /* Add Order */
-
 .add-order {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: #fce09b;
   padding: 5px 10px;
   border-radius: 10px;
   max-width: 665px;
@@ -241,38 +236,35 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .add-order h2 {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .add-order button {
-  max-width: 150px;
+  font-family: "Poppins", sans-serif;
+  max-width: 100px;
   width: 100%;
   justify-content: center;
-  padding: 0.8rem 2.5rem;
+  padding: 5px 7px;
   margin-block: 1.5rem;
+  margin-left: 10px;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: white;
   border: 3px solid transparent;
-  border-radius: 10px;
+  border-radius: 5px;
   background-color: #b2533e;
   cursor: pointer;
   transition: all 0.15s ease-in;
-  margin-right: 50px;
 }
-
-/* End of Order List */
-
+/* End of Add Order */
 
 /* Shipping Information */
-
 .row-content {
   display: flex;
-  min-height: 100vh;
+  height: 700px;
   max-width: 600px;
   width: 100%;
-  margin: 50px 20px;
   align-items: left;
   justify-content: left;
 }
@@ -285,6 +277,7 @@ header.navbar-container .nav-list li:hover a {
   height: 600px;
   border-radius: 10px;
   box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
+  margin-top: 40px;
 }
 
 .content p {
@@ -353,9 +346,9 @@ header.navbar-container .nav-list li:hover a {
   width: 100%;
   padding-left: 15px;
 }
+/* End of Shipping Information */
 
 /* Total Charge */
-
 .subtotal {
   max-height: 100px;
   height: 100%;
@@ -391,9 +384,9 @@ header.navbar-container .nav-list li:hover a {
 .subtotal-right {
   text-align: right;
 }
+/* End of Total Charge */
 
 /* Order Confirmation */
-
 .order-confirm-btn {
   display: flex;
   justify-content: center;
@@ -401,6 +394,7 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .order-confirm-btn button {
+  font-family: "Poppins", sans-serif;
   max-width: 530px;
   width: 100%;
   justify-content: center;
@@ -465,12 +459,9 @@ header.navbar-container .nav-list li:hover a {
   border: none;
   border-radius: 30px;
 }
-
-/* End of Shipping Information */
-
+/* End of Order Confirmation */
 
 /* Footer */
-
 footer {
   display: flex;
   background-color: #186f65;
@@ -548,13 +539,11 @@ ul li a {
 .social-links i fa-brands::before {
   size: 40px;
 }
-
 /* End of Footer */
-
 
 /* Responsive Page Setting */
 
-/* 1. Layar Laptop */
+/* 1. Display Laptop */
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
@@ -572,8 +561,9 @@ ul li a {
     width: 75%;
   }
 }
+/* End of Display Laptop */
 
-/* 2. Layar Tablet */
+/* 2. Display Tablet */
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
@@ -619,40 +609,40 @@ ul li a {
     right: 0;
   }
 
-  main .content .content-image img {
-    width: 62.5%;
-  }
-
   .order {
     max-height: 50px;
     font-size: 15px;
     font-family: "Poppins";
-    margin-left: 100px;
+    text-align: center;
+    margin: 0;
   }
 
   .order hr {
-    max-width: 130px;
+    display: flex;
+    max-width: 160px;
     width: 100%;
     height: 5px;
     border-radius: 15px;
     background-color: #b2533e;
+    margin: auto;
   }
 
   .container {
     display: flex;
     flex-wrap: wrap;
+    height: 1100px;
   }
 
   .row {
     width: 500px;
-    max-height: 950px;
+    max-height: 400px;
     height: 100%;
     justify-content: left;
   }
 
   .scroll {
     overflow: auto;
-    max-height: 700px;
+    max-height: 350px;
     height: 100%;
     width: 100%;
     max-width: 400px;
@@ -672,35 +662,31 @@ ul li a {
 
   .add-order {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    background-color: #fce09b;
-    padding: 10px 5px;
     border-radius: 10px;
-    max-width: 370px;
-    max-height: 100%;
-    height: 75px;
-    width: 100%;
-    margin-left: 5px;
+    max-width: 665px;
+    height: 30px;
+    padding: 0;
   }
-  
+
   .add-order h2 {
     font-size: 12px;
     margin-left: 10px;
   }
-  
+
   .add-order button {
-    max-width: 100px;
+    max-width: 70px;
     width: 100%;
     justify-content: center;
-    padding: 0.8rem 2.5rem;
+    padding: 5px 3px;
     margin-block: 1.5rem;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: white;
     border: 3px solid transparent;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #b2533e;
     cursor: pointer;
     transition: all 0.15s ease-in;
@@ -708,13 +694,13 @@ ul li a {
   }
 
   .row-content {
-    width: 500px;
+    width: 100%;
+    margin-inline: 10px;
     align-items: left;
     justify-content: left;
   }
-  
+
   .content {
-    margin-top: 60px;
     display: block;
     background-color: #fff1cd;
     max-width: 470px;
@@ -732,7 +718,7 @@ ul li a {
     height: 100%;
     margin-bottom: 30px;
   }
-  
+
   .notes input {
     max-width: 400px;
     width: 100%;
@@ -747,7 +733,7 @@ ul li a {
     justify-content: center;
     margin-top: 120px;
   }
-  
+
   .order-confirm-btn button {
     max-width: 530px;
     width: 100%;
@@ -772,7 +758,7 @@ ul li a {
     align-items: center;
     justify-content: center;
   }
-  
+
   .subtotal-item {
     display: flex;
     border-radius: 10px;
@@ -784,10 +770,6 @@ ul li a {
     align-items: center;
     justify-content: space-between;
     margin-top: 230px;
-  }
-
-  h1 {
-    font-size: 1rem;
   }
 
   .footer-col .title {
@@ -828,8 +810,9 @@ ul li a {
     margin-block: 7px;
   }
 }
+/* End of Display Tablet */
 
-/* 3. Layar HP */
+/* 3. Display HP */
 @media (max-width: 450px) {
   html {
     font-size: 55%;
@@ -837,13 +820,6 @@ ul li a {
 
   .title {
     font-size: 1rem;
-  }
-
-  .hr2 {
-    width: 200px;
-    width: 100%;
-    max-height: 4px;
-    height: 100%;
   }
 
   .navbar-container {
@@ -864,7 +840,7 @@ ul li a {
     justify-content: center;
     align-items: center;
     right: -100%;
-    top: 80px;
+    top: 60px;
     flex-direction: column;
     background-color: #439c91;
     border-bottom-left-radius: 20px;
@@ -886,18 +862,6 @@ ul li a {
     right: 0;
   }
 
-  .content-description {
-    width: 40%;
-  }
-
-  main .content .content-image img {
-    width: 30%;
-  }
-
-  .about-description {
-    margin-block: 15px;
-  }
-
   .footer-col img {
     max-width: 144px;
     justify-content: center;
@@ -909,3 +873,4 @@ ul li a {
     width: 100%;
   }
 }
+/* End of Display Hp */
