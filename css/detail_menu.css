@@ -642,6 +642,11 @@ ul li a {
     margin-inline: 15px;
   }
 
+  .search-bar input{
+    margin: 0;
+    width: 170px;
+  }
+
   .review1 {
     display: flex;
     flex-wrap: wrap;
