@@ -87,6 +87,9 @@ header.navbar-container .nav-list li:hover a {
 
 /* End of Header */
 
+
+/* Main Content */
+
 .container {
   min-height: 100vh;
   width: 100%;
@@ -94,6 +97,8 @@ header.navbar-container .nav-list li:hover a {
   justify-content: center;
   margin-top: 80px;
 }
+
+/* Order List */
 
 .row {
   max-width: 700px;
@@ -103,45 +108,29 @@ header.navbar-container .nav-list li:hover a {
   justify-content: left;
 }
 
+.order {
+  max-height: 100px;
+  color: #b2533e;
+  margin-inline: 20px;
+  font-size: 16px;
+  font-family: "Poppins";
+}
+
+.order hr {
+  max-width: 172px;
+  width: 100%;
+  height: 4px;
+  border-radius: 15px;
+  background-color: #b2533e;
+}
+
+/* Card Menu */
+
 .scroll {
   overflow: auto;
   max-height: 600px;
   height: 100%;
   margin-top: 10px;
-}
-
-.tambah-pesan {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fce09b;
-  padding: 5px 10px;
-  border-radius: 10px;
-  max-width: 665px;
-  max-height: 100%;
-  height: 75px;
-}
-
-.tambah-pesan h2 {
-  font-size: 24px;
-}
-
-.tambah-pesan button {
-  max-width: 150px;
-  width: 100%;
-  justify-content: center;
-  padding: 0.8rem 2.5rem;
-  margin-block: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 1rem;
-  color: white;
-  border: 3px solid transparent;
-  border-radius: 10px;
-  background-color: #b2533e;
-  cursor: pointer;
-  transition: all 0.15s ease-in;
-  margin-right: 50px;
 }
 
 .side-bar {
@@ -174,50 +163,17 @@ header.navbar-container .nav-list li:hover a {
   padding: 10px;
 }
 
-.jenis-order {
+.order-type {
   max-width: 350px;
   width: 100%;
   padding: 15px;
 }
 
-.jumlah-order {
-  display: flex;
-  max-height: 50px;
-  height: 100%;
-  padding-block: 10px;
-  margin-top: 30px;
-}
-
-.jumlah-order p {
-  font-size: 21px;
-  text-align: center;
-  width: 30px;
-  height: 30px;
-  margin: 5px;
-}
-
-.jumlah-order .minus {
-  background-color: white;
-  border: 1px solid #186f65;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.jumlah-order .num {
-  background-color: white;
-  border-radius: 5px;
-}
-.jumlah-order .plus {
-  color: white;
-  background-color: #186f65;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.jenis-order h3 {
+.order-type h3 {
   justify-content: end;
 }
 
-.harga {
+.menu-price {
   max-width: 120px;
   width: 100%;
   text-align: left;
@@ -226,40 +182,7 @@ header.navbar-container .nav-list li:hover a {
   margin-left: 5px;
 }
 
-.pesanan {
-  max-height: 100px;
-  color: #b2533e;
-  margin-inline: 20px;
-  font-size: 16px;
-  font-family: "Poppins";
-}
-
-.pesanan hr {
-  max-width: 172px;
-  width: 100%;
-  height: 4px;
-  border-radius: 15px;
-  background-color: #b2533e;
-}
-
-.pesanan-lainnya {
-  max-height: 130px;
-  height: 100%;
-  padding: 10px;
-}
-
-.pesanan-lainnya h4 {
-  margin-bottom: 10px;
-}
-
-.pesanan-lainnya a {
-  color: #b2533e;
-  padding-bottom: 10px;
-  margin-bottom: 50px;
-  text-decoration: none;
-}
-
-.catatan input {
+.notes input {
   max-width: 400px;
   width: 100%;
   padding: 10px;
@@ -268,7 +191,83 @@ header.navbar-container .nav-list li:hover a {
   margin-top: 15px;
 }
 
-.row-konten {
+.order-total {
+  display: flex;
+  max-height: 50px;
+  height: 100%;
+  padding-block: 10px;
+  margin-top: 30px;
+}
+
+.order-total p {
+  font-size: 21px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+}
+
+.order-total .minus {
+  background-color: white;
+  border: 1px solid #186f65;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.order-total .num {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.order-total .plus {
+  color: white;
+  background-color: #186f65;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Add Order */
+
+.add-order {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fce09b;
+  padding: 5px 10px;
+  border-radius: 10px;
+  max-width: 665px;
+  max-height: 100%;
+  height: 75px;
+}
+
+.add-order h2 {
+  font-size: 24px;
+}
+
+.add-order button {
+  max-width: 150px;
+  width: 100%;
+  justify-content: center;
+  padding: 0.8rem 2.5rem;
+  margin-block: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1rem;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  background-color: #b2533e;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+  margin-right: 50px;
+}
+
+/* End of Order List */
+
+
+/* Shipping Information */
+
+.row-content {
   display: flex;
   min-height: 100vh;
   max-width: 600px;
@@ -278,7 +277,7 @@ header.navbar-container .nav-list li:hover a {
   justify-content: left;
 }
 
-.konten {
+.content {
   flex-direction: column;
   background-color: #fff1cd;
   max-width: 600px;
@@ -288,7 +287,11 @@ header.navbar-container .nav-list li:hover a {
   box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
 }
 
-.info-pengiriman {
+.content p {
+  max-width: 150px;
+}
+
+.shipping-info {
   color: #b2533e;
   padding: 10px 20px;
 }
@@ -303,8 +306,8 @@ header.navbar-container .nav-list li:hover a {
   justify-content: center;
 }
 
-.form .nama,
-.nama-belakang,
+.form .first-name,
+.last-name,
 .email,
 .no-telp {
   max-width: 250px;
@@ -314,8 +317,8 @@ header.navbar-container .nav-list li:hover a {
   margin: 10px 20px;
 }
 
-.form .nama input,
-.nama-belakang input,
+.form .first-name input,
+.last-name input,
 .email input,
 .no-telp input {
   border: 1px solid #b2533e;
@@ -325,7 +328,7 @@ header.navbar-container .nav-list li:hover a {
   background-color: #fdfaf2;
 }
 
-.form .alamat {
+.form .address {
   display: flex;
   flex-direction: column;
   max-width: 540px;
@@ -335,7 +338,7 @@ header.navbar-container .nav-list li:hover a {
   margin: 10px 20px;
 }
 
-.form .alamat input {
+.form .address input {
   max-width: 550px;
   width: 100%;
   max-height: 100px;
@@ -350,6 +353,8 @@ header.navbar-container .nav-list li:hover a {
   width: 100%;
   padding-left: 15px;
 }
+
+/* Total Charge */
 
 .subtotal {
   max-height: 100px;
@@ -387,13 +392,15 @@ header.navbar-container .nav-list li:hover a {
   text-align: right;
 }
 
-.konfir-btn {
+/* Order Confirmation */
+
+.order-confirm-btn {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
 
-.konfir-btn button {
+.order-confirm-btn button {
   max-width: 530px;
   width: 100%;
   justify-content: center;
@@ -409,14 +416,6 @@ header.navbar-container .nav-list li:hover a {
   cursor: pointer;
   transition: all 0.15s ease-in;
 }
-
-.konten p {
-  max-width: 150px;
-}
-
-/* .tambah-pesan {
-  
-} */
 
 .modal {
   display: none;
@@ -459,7 +458,7 @@ header.navbar-container .nav-list li:hover a {
   margin-block: 40px;
 }
 
-.ttp-Btn {
+.close-btn {
   background-color: #186f65;
   color: white;
   padding: 15px;
@@ -467,13 +466,25 @@ header.navbar-container .nav-list li:hover a {
   border-radius: 30px;
 }
 
-/*Footer*/
+/* End of Shipping Information */
+
+
+/* Footer */
+
 footer {
   display: flex;
   background-color: #186f65;
   max-height: 400px;
   justify-content: center;
   width: 100%;
+}
+
+.footer-col {
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-block: 20px;
+  width: 25%;
 }
 
 .footer-col img {
@@ -492,14 +503,6 @@ footer {
   margin-inline: auto;
   justify-content: center;
   width: 100%;
-}
-
-.footer-col {
-  justify-content: center;
-  align-items: center;
-  color: white;
-  padding-block: 20px;
-  width: 25%;
 }
 
 .footer-col .title {
@@ -548,13 +551,19 @@ ul li a {
 
 /* End of Footer */
 
+
+/* Responsive Page Setting */
+
+/* 1. Layar Laptop */
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
   }
+
   .title {
     font-size: 1.75rem;
   }
+
   header.navbar-container .logo img {
     width: 150px;
   }
@@ -562,36 +571,106 @@ ul li a {
   main .content .content-image img {
     width: 75%;
   }
-  .card {
-    max-width: 75%;
-  }
 }
 
+/* 2. Layar Tablet */
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
   }
 
-  .title1 {
-    font-size: 1.5rem;
+  .navbar-container {
+    max-height: 60px;
+    height: 100%;
   }
 
-  .title2 {
-    font-size: 2rem;
-    color: #b2533e;
+  header.navbar-container .logo img {
+    width: 120px;
   }
 
-  .title3 {
-    font-size: 2rem;
-    color: #b2533e;
+  #hamburger {
+    display: block;
+  }
+
+  .nav-list {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: -100%;
+    top: 60px;
+    flex-direction: column;
+    background-color: #439c91;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width: 100%;
     text-align: center;
+    transition: 0.3s;
   }
 
-  /* html {
-    font-size: 60%;
-  } */
+  .nav-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 170px;
+    margin-block: 20px;
+  }
 
-  .tambah-pesan {
+  .nav-list.active {
+    right: 0;
+  }
+
+  main .content .content-image img {
+    width: 62.5%;
+  }
+
+  .order {
+    max-height: 50px;
+    font-size: 15px;
+    font-family: "Poppins";
+    margin-left: 100px;
+  }
+
+  .order hr {
+    max-width: 130px;
+    width: 100%;
+    height: 5px;
+    border-radius: 15px;
+    background-color: #b2533e;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .row {
+    width: 500px;
+    max-height: 950px;
+    height: 100%;
+    justify-content: left;
+  }
+
+  .scroll {
+    overflow: auto;
+    max-height: 700px;
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 10px;
+  }
+
+  .side-bar {
+    align-items: center;
+    max-width: 350px;
+    width: 100%;
+    height: 120px;
+    margin: 20px 10px;
+    box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
+    border-radius: 10px;
+    background-color: #fdfaf2;
+  }
+
+  .add-order {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -605,12 +684,12 @@ ul li a {
     margin-left: 5px;
   }
   
-  .tambah-pesan h2 {
+  .add-order h2 {
     font-size: 12px;
     margin-left: 10px;
   }
   
-  .tambah-pesan button {
+  .add-order button {
     max-width: 100px;
     width: 100%;
     justify-content: center;
@@ -628,53 +707,7 @@ ul li a {
     margin-right: 30px;
   }
 
-  .pesanan {
-    max-height: 50px;
-    font-size: 15px;
-    font-family: "Poppins";
-    margin-left: 100px;
-  }
-
-  .pesanan hr {
-    max-width: 130px;
-    width: 100%;
-    height: 5px;
-    border-radius: 15px;
-    background-color: #b2533e;
-  }
-
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .side-bar {
-    align-items: center;
-    max-width: 350px;
-    width: 100%;
-    height: 120px;
-    margin: 20px 10px;
-    box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
-    border-radius: 10px;
-    background-color: #fdfaf2;
-  }
-
-  .row {
-    width: 500px;
-    max-height: 950px;
-    height: 100%;
-    justify-content: left;
-  }
-  .scroll {
-    overflow: auto;
-    max-height: 700px;
-    height: 100%;
-    width: 100%;
-    max-width: 400px;
-    margin-top: 10px;
-  }
-
-  .row-konten {
+  .row-content {
     width: 500px;
     align-items: left;
     justify-content: left;
@@ -683,9 +716,6 @@ ul li a {
   .content {
     margin-top: 60px;
     display: block;
-  }
-
-  .konten {
     background-color: #fff1cd;
     max-width: 470px;
     width: 100%;
@@ -702,26 +732,8 @@ ul li a {
     height: 100%;
     margin-bottom: 30px;
   }
-
-
-  .pesanan-lainnya {
-    max-height: 130px;
-    height: 100%;
-    padding: 10px;
-  }
   
-  .pesanan-lainnya h4 {
-    margin-bottom: 10px;
-  }
-  
-  .pesanan-lainnya a {
-    color: #b2533e;
-    padding-bottom: 10px;
-    margin-bottom: 50px;
-    text-decoration: none;
-  }
-  
-  .catatan input {
+  .notes input {
     max-width: 400px;
     width: 100%;
     padding: 10px;
@@ -730,13 +742,13 @@ ul li a {
     margin-top: 15px;
   }
 
-  .konfir-btn {
+  .order-confirm-btn {
     display: flex;
     justify-content: center;
     margin-top: 120px;
   }
   
-  .konfir-btn button {
+  .order-confirm-btn button {
     max-width: 530px;
     width: 100%;
     justify-content: center;
@@ -778,84 +790,6 @@ ul li a {
     font-size: 1rem;
   }
 
-  .navbar-container {
-    max-height: 60px;
-    height: 100%;
-  }
-
-  header.navbar-container .logo img {
-    width: 120px;
-  }
-
-  #hamburger {
-    display: block;
-  }
-
-  .nav-list {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: -100%;
-    top: 60px;
-    flex-direction: column;
-    background-color: #439c91;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-    width: 100%;
-    text-align: center;
-    transition: 0.3s;
-  }
-
-  .nav-list ul {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 170px;
-    margin-block: 20px;
-  }
-
-  /* .nav-item {
-  } */
-
-  .nav-list.active {
-    right: 0;
-  }
-
-  main .content .content-image img {
-    width: 62.5%;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid .card {
-    max-width: 150px;
-    max-height: 200px;
-  }
-
-  .grid-order {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 250px;
-    max-height: 300px;
-  }
-
-  .grid-order img {
-    max-width: 80px;
-    max-height: 80px;
-  }
-
-  .card-order {
-    margin-block: 10px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .card img {
-    max-width: 150px;
-    max-height: 150px;
-  }
-
   .footer-col .title {
     font-size: 100%;
   }
@@ -895,13 +829,16 @@ ul li a {
   }
 }
 
+/* 3. Layar HP */
 @media (max-width: 450px) {
   html {
     font-size: 55%;
   }
+
   .title {
     font-size: 1rem;
   }
+
   .hr2 {
     width: 200px;
     width: 100%;
@@ -916,6 +853,7 @@ ul li a {
   header.navbar-container .logo img {
     width: 130px;
   }
+
   #hamburger {
     display: block;
   }
@@ -958,18 +896,6 @@ ul li a {
 
   .about-description {
     margin-block: 15px;
-  }
-
-  .grid .card {
-    width: 100%x;
-  }
-
-  .grid .card img {
-    width: 150px;
-  }
-
-  .grid-order {
-    width: 350px;
   }
 
   .footer-col img {
