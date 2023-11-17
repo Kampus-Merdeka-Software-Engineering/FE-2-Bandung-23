@@ -1,3 +1,5 @@
+// Function active link on the navbar
+
 // Ambil URL saat ini
 const currentUrl = window.location.href;
 
@@ -14,8 +16,9 @@ links.forEach((link) => {
     link.classList.add("active");
   }
 });
+// End of Function active link on the navbar
 
-// Kategori
+// Function active link on Category
 const listItems = document.querySelectorAll(".list-kat li");
 
 // Menambahkan event listener pada setiap elemen <li>
@@ -30,8 +33,9 @@ listItems.forEach(function (item, index) {
     item.classList.add("active");
   });
 });
-// End of Kategori
+// End of Function active link on Category
 
+// Function hamburger button
 const hamburgerButtonElement = document.querySelector("#hamburger");
 const drawerElement = document.querySelector(".nav-list");
 
@@ -39,6 +43,7 @@ hamburgerButtonElement.addEventListener("click", () => {
   hamburgerButtonElement.classList.toggle("active");
   drawerElement.classList.toggle("active");
 });
+// End of Function hamburger button
 
 document.querySelectorAll(".jumlah-order").forEach(function (element) {
   var minusButton = element.querySelector(".minus");

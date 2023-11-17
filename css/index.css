@@ -96,7 +96,7 @@ main {
   align-items: center;
 }
 
-.content {
+.box-description {
   margin-top: 80px;
   width: 100%;
   flex: 1;
@@ -106,22 +106,22 @@ main {
   background: linear-gradient(to right, #fdfaf2, white);
 }
 
-main .content .content-description {
+.content-description {
   flex: 1 1;
   text-align: center;
   width: 100%;
 }
 
-.title1 {
+.title-description {
   font-size: 3.5rem;
 }
 
-main .content .content-description p {
+.content-description p {
   line-height: 1.7rem;
   font-size: 1.2rem;
 }
 
-main .content .content-description button {
+.content-description button {
   padding: 0.8rem 2.5rem;
   margin-block-start: 1rem;
   text-transform: uppercase;
@@ -137,19 +137,19 @@ main .content .content-description button {
   transition: all 0.15s ease-in;
 }
 
-main .content .content-description button:hover {
+.content-description button:hover {
   border: 3px solid #186f65;
   color: #2d3e50;
   background-color: transparent;
 }
 
-main .content .content-image {
+.content-image {
   flex: 1;
   display: flex;
   justify-content: end;
 }
 
-main .content .content-image img {
+.content-image img {
   min-width: 200px;
   width: 100%;
 }
@@ -470,7 +470,7 @@ ul li a {
     width: 150px;
   }
 
-  main .content .content-image img {
+  .content-image img {
     width: 75%;
   }
 
@@ -484,7 +484,7 @@ ul li a {
     font-size: 62.5%;
   }
 
-  .content {
+  .box-description {
     margin-top: 60px;
   }
 
@@ -524,14 +524,11 @@ ul li a {
     margin-block: 20px;
   }
 
-  /* .nav-item {
-  } */
-
   .nav-list.active {
     right: 0;
   }
 
-  main .content .content-image img {
+  .content-image img {
     width: 62.5%;
   }
 
@@ -602,7 +599,7 @@ ul li a {
 }
 
 @media (max-width: 450px) {
-  .content-description h1 {
+  .title-description {
     font-size: 20px;
   }
 
@@ -645,11 +642,11 @@ ul li a {
     width: 40%;
   }
 
-  main .content .content-image img {
+  .content-image img {
     width: 30%;
   }
 
-  main .content .content-description button {
+  .content-description button {
     font-size: 9px;
     padding: 5px 15px;
   }
