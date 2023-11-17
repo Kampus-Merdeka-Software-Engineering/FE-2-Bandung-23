@@ -45,7 +45,7 @@ hamburgerButtonElement.addEventListener("click", () => {
 });
 // End of Function hamburger button
 
-document.querySelectorAll(".jumlah-order").forEach(function (element) {
+document.querySelectorAll(".order-total").forEach(function (element) {
   var minusButton = element.querySelector(".minus");
   var plusButton = element.querySelector(".plus");
   var jumlahElement = element.querySelector(".num");
