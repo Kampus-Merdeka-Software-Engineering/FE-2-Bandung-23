@@ -588,7 +588,7 @@ ul li a {
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 576px) {
   .title-description {
     font-size: 20px;
   }

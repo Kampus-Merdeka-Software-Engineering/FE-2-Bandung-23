@@ -651,7 +651,6 @@ ul li a {
 
   .side-bar {
     align-items: center;
-    max-width: 350px;
     width: 100%;
     height: 120px;
     margin: 20px 10px;
@@ -820,10 +819,6 @@ ul li a {
 
   .title {
     font-size: 1rem;
-  }
-
-  .navbar-container {
-    max-width: 375px;
   }
 
   header.navbar-container .logo img {

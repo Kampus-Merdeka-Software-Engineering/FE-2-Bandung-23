@@ -478,6 +478,29 @@ ul li a {
   .container {
     width: 100%;
   }
+
+  .row {
+    width: 230px;
+  }
+
+  .row-konten {
+    width: 480px;
+  }
+
+  .card {
+    width: 200px;
+  }
+
+  .list-menu {
+    display: grid;
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media (max-width: 768px) {
@@ -551,6 +574,29 @@ ul li a {
 
   .artikel p {
     font-size: 16px;
+  }
+
+  .row {
+    width: 230px;
+  }
+
+  .row-konten {
+    width: 480px;
+  }
+
+  .card {
+    width: 200px;
+  }
+
+  .list-menu {
+    display: grid;
+    max-width: 600px;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
 
   footer {

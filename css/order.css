@@ -361,10 +361,6 @@ ul li a {
     max-height: 3px;
   }
 
-  .navbar-container {
-    max-width: 375px;
-  }
-
   header.navbar-container .logo img {
     width: 130px;
   }
