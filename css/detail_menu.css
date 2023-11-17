@@ -262,7 +262,7 @@ header.navbar-container .nav-list li:hover a {
 
   max-width: 900px;
   width: 100%;
-  height: 470px;
+  height: 550px;
   border-radius: 10px;
 }
 
@@ -307,14 +307,12 @@ header.navbar-container .nav-list li:hover a {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  max-height: 400px;
-  height: 100%;
+  height: 400px;
   background-color: #fff1cd;
   justify-content: center;
   padding-block: 20px;
   border-radius: 10px;
   box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
-  margin-top: 50px;
 }
 
 .menu-img {
@@ -568,7 +566,7 @@ ul li a {
     height: 47px;
   }
 
-  .art-title {
+  .art-title h3 {
     font-size: 24px;
   }
 
@@ -617,17 +615,27 @@ ul li a {
   }
 
   .detail-menu {
-    max-width: 350px;
-    height: 100%;
-    max-height: 800px;
+      width: 100%;
+      height: 550px;
+      margin-top: 20px;
+  }
 
+  .menu-img{
+    max-width: 300px;
+    max-height: 350px;
+    margin: auto;
   }
 
   .menu-img img {
-    max-width: 325px;
-    max-height: 275px;
+    max-width: 300px;
+    max-height: 250px;
     align-items: center;
-    margin-left: 10px;
+    margin: auto;
+  }
+
+  .menu-btn{
+    margin-top: 10px;
+    height: 40px;
   }
 
   .menu-detail {
@@ -639,10 +647,10 @@ ul li a {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-top: 150px;
+    margin-top: 50px;
     max-width: 900px;
     width: 100%;
-    height: 550px;
+    height: 450px;
     border-radius: 10px;
   }
   
