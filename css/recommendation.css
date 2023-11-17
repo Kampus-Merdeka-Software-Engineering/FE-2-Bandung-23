@@ -110,7 +110,7 @@ main {
   background-color: #b2533e;
 }
 
-.konten-rekomen {
+.content-recommends {
   min-height: 100vh;
   display: flex;
   flex-wrap: wrap;
@@ -392,7 +392,7 @@ ul li a {
     width: 55%;
   }
 
-  .konten-rekomen {
+  .content-recommends {
     margin-top: 60px;
   }
 
