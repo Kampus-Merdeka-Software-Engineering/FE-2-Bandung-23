@@ -124,7 +124,7 @@ header.navbar-container .nav-list li:hover a {
 /* Card Menu */
 .scroll {
   overflow: auto;
-  max-height: 600px;
+  max-height: 450px;
   height: 100%;
   margin-top: 10px;
 }
@@ -277,7 +277,7 @@ header.navbar-container .nav-list li:hover a {
   height: 600px;
   border-radius: 10px;
   box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
-  margin-top: 40px;
+  margin-top: 85px;
 }
 
 .content p {
@@ -367,7 +367,7 @@ header.navbar-container .nav-list li:hover a {
   height: 100%;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
+  margin-top: 10px;
 }
 
 .subtotal-item h3 {
@@ -645,7 +645,7 @@ ul li a {
     max-height: 350px;
     height: 100%;
     width: 100%;
-    max-width: 400px;
+    max-width: 300px;
     margin-top: 10px;
   }
 
@@ -707,6 +707,7 @@ ul li a {
     height: 620px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
+    margin-top: 50px;
   }
 
   .order-menu {
@@ -759,7 +760,7 @@ ul li a {
   }
 
   .subtotal-item {
-    display: flex;
+    /* display: flex;
     border-radius: 10px;
     background-color: #fce09b;
     max-width: 550px;
@@ -767,8 +768,8 @@ ul li a {
     max-height: 100px;
     height: 100%;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 230px;
+    justify-content: space-between; */
+    margin-top: 700px;
   }
 
   .footer-col .title {
