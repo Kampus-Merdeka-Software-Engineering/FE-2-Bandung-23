@@ -95,6 +95,8 @@ main {
   align-items: center;
 }
 
+/* recommend start */
+
 .title-recommend {
   font-size: 1 rem;
   color: #b2533e;
@@ -193,6 +195,8 @@ main {
   font-size: 1.2rem;
   margin-top: 15px;
 }
+
+/* end of recomeend */
 
 /*Footer*/
 footer {
