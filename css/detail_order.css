@@ -465,9 +465,10 @@ header.navbar-container .nav-list li:hover a {
 footer {
   display: flex;
   background-color: #186f65;
-  max-height: 400px;
+  /* max-height: 400px; */
   justify-content: center;
   width: 100%;
+  margin-top: 160px;
 }
 
 .footer-col {
