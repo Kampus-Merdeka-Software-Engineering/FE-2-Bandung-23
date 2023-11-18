@@ -95,13 +95,13 @@ main {
   align-items: center;
 }
 
-.title-rekomen {
+.title-recommend {
   font-size: 1 rem;
   color: #b2533e;
   margin-block: 20px;
 }
 
-.title-rekomen hr {
+.title-recommend hr {
   max-width: 600px;
   width: 100%;
   height: 5px;
