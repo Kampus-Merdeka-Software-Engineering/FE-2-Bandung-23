@@ -312,7 +312,7 @@ main {
   height: 100%;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 325px;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -694,6 +694,7 @@ ul li a {
   }
 
   .kategori {
+    width: 150px;
     height: 300px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
@@ -720,6 +721,10 @@ ul li a {
   } */
 
   .search-bar {
+    width: 100%;
+  }
+
+  .search-bar input[type="text"] {
     width: 100%;
   }
 
