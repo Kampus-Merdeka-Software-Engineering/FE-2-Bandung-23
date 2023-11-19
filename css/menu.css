@@ -654,6 +654,7 @@ ul li a {
 @media (max-width: 450px) {
   .container {
     margin-top: 60px;
+    width: 100%;
   }
 
   .title {
