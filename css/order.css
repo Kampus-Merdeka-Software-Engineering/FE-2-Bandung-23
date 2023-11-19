@@ -112,6 +112,7 @@ header.navbar-container .nav-list li:hover a {
   background-color: #b2533e;
   width: 230px;
   margin-top: 0;
+  border-radius: 10px;
 }
 
 .konten2 {
@@ -245,6 +246,11 @@ ul li a {
     margin-inline: 30px;
   }
 
+  hr {
+    max-width: 175px;
+    border-radius: 10px;
+  }
+
   p {
     text-align: center;
   }
@@ -253,6 +259,11 @@ ul li a {
     width: 150px;
   }
   .container {
+    width: 100%;
+  }
+
+  .copyright p {
+    text-align: left;
     width: 100%;
   }
 }
@@ -309,11 +320,10 @@ ul li a {
 
   .konten {
     margin-inline: 30px;
-    margin-bottom: 220px;
   }
 
   .konten2 {
-    margin: 20px
+    margin: 20px;
   }
 
   hr {
@@ -328,7 +338,6 @@ ul li a {
 
   .footer-col,
   .footer-col-com {
-
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
@@ -355,6 +364,11 @@ ul li a {
   .footer-col h3 {
     margin-block: 7px;
   }
+
+  .copyright p {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -372,6 +386,7 @@ ul li a {
   hr {
     max-width: 130px;
     max-height: 3px;
+    border-radius: 10px;
   }
 
   header.navbar-container .logo img {
@@ -419,8 +434,9 @@ ul li a {
     align-items: center;
   }
 
-  .copyright {
+  .copyright p {
     text-align: center;
     width: 100%;
+    font-size: 10px;
   }
 }
