@@ -191,6 +191,7 @@ h1.title2 {
   height: 200px;
   border-radius: 99px;
   box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
+  object-fit: cover;
 }
 
 /*Footer*/
@@ -491,14 +492,14 @@ ul li a {
   .aboutus-container {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    gap: 5px;
+    gap: 20px;
   }
 
   .aboutus-item {
     max-width: 130px;
     width: 100%;
-    margin-inline: 30px;
     height: 100%;
+    margin-bottom: 10px;
   }
 
   .aboutus-item img {
