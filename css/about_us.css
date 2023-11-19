@@ -99,26 +99,29 @@ main {
 .content {
   /*margin-right: 30px;*/
   /*margin-left: 30px;*/
-  margin-top: 60px;
+  margin-top: 80px;
   flex: 1;
   display: flex;
   align-items: center;
+  background: linear-gradient(to right, #fdfaf2, white);
 }
 
 main .content .content-description {
   flex: 1 1;
   text-align: center;
   width: 100%;
+  padding: 10px;
 }
 
-main .content .content-description .title {
-  font-size: 3.5rem;
-  margin-block: 1rem;
+h1.title1 {
+  margin-bottom: 15px;
 }
 
 main .content .content-description p {
   line-height: 1.7rem;
   font-size: 1.2rem;
+  text-align: left;
+  padding: 10px;
 }
 
 main .content .content-image {
@@ -128,8 +131,11 @@ main .content .content-image {
 }
 
 main .content .content-image img {
-  max-width: 500px;
   width: 100%;
+}
+
+.about-image {
+  margin-block: 20px;
 }
 
 /*Tim Kami*/
@@ -138,11 +144,15 @@ main .content .content-image img {
   text-align: center;
   height: 100%;
   width: 100%;
-  background-color: #fdfaf2;
+  background: linear-gradient(to left, #f7e1ae, #fdfaf2);
 }
 
 .team .our-team {
   margin: 30px;
+}
+
+h1.title2 {
+  color: #b2533e;
 }
 
 .team .our-team .title {
@@ -171,7 +181,7 @@ main .content .content-image img {
 }
 
 .aboutus-container .aboutus-item {
-  width: 240px;
+  width: 270px;
   text-align: center;
   margin: auto;
 }
@@ -179,6 +189,8 @@ main .content .content-image img {
 .aboutus-item img {
   width: 200px;
   height: 200px;
+  border-radius: 99px;
+  box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
 }
 
 /*Footer*/
@@ -332,11 +344,27 @@ ul li a {
   }
 
   main .content .content-image img {
-    width: 62.5%;
+    width: 100%;
   }
 
-  .grid {
+  h1.title1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  h1.title2 {
+    font-size: 24px;
+    color: #b2533e;
+  }
+
+  .our-team hr {
+    width: 120px;
+    height: 4px;
+  }
+
+  .aboutus-container {
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
 
   .footer-col .title {
@@ -355,6 +383,7 @@ ul li a {
     width: 100%;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   .footer-col img {
@@ -377,6 +406,11 @@ ul li a {
   .footer-col h3 {
     margin-block: 7px;
   }
+
+  .copyright {
+    text-align: center;
+    width: 100%;
+  }
 }
 
 @media (max-width: 450px) {
@@ -387,13 +421,13 @@ ul li a {
     padding-inline: 8px;
   }
 
-  main .content .content-image img{
+  main .content .content-image img {
     flex: 1;
     display: flex;
     justify-content: end;
     height: 200px;
     width: 100%; /*widthnya belum bisa, jadi gepeng*/
-}
+  }
 
   h1.title1 {
     font-size: 20px;
@@ -403,7 +437,7 @@ ul li a {
   h1.title2 {
     font-size: 20px;
     color: #b2533e;
-}
+  }
 
   .our-team hr {
     width: 100px;
@@ -450,10 +484,6 @@ ul li a {
     width: 100%;
   }
 
-  .content .content-description {
-    width: 220px;
-  }
-
   .aboutus-container {
     width: 450px;
   }
@@ -461,12 +491,14 @@ ul li a {
   .aboutus-container {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
+    gap: 5px;
   }
 
   .aboutus-item {
-    max-width: 170px;
+    max-width: 130px;
     width: 100%;
     margin-inline: 30px;
+    height: 100%;
   }
 
   .aboutus-item img {
@@ -487,4 +519,3 @@ ul li a {
     width: 100%;
   }
 }
-
