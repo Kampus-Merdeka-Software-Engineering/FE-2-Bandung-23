@@ -45,6 +45,16 @@ hamburgerButtonElement.addEventListener("click", () => {
 });
 // End of Function hamburger button
 
+// Function hamburger button
+const filterButtonElement = document.querySelector("#filter");
+const filterElement = document.querySelector(".row");
+
+filterButtonElement.addEventListener("click", () => {
+  filterButtonElement.classList.toggle("active");
+  filterElement.classList.toggle("active");
+});
+// End of Function hamburger button
+
 document.querySelectorAll(".order-total").forEach(function (element) {
   var minusButton = element.querySelector(".minus");
   var plusButton = element.querySelector(".plus");
