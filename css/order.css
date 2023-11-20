@@ -87,6 +87,8 @@ header.navbar-container .nav-list li:hover a {
 
 /* End of Header */
 
+/* start main and content */
+
 .container {
   height: 100%;
   width: 100%;
@@ -96,7 +98,7 @@ header.navbar-container .nav-list li:hover a {
   margin-top: 80px;
 }
 
-.konten {
+.content {
   width: 100%;
   color: #b2533e;
   font-size: 2rem;
@@ -106,7 +108,7 @@ header.navbar-container .nav-list li:hover a {
   margin-right: 150px;
 }
 
-.konten-hr {
+.content-hr {
   margin-block: 30px;
   height: 5px;
   background-color: #b2533e;
@@ -115,7 +117,7 @@ header.navbar-container .nav-list li:hover a {
   border-radius: 10px;
 }
 
-.konten2 {
+.content2 {
   margin-top: 20px;
   max-width: 800px;
   width: 100%;
@@ -129,7 +131,7 @@ header.navbar-container .nav-list li:hover a {
   margin-bottom: 50px;
 }
 
-.konten2 button {
+.content2 button {
   padding: 0.8rem 2.5rem;
   margin-block-start: 1rem;
   text-transform: uppercase;
@@ -146,15 +148,17 @@ header.navbar-container .nav-list li:hover a {
   transition: all 0.15s ease-in;
 }
 
-.konten2 button:hover {
+.content2 button:hover {
   border: 3px solid #186f65;
   color: #2d3e50;
   background-color: transparent;
 }
 
-.konten2 a {
+.content2 a {
   text-decoration: none;
 }
+
+/* end of main and content */
 
 /*Footer*/
 footer {
@@ -237,12 +241,16 @@ ul li a {
 
 /* End of Footer */
 
+/* Responsive Page Setting */
+
+/* 1. Display Laptop */
+
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
   }
 
-  .konten {
+  .content {
     margin-inline: 30px;
   }
 
@@ -267,6 +275,10 @@ ul li a {
     width: 100%;
   }
 }
+
+/* End of Display Laptop */
+
+/* 2. Display Tablet */
 
 @media (max-width: 768px) {
   html {
@@ -318,7 +330,7 @@ ul li a {
     margin-top: 60px;
   }
 
-  .konten {
+  .content {
     margin-inline: 30px;
   }
 
@@ -371,6 +383,10 @@ ul li a {
   }
 }
 
+/* End of Display Tablet */
+
+/* 3. Display HP */
+
 @media (max-width: 450px) {
   html {
     font-size: 55%;
@@ -379,7 +395,7 @@ ul li a {
     font-size: 1rem;
   }
 
-  .konten {
+  .content {
     margin-bottom: 0;
   }
 
@@ -440,3 +456,4 @@ ul li a {
     font-size: 10px;
   }
 }
+/* End of Display Hp */
