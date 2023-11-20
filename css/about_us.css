@@ -90,7 +90,6 @@ header.navbar-container .nav-list li:hover a {
 main {
   width: 100%;
   flex: 1;
-
   display: flex;
   align-items: center;
 }
@@ -108,17 +107,25 @@ main .about-us .about-us-description {
   flex: 1 1;
   text-align: center;
   width: 100%;
-  padding: 10px;
+  padding: 10px 60px;
 }
 
 main .about-us .about-us-description .about-us-title {
-  font-size: 3.5rem;
-  margin-block: 1rem;
+  font-size: 42px;
+  color: #b2533e;
+}
+
+.about-us-description hr {
+  height: 5px;
+  background-color: #b2533e;
+  width: 300px;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 main .about-us .about-us-description p {
-  line-height: 1.7rem;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: left;
   padding: 10px;
 }
@@ -130,7 +137,6 @@ main .about-us .about-us-image {
 }
 
 main .about-us .about-us-image img {
-  max-width: 500px;
   width: 100%;
 }
 
@@ -140,7 +146,7 @@ main .about-us .about-us-image img {
 
 /*Tim Kami*/
 .team {
-  max-height: 900px;
+  max-height: 950px;
   text-align: center;
   height: 100%;
   width: 100%;
@@ -154,16 +160,21 @@ main .about-us .about-us-image img {
 .team .our-team .our-team-title {
   justify-content: center;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 42px;
   color: #b2533e;
 }
 
 .our-team hr {
-  width: 150px;
+  width: 200px;
   height: 5px;
   margin: auto;
   border-radius: 15px;
   background-color: #b2533e;
+}
+
+.social-media i {
+  font-size: 30px;
+  margin: 10px;
 }
 
 .our-team-container {
@@ -177,9 +188,13 @@ main .about-us .about-us-image img {
 }
 
 .our-team-container .our-team-item {
-  width: 240px;
+  width: 300px;
   text-align: center;
   margin: auto;
+  border-radius: 15px;
+  color: white;
+  background-color: #d7996c;
+  box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
 }
 
 .our-team-item img {
@@ -188,6 +203,8 @@ main .about-us .about-us-image img {
   border-radius: 99px;
   box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
   object-fit: cover;
+  margin-top: 10px;
+  background-color: #f7e1ae;
 }
 
 /*Footer*/
@@ -287,16 +304,16 @@ ul li a {
     width: 150px;
   }
 
-  main .about-us .about-us-image img {
-    width: 75%;
-  }
-
   .our-team hr {
     width: 120px;
   }
 }
 
 @media (max-width: 768px) {
+  main {
+    min-height: 100vh;
+  }
+
   html {
     font-size: 62.5%;
   }
@@ -348,13 +365,31 @@ ul li a {
     right: 0;
   }
 
-  main .about-us .about-us-image img {
-    width: 62.5%;
+  .team {
+    max-height: 1200px;
+    height: 100%;
   }
 
-  h1.title1 {
-    font-size: 24px;
-    margin-bottom: 5px;
+  main .about-us .about-us-description {
+    padding: 10px;
+  }
+
+  main .about-us .about-us-image img {
+    width: 100%;
+  }
+
+  main .about-us .about-us-description .about-us-title {
+    font-size: 32px;
+  }
+
+  .about-us-description hr {
+    margin-bottom: 10px;
+    width: 230px;
+    height: 4px;
+  }
+
+  main .about-us .about-us-description p {
+    font-size: 14px;
   }
 
   h1.title2 {
@@ -362,14 +397,26 @@ ul li a {
     color: #b2533e;
   }
 
+  .team .our-team .our-team-title {
+    font-size: 32px;
+  }
+
   .our-team hr {
-    width: 120px;
+    width: 145px;
     height: 4px;
+  }
+
+  .our-team-container .our-team-item {
+    font-size: 14px;
   }
 
   .aboutus-container {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
+  }
+
+  .our-team-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .footer-col .title {
@@ -436,7 +483,6 @@ ul li a {
 
   main .about-us .about-us-description .about-us-title {
     font-size: 20px;
-    margin-bottom: 5px;
   }
 
   .team .our-team .our-team-title {
@@ -489,8 +535,15 @@ ul li a {
     width: 100%;
   }
 
-  .about-us .about-us-description {
-    width: 220px;
+  main .about-us .about-us-description {
+    width: 200px;
+    padding: 0;
+  }
+
+  .about-us-description hr {
+    width: 140px;
+    height: 3px;
+    margin-bottom: 5px;
   }
 
   .our-team-container {
@@ -515,6 +568,10 @@ ul li a {
     width: 100%;
     max-height: 100px;
     height: 100%;
+  }
+
+  .social-media i {
+    font-size: 21px;
   }
 
   .footer-col img {
