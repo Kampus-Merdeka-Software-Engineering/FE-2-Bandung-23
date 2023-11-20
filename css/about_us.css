@@ -294,6 +294,10 @@ ul li a {
   main .content .content-image img {
     width: 75%;
   }
+
+  .our-team hr {
+    width: 120px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -304,7 +308,11 @@ ul li a {
     font-size: 1.5rem;
   }
   header.navbar-container .logo img {
-    width: 120px;
+    width: 150px;
+  }
+
+  .content {
+    margin-top: 60px;
   }
 
   #hamburger {

@@ -492,6 +492,24 @@ ul li a {
   .card {
     max-width: 75%;
   }
+
+  .hr2 {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .hr3 {
+    max-width: 270px;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .hr4 {
+    max-width: 610px;
+    width: 100%;
+    border-radius: 15px;
+  }
 }
 /* End of Display Laptop */
 
@@ -499,6 +517,24 @@ ul li a {
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
+  }
+
+  .hr2 {
+    max-width: 335px;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .hr3 {
+    max-width: 225px;
+    width: 100%;
+    border-radius: 15px;
+  }
+
+  .hr4 {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 15px;
   }
 
   .box-description {
@@ -577,15 +613,16 @@ ul li a {
 
   .footer-col,
   .footer-col-com {
-    display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   .footer-col img {
     width: 80%;
+    margin: auto;
   }
 
   .footer-col .title,
@@ -608,7 +645,7 @@ ul li a {
 
 /* 3. Display HP */
 
-@media (max-width: 576px) {
+@media (max-width: 450px) {
   .title-description {
     font-size: 20px;
   }
@@ -628,16 +665,21 @@ ul li a {
     max-width: 135px;
     width: 100%;
     height: 4px;
+    border-radius: 15px;
   }
 
   .hr3 {
     max-width: 175px;
     width: 100%;
+    height: 4px;
+    border-radius: 15px;
   }
 
   .hr4 {
     max-width: 120px;
     width: 100%;
+    height: 4px;
+    border-radius: 15px;
   }
 
   header.navbar-container .logo img {

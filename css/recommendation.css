@@ -392,6 +392,7 @@ ul li a {
 
   .detail-menu {
     width: 650px;
+    margin-inline: 20px;
   }
 
   .menu-img {
@@ -431,6 +432,7 @@ ul li a {
   .footer-col-com .title {
     width: 100%;
     text-align: center;
+    font-size: 12px;
   }
 
   .social-links i {

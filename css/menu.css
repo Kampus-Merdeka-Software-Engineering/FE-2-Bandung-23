@@ -518,6 +518,29 @@ ul li a {
     justify-content: center;
     align-items: center;
   }
+
+  .kategori ul li a {
+    font-size: 14px;
+  }
+
+  .art-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .artikel {
+    height: 600px;
+  }
+
+  .artikel p {
+    font-size: 12px;
+  }
+
+  .artikel a {
+    font-size: 12px;
+    margin-left: 25px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -590,11 +613,22 @@ ul li a {
   }
 
   .art-title {
-    font-size: 24px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .artikel {
+    height: 600px;
   }
 
   .artikel p {
-    font-size: 16px;
+    font-size: 12px;
+  }
+
+  .artikel a {
+    font-size: 12px;
+    margin-left: 25px;
   }
 
   .row {
@@ -620,6 +654,10 @@ ul li a {
     align-items: center;
   }
 
+  .nama-menu h3 {
+    font-size: 14px;
+  }
+
   footer {
     display: flex;
     flex-direction: column;
@@ -643,6 +681,7 @@ ul li a {
   .footer-col-com .title {
     width: 100%;
     text-align: center;
+    font-size: 12px;
   }
 
   .social-links i {
@@ -747,8 +786,16 @@ ul li a {
     max-width: 150px;
   }
 
-  .nama-menu {
-    font-size: 1.4rem;
+  .nama-menu h3 {
+    font-size: 14px;
+  }
+
+  .nama-menu h4 {
+    font-size: 12px;
+  }
+
+  .nama-menu a {
+    font-size: 10px;
   }
 
   .footer-col img {
