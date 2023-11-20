@@ -84,6 +84,7 @@ header.navbar-container .nav-list li:hover a {
   background-color: #a6cf98;
   color: #186f65;
 }
+
 /* End of Header */
 
 /* Main Content */
@@ -633,20 +634,20 @@ ul li a {
   .container {
     display: flex;
     flex-wrap: wrap;
-    height: 1100px;
+    height: 1300px;
     margin-top: 60px;
   }
 
   .row {
     width: 500px;
-    max-height: 400px;
+    max-height: 500px;
     height: 100%;
     justify-content: left;
   }
 
   .scroll {
     overflow: auto;
-    max-height: 350px;
+    max-height: 400px;
     height: 100%;
     width: 100%;
     margin-top: 10px;
@@ -675,6 +676,7 @@ ul li a {
   .order-total {
     width: 100px;
     margin-top: 5px;
+    margin-inline: 10px;
   }
 
   .order-total p {
@@ -806,21 +808,23 @@ ul li a {
 
   .footer-col,
   .footer-col-com {
-    display: flex;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   .footer-col img {
     width: 80%;
+    margin: auto;
   }
 
   .footer-col .title,
   .footer-col-com .title {
     width: 100%;
     text-align: center;
+    font-size: 12px;
   }
 
   .social-links i {
@@ -879,6 +883,18 @@ ul li a {
 
   .nav-list.active {
     right: 0;
+  }
+
+  .row {
+    height: 400px;
+  }
+
+  .scroll {
+    height: 350px;
+  }
+
+  .add-order {
+    height: 50px;
   }
 
   .side-bar {
