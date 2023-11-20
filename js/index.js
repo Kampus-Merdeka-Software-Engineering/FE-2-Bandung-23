@@ -47,7 +47,7 @@ hamburgerButtonElement.addEventListener("click", () => {
 
 // Function hamburger button
 const filterButtonElement = document.querySelector("#filter");
-const filterElement = document.querySelector(".row");
+const filterElement = document.querySelector(".side-bar");
 
 filterButtonElement.addEventListener("click", () => {
   filterButtonElement.classList.toggle("active");
@@ -56,9 +56,9 @@ filterButtonElement.addEventListener("click", () => {
 // End of Function hamburger button
 
 document.querySelectorAll(".order-total").forEach(function (element) {
-  var minusButton = element.querySelector(".minus");
-  var plusButton = element.querySelector(".plus");
-  var jumlahElement = element.querySelector(".num");
+  var minusButton = element.querySelectorAll(".minus");
+  var plusButton = element.querySelectorAll(".plus");
+  var jumlahElement = element.querySelectorAll(".num");
   var jumlah = parseInt(jumlahElement.innerText);
 
   minusButton.addEventListener("click", function () {
@@ -112,9 +112,9 @@ nomorTeleponElement.addEventListener("input", function () {
 TeleponUtil.formatNomorTelepon(nomorTeleponElement);
 
 // Modal
-var konfirmasiBtn = document.querySelector("#konfirmasiBtn");
-var tutupBtn = document.querySelector("#tutupBtn");
-var modal = document.querySelector("#modal");
+var konfirmasiBtn = document.getElementById("konfirmasiBtn");
+var tutupBtn = document.getElementById("tutupBtn");
+var modal = document.getElementById("modal");
 
 konfirmasiBtn.addEventListener("click", function () {
   tampilkanModal();
@@ -129,5 +129,7 @@ function tampilkanModal() {
 }
 
 function tutupModal() {
+  modal.style.display = "none";
+  // Arahkan ke halaman index.html
   window.location.href = "index.html";
 }

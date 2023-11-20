@@ -328,14 +328,25 @@ ul li a {
 
   .container {
     margin-top: 60px;
+    height: 600px;
   }
 
   .content {
     margin-inline: 30px;
   }
 
-  .konten2 {
-    margin: 20px;
+  .content2 {
+    display: block;
+  }
+
+  p {
+    width: 500px;
+    margin: auto;
+  }
+
+  .content2 button {
+    margin: auto;
+    margin-top: 20px;
   }
 
   hr {
@@ -395,6 +406,11 @@ ul li a {
     font-size: 1rem;
   }
 
+  .container {
+    margin-top: 60px;
+    height: 400px;
+  }
+
   .content {
     margin-bottom: 0;
   }
@@ -440,10 +456,20 @@ ul li a {
     right: 0;
   }
 
-  p {
-    font-size: 1.45rem;
+  .content2 {
+    display: block;
   }
 
+  p {
+    font-size: 1.25rem;
+    width: 300px;
+    margin: auto;
+  }
+
+  .content2 button {
+    margin: auto;
+    margin-top: 20px;
+  }
   .footer-col img {
     max-width: 144px;
     justify-content: center;

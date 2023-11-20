@@ -426,20 +426,20 @@ ul li a {
     padding-inline: 8px;
   }
 
-  main .about-us .about-us-image img{
+  main .about-us .about-us-image img {
     flex: 1;
     display: flex;
     justify-content: end;
     height: 200px;
-    width: 100%; 
-}
+    width: 100%;
+  }
 
-  h1.about-us-title {
+  main .about-us .about-us-description .about-us-title {
     font-size: 20px;
     margin-bottom: 5px;
   }
 
-  h1.our-team-title {
+  .team .our-team .our-team-title {
     font-size: 20px;
     color: #b2533e;
   }
