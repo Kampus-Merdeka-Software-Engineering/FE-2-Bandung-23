@@ -514,6 +514,29 @@ ul li a {
     justify-content: center;
     align-items: center;
   }
+
+  .kategori ul li a {
+    font-size: 14px;
+  }
+
+  .art-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .article {
+    height: 600px;
+  }
+
+  .article p {
+    font-size: 12px;
+  }
+
+  .article a {
+    font-size: 12px;
+    margin-left: 25px;
+  }
 }
 /* End of Display Laptop */
 
@@ -592,6 +615,25 @@ ul li a {
     font-size: 16px;
   }
 
+  .art-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .article {
+    height: 600px;
+  }
+
+  .article p {
+    font-size: 12px;
+  }
+
+  .article a {
+    font-size: 12px;
+    margin-left: 25px;
+  }
+
   .side-bar {
     width: 230px;
   }
@@ -613,6 +655,10 @@ ul li a {
     gap: 20px;
     justify-content: center;
     align-items: center;
+  }
+
+  .menu-name h3 {
+    font-size: 14px;
   }
 
   footer {
@@ -638,6 +684,7 @@ ul li a {
   .footer-col-com .title {
     width: 100%;
     text-align: center;
+    font-size: 12px;
   }
 
   .social-links i {
@@ -738,6 +785,18 @@ ul li a {
     font-size: 1.4rem;
   }
 
+  .menu-name h3 {
+    font-size: 14px;
+  }
+
+  .menu-name h4 {
+    font-size: 12px;
+  }
+
+  .menu-name a {
+    font-size: 10px;
+  }
+
   .footer-col img {
     max-width: 144px;
     justify-content: center;
@@ -749,4 +808,3 @@ ul li a {
     width: 100%;
   }
 }
-/* End of Display Hp */

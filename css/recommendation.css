@@ -87,6 +87,8 @@ header.navbar-container .nav-list li:hover a {
 
 /* End of Header */
 
+/* main */
+
 main {
   width: 100%;
   flex: 1;
@@ -286,6 +288,10 @@ ul li a {
 
 /* End of Footer */
 
+/* Responsive Page Setting */
+
+/* 1. Display Laptop */
+
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
@@ -324,7 +330,9 @@ ul li a {
     width: 300px;
   }
 }
+/* End of Display Laptop */
 
+/* 2. Display Tablet */
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
@@ -384,6 +392,7 @@ ul li a {
 
   .detail-menu {
     width: 650px;
+    margin-inline: 20px;
   }
 
   .menu-img {
@@ -423,6 +432,7 @@ ul li a {
   .footer-col-com .title {
     width: 100%;
     text-align: center;
+    font-size: 12px;
   }
 
   .social-links i {
@@ -435,6 +445,9 @@ ul li a {
     margin-block: 7px;
   }
 }
+/* End of Display Tablet */
+
+/* 3. Display HP */
 
 @media (max-width: 450px) {
   .title {
@@ -489,3 +502,4 @@ ul li a {
     width: 100%;
   }
 }
+/* End of Display Hp */
