@@ -96,41 +96,41 @@ main {
 }
 
 /* Tentang Kami */
-.content {
-  /*margin-right: 30px;*/
-  /*margin-left: 30px;*/
-  margin-top: 80px;
+.about-us {
+  margin-top: 60px;
   flex: 1;
   display: flex;
   align-items: center;
   background: linear-gradient(to right, #fdfaf2, white);
 }
 
-main .content .content-description {
+main .about-us .about-us-description {
   flex: 1 1;
   text-align: center;
   width: 100%;
   padding: 10px;
 }
 
-h1.title1 {
-  margin-bottom: 15px;
+main .about-us .about-us-description .about-us-title {
+  font-size: 3.5rem;
+  margin-block: 1rem;
 }
 
-main .content .content-description p {
+main .about-us .about-us-description p {
   line-height: 1.7rem;
   font-size: 1.2rem;
   text-align: left;
   padding: 10px;
 }
 
-main .content .content-image {
+main .about-us .about-us-image {
   flex: 1;
   display: flex;
   justify-content: end;
 }
 
-main .content .content-image img {
+main .about-us .about-us-image img {
+  max-width: 500px;
   width: 100%;
 }
 
@@ -151,11 +151,7 @@ main .content .content-image img {
   margin: 30px;
 }
 
-h1.title2 {
-  color: #b2533e;
-}
-
-.team .our-team .title {
+.team .our-team .our-team-title {
   justify-content: center;
   text-align: center;
   font-size: 2.5rem;
@@ -170,7 +166,7 @@ h1.title2 {
   background-color: #b2533e;
 }
 
-.aboutus-container {
+.our-team-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Dua kolom dengan lebar yang sama */
   grid-template-rows: repeat(2, 1fr); /* Tiga baris dengan tinggi yang sama */
@@ -180,13 +176,13 @@ h1.title2 {
   flex-wrap: wrap;
 }
 
-.aboutus-container .aboutus-item {
-  width: 270px;
+.our-team-container .our-team-item {
+  width: 240px;
   text-align: center;
   margin: auto;
 }
 
-.aboutus-item img {
+.our-team-item img {
   width: 200px;
   height: 200px;
   border-radius: 99px;
@@ -284,14 +280,14 @@ ul li a {
   html {
     font-size: 75%;
   }
-  .title {
+  .about-us-title {
     font-size: 1.75rem;
   }
   header.navbar-container .logo img {
     width: 150px;
   }
 
-  main .content .content-image img {
+  main .about-us .about-us-image img {
     width: 75%;
   }
 
@@ -304,7 +300,7 @@ ul li a {
   html {
     font-size: 62.5%;
   }
-  .title {
+  .about-us-title {
     font-size: 1.5rem;
   }
   header.navbar-container .logo img {
@@ -352,8 +348,8 @@ ul li a {
     right: 0;
   }
 
-  main .content .content-image img {
-    width: 100%;
+  main .about-us .about-us-image img {
+    width: 62.5%;
   }
 
   h1.title1 {
@@ -423,27 +419,27 @@ ul li a {
 }
 
 @media (max-width: 450px) {
-  main .content .content-description p {
+  main .about-us .about-us-description p {
     line-height: 1rem;
     font-size: 8px;
     text-align: justify;
     padding-inline: 8px;
   }
 
-  main .content .content-image img {
+  main .about-us .about-us-image img{
     flex: 1;
     display: flex;
     justify-content: end;
     height: 200px;
-    width: 100%; /*widthnya belum bisa, jadi gepeng*/
-  }
+    width: 100%; 
+}
 
-  h1.title1 {
+  h1.about-us-title {
     font-size: 20px;
     margin-bottom: 5px;
   }
 
-  h1.title2 {
+  h1.our-team-title {
     font-size: 20px;
     color: #b2533e;
   }
@@ -489,28 +485,32 @@ ul li a {
     right: 0;
   }
 
-  .content {
+  .about-us {
     width: 100%;
   }
 
-  .aboutus-container {
+  .about-us .about-us-description {
+    width: 220px;
+  }
+
+  .our-team-container {
     width: 450px;
   }
 
-  .aboutus-container {
+  .our-team-container {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
     gap: 20px;
   }
 
-  .aboutus-item {
-    max-width: 130px;
+  .our-team-item {
+    max-width: 170px;
     width: 100%;
     height: 100%;
     margin-bottom: 10px;
   }
 
-  .aboutus-item img {
+  .our-team-item img {
     max-width: 100px;
     width: 100%;
     max-height: 100px;

@@ -19,7 +19,7 @@ links.forEach((link) => {
 // End of Function active link on the navbar
 
 // Function active link on Category
-const listItems = document.querySelectorAll(".list-kat li");
+const listItems = document.querySelectorAll(".list-cat li");
 
 // Menambahkan event listener pada setiap elemen <li>
 listItems.forEach(function (item, index) {
