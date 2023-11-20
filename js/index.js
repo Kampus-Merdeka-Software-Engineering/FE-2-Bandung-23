@@ -112,9 +112,9 @@ nomorTeleponElement.addEventListener("input", function () {
 TeleponUtil.formatNomorTelepon(nomorTeleponElement);
 
 // Modal
-var konfirmasiBtn = document.getElementById("konfirmasiBtn");
-var tutupBtn = document.getElementById("tutupBtn");
-var modal = document.getElementById("modal");
+var konfirmasiBtn = document.querySelector("#konfirmasiBtn");
+var tutupBtn = document.querySelector("#tutupBtn");
+var modal = document.querySelector("#modal");
 
 konfirmasiBtn.addEventListener("click", function () {
   tampilkanModal();

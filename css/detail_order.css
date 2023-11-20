@@ -11,7 +11,7 @@ html,
 body,
 main {
   width: 100%;
-  min-height: 100vh;
+  height: 100%;
   font-size: 100%;
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -468,7 +468,7 @@ footer {
   /* max-height: 400px; */
   justify-content: center;
   width: 100%;
-  margin-top: 160px;
+  margin-top: 20px;
 }
 
 .footer-col {
@@ -616,6 +616,7 @@ ul li a {
     font-family: "Poppins";
     text-align: center;
     margin: 0;
+    margin-top: 20px;
   }
 
   .order hr {
@@ -632,6 +633,7 @@ ul li a {
     display: flex;
     flex-wrap: wrap;
     height: 1100px;
+    margin-top: 60px;
   }
 
   .row {
@@ -646,28 +648,38 @@ ul li a {
     max-height: 350px;
     height: 100%;
     width: 100%;
-    max-width: 300px;
     margin-top: 10px;
   }
 
   .side-bar {
     align-items: center;
-    width: 100%;
-    height: 120px;
+    width: 475px;
+    height: 105px;
     margin: 20px 10px;
     box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
     border-radius: 10px;
     background-color: #fdfaf2;
   }
 
-  .add-order {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    max-width: 665px;
-    height: 30px;
-    padding: 0;
+  .side-bar img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .order-type {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  .order-total {
+    width: 80px;
+    margin-top: 5px;
+  }
+
+  .order-total p {
+    font-size: 14px;
+    height: 20px;
+    width: 20px;
   }
 
   .add-order h2 {
@@ -708,7 +720,7 @@ ul li a {
     height: 620px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
-    margin-top: 50px;
+    margin-top: 0;
   }
 
   .order-menu {
@@ -732,7 +744,8 @@ ul li a {
   .order-confirm-btn {
     display: flex;
     justify-content: center;
-    margin-top: 120px;
+    margin-top: 20px;
+    margin-inline: 20px;
   }
 
   .order-confirm-btn button {
@@ -761,16 +774,7 @@ ul li a {
   }
 
   .subtotal-item {
-    /* display: flex;
-    border-radius: 10px;
-    background-color: #fce09b;
-    max-width: 550px;
-    width: 100%;
-    max-height: 100px;
-    height: 100%;
-    align-items: center;
-    justify-content: space-between; */
-    margin-top: 700px;
+    margin-inline: 20px;
   }
 
   .footer-col .title {
@@ -857,6 +861,75 @@ ul li a {
 
   .nav-list.active {
     right: 0;
+  }
+
+  .side-bar {
+    width: 350px;
+    height: 105px;
+  }
+
+  .order h2 {
+    font-size: 20px;
+  }
+
+  .order hr {
+    width: 150px;
+    height: 4px;
+  }
+
+  .side-bar img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .order-type {
+    padding: 10px;
+  }
+
+  .order-type p {
+    font-size: 12px;
+  }
+
+  .notes input {
+    margin-top: 8px;
+    height: 30px;
+  }
+
+  .order-total {
+    width: 80px;
+  }
+
+  .order-total p {
+    font-size: 14px;
+    height: 20px;
+    width: 20px;
+  }
+
+  .row-content {
+    margin-inline: 15px;
+    height: 640px;
+  }
+
+  .form {
+    max-height: 400px;
+    height: 100%;
+  }
+
+  .form .first-name,
+  .last-name,
+  .email,
+  .no-telp {
+    max-width: 320px;
+    width: 100%;
+  }
+
+  .form .address {
+    height: 100px;
+  }
+
+  .form input {
+    max-width: 320px;
+    width: 100%;
   }
 
   .footer-col img {
