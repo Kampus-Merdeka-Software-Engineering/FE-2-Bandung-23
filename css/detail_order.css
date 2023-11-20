@@ -654,7 +654,7 @@ ul li a {
   .side-bar {
     align-items: center;
     width: 475px;
-    height: 105px;
+    height: 130px;
     margin: 20px 10px;
     box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
     border-radius: 10px;
@@ -662,8 +662,8 @@ ul li a {
   }
 
   .side-bar img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 130px;
   }
 
   .order-type {
@@ -672,7 +672,7 @@ ul li a {
   }
 
   .order-total {
-    width: 80px;
+    width: 100px;
     margin-top: 5px;
   }
 
@@ -706,7 +706,7 @@ ul li a {
   }
 
   .row-content {
-    width: 100%;
+    width: 500px;
     margin-inline: 10px;
     align-items: left;
     justify-content: left;
@@ -715,12 +715,29 @@ ul li a {
   .content {
     display: block;
     background-color: #fff1cd;
-    max-width: 470px;
     width: 100%;
-    height: 620px;
+    height: 670px;
     border-radius: 10px;
     box-shadow: 3px 3px 5px 3px rgb(0, 0, 0, 0.5);
     margin-top: 0;
+  }
+
+  .form .first-name,
+  .last-name,
+  .email,
+  .no-telp {
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .form {
+    max-height: 430px;
+    height: 100%;
+  }
+
+  .form input {
+    max-width: 500px;
+    width: 100%;
   }
 
   .order-menu {
@@ -868,6 +885,11 @@ ul li a {
     height: 105px;
   }
 
+  .side-bar img {
+    width: 100px;
+    height: 100px;
+  }
+
   .order h2 {
     font-size: 20px;
   }
@@ -910,6 +932,10 @@ ul li a {
     height: 640px;
   }
 
+  .content {
+    height: 620px;
+  }
+
   .form {
     max-height: 400px;
     height: 100%;
@@ -930,6 +956,10 @@ ul li a {
   .form input {
     max-width: 320px;
     width: 100%;
+  }
+
+  .order-confirm-btn {
+    margin-top: 20px;
   }
 
   .footer-col img {
