@@ -21,7 +21,6 @@ main {
 }
 
 /* Header */
-
 header.navbar-container {
   position: fixed;
   top: 0;
@@ -85,13 +84,12 @@ header.navbar-container .nav-list li:hover a {
   background-color: #a6cf98;
   color: #186f65;
 }
-
 /* End of Header */
 
+/* Start Container */
 main {
   width: 100%;
   flex: 1;
-
   display: flex;
   align-items: center;
 }
@@ -101,7 +99,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: radial-gradient(
+  background: radial-gradient
+  (
     circle farthest-side at center right,
     #f6e8c9,
     #ffffff
@@ -109,25 +108,20 @@ main {
   margin-top: 80px;
 }
 
-.row {
+/* Side Bar */
+.side-bar {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
   max-width: 300px;
   width: 100%;
   margin: 30px 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.nav-link.active {
-  background-color: #a6cf98;
-  color: #186f65;
+.side-bar .open {
+  transform: translate(0, 0);
 }
-
-.list-kat a.active {
-  background-color: #a6cf98;
-  color: #186f65;
-}
-/* Start Kategori */
 
 #filter {
   display: none;
@@ -137,16 +131,10 @@ main {
   text-align: center;
   justify-content: center;
 }
+/* End of Side Bar */
 
-.row {
-  transition: transform 0.3s ease-in-out;
-}
-
-.row.open {
-  transform: translate(0, 0);
-}
-
-.kategori {
+/* Start Kategori Menu */
+.menu-category {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,14 +149,14 @@ main {
   border: 1px solid #186f65;
 }
 
-.list-kat {
+.list-cat {
   max-width: 400px;
   width: 100%;
   max-height: 500px;
   height: 100%;
 }
 
-.list-kat ul {
+.list-cat ul {
   padding: 0;
   max-height: 500px;
   height: 100%;
@@ -176,11 +164,11 @@ main {
   list-style: none;
 }
 
-.list-kat li {
+.list-cat li {
   border-radius: inherit;
 }
 
-.kategori ul li a {
+.menu-category ul li a {
   color: #186f65;
   font-size: 1.1rem;
   word-spacing: 2px;
@@ -192,7 +180,7 @@ main {
   padding: 12px 20px;
 }
 
-.kategori i {
+.menu-category i {
   font-size: 10px;
   align-items: center;
 }
@@ -204,7 +192,7 @@ main {
   background-color: #186f65;
 }
 
-.list-kat .active {
+.list-cat .active {
   background-color: #d7996c;
   color: white;
 }
@@ -212,14 +200,12 @@ main {
 .active li a {
   color: white;
 }
-/* End of Kategori */
+/* End of Kategori Menu*/
 
 /* Start Artikel */
-.artikel {
-  /* display: flex; */
+.article {
   justify-content: center;
   align-items: center;
-  /* flex: 1; */
   max-width: 400px;
   width: 100%;
   height: 775px;
@@ -230,7 +216,7 @@ main {
   box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
 }
 
-.art-title {
+.title-article {
   text-align: center;
   color: white;
   width: 100%;
@@ -240,12 +226,12 @@ main {
   font-size: 24px;
 }
 
-.title-hr {
+.title-article-hr {
   height: 5px;
   background-color: #fce09b;
 }
 
-.artikel p {
+.article p {
   text-align: left;
   color: white;
   /* height: 25px; */
@@ -257,7 +243,7 @@ main {
   font-size: 18px;
 }
 
-.artikel a {
+.article a {
   text-align: center;
   margin-left: 60px;
   margin-right: 10px;
@@ -271,16 +257,17 @@ main {
   font-style: italic;
 }
 
-.artikel i {
+.article i {
   margin-left: 10px;
 }
 
-.artikel-hr {
+.article-hr {
   margin-block: 30px;
 }
 /* End of Artikel */
 
-.row-konten {
+/* Main Content */
+.main-content {
   display: flex;
   flex-wrap: wrap;
   height: 100%;
@@ -293,7 +280,7 @@ main {
   top: 0;
 }
 
-.konten {
+.sub-main-content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -306,6 +293,7 @@ main {
   border-radius: 10px;
 }
 
+/* Search Bar */
 .search-bar {
   display: flex;
   max-height: 50px;
@@ -340,7 +328,9 @@ main {
   border: transparent;
   background-color: transparent;
 }
+/* End of Search Bar */
 
+/* Start Daftar Menu */
 .list-menu {
   display: grid;
   max-width: 850px;
@@ -352,7 +342,7 @@ main {
   align-items: center;
 }
 
-.card {
+.card-menu {
   display: flex;
   flex-wrap: wrap;
   max-width: 400px;
@@ -363,7 +353,7 @@ main {
   margin-top: 5px;
 }
 
-.card img {
+.card-menu img {
   max-width: 375px;
   width: 100%;
   max-height: 260px;
@@ -373,7 +363,7 @@ main {
   box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
 }
 
-.nama-menu {
+.menu-name {
   bottom: 25px;
   border-radius: 15px;
   background-color: #fce09b;
@@ -387,19 +377,20 @@ main {
   border: 0.5px solid black;
 }
 
-.nama-menu h4 {
+.menu-name h4 {
   font-weight: 400;
 }
 
-.nama-menu a {
+.menu-name a {
   text-decoration: none;
   color: #b2533e;
   font-weight: 600;
 }
 
-.nama-menu i {
+.menu-name i {
   margin-left: 10px;
 }
+/* End of Daftar Menu */
 
 /*Footer*/
 footer {
@@ -408,6 +399,14 @@ footer {
   max-height: 400px;
   justify-content: center;
   width: 100%;
+}
+
+.footer-col {
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding-block: 20px;
+  width: 25%;
 }
 
 .footer-col img {
@@ -426,14 +425,6 @@ footer {
   margin-inline: auto;
   justify-content: center;
   width: 100%;
-}
-
-.footer-col {
-  justify-content: center;
-  align-items: center;
-  color: white;
-  padding-block: 20px;
-  width: 25%;
 }
 
 .footer-col .title {
@@ -479,32 +470,37 @@ ul li a {
 .social-links i fa-brands::before {
   size: 40px;
 }
-
 /* End of Footer */
 
+/* Responsive Page Setting */
+
+/* 1. Display Laptop */
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
   }
+
   .title {
     font-size: 1.75rem;
   }
+
   header.navbar-container .logo img {
     width: 150px;
   }
+
   .container {
     width: 100%;
   }
 
-  .row {
+  .side-bar {
     width: 230px;
   }
 
-  .row-konten {
+  .main-content {
     width: 480px;
   }
 
-  .card {
+  .card-menu {
     width: 200px;
   }
 
@@ -529,20 +525,22 @@ ul li a {
     margin-top: 10px;
   }
 
-  .artikel {
+  .article {
     height: 600px;
   }
 
-  .artikel p {
+  .article p {
     font-size: 12px;
   }
 
-  .artikel a {
+  .article a {
     font-size: 12px;
     margin-left: 25px;
   }
 }
+/* End of Display Laptop */
 
+/* 2. Display Tablet */
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
@@ -589,27 +587,32 @@ ul li a {
     margin-block: 20px;
   }
 
-  /* .nav-item {
-  } */
-
   .nav-list.active {
     right: 0;
   }
 
-  .kategori {
+  .menu-category {
     max-height: 450px;
     height: 100%;
   }
 
-  .list-kat {
+  .list-cat {
     max-height: 450px;
     height: 100%;
   }
 
-  .kategori ul li a {
+  .menu-category ul li a {
     font-size: 1.4rem;
     padding: 12px 15px;
     height: 47px;
+  }
+
+  .title-article {
+    font-size: 24px;
+  }
+
+  .article p {
+    font-size: 16px;
   }
 
   .art-title {
@@ -618,28 +621,28 @@ ul li a {
     margin-top: 10px;
   }
 
-  .artikel {
+  .article {
     height: 600px;
   }
 
-  .artikel p {
+  .article p {
     font-size: 12px;
   }
 
-  .artikel a {
+  .article a {
     font-size: 12px;
     margin-left: 25px;
   }
 
-  .row {
+  .side-bar {
     width: 230px;
   }
 
-  .row-konten {
+  .main-content {
     width: 400px;
   }
 
-  .card {
+  .card-menu {
     width: 175px;
   }
 
@@ -654,7 +657,7 @@ ul li a {
     align-items: center;
   }
 
-  .nama-menu h3 {
+  .menu-name h3 {
     font-size: 14px;
   }
 
@@ -694,7 +697,9 @@ ul li a {
     margin-block: 7px;
   }
 }
+/* End of Display Tablet */
 
+/* 3. Display HP */
 @media (max-width: 450px) {
   .container {
     margin-top: 60px;
@@ -704,6 +709,7 @@ ul li a {
   .title {
     font-size: 1rem;
   }
+
   header.navbar-container .logo img {
     width: 130px;
   }
@@ -721,7 +727,7 @@ ul li a {
     border-bottom-right-radius: 10px;
   }
 
-  .row {
+  .side-bar {
     position: fixed;
     justify-content: center;
     align-items: center;
@@ -738,32 +744,25 @@ ul li a {
     text-align: left;
   }
 
-  .kategori {
+  .menu-category {
     width: 150px;
     height: 300px;
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
   }
 
-  .kategori ul li a {
+  .menu-category ul li a {
     padding: 5px;
     height: 30px;
   }
 
-  .row.active {
+  .side-bar .active {
     left: 0;
   }
 
-  .artikel {
+  .article {
     display: none;
   }
-
-  /* .nav-list ul {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 170px;
-    margin-block: 20px;
-  } */
 
   .search-bar {
     width: 355px;
@@ -778,23 +777,23 @@ ul li a {
     width: 100%;
   }
 
-  /* .konten {
-    margin-top: 20px;
-  } */
-
-  .card {
+  .card-menu {
     max-width: 150px;
   }
 
-  .nama-menu h3 {
+  .menu-name {
+    font-size: 1.4rem;
+  }
+
+  .menu-name h3 {
     font-size: 14px;
   }
 
-  .nama-menu h4 {
+  .menu-name h4 {
     font-size: 12px;
   }
 
-  .nama-menu a {
+  .menu-name a {
     font-size: 10px;
   }
 
