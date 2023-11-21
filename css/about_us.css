@@ -130,6 +130,14 @@ main .about-us .about-us-description p {
   padding: 10px;
 }
 
+.featured {
+  margin-top: 60px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #fdfaf2, white);
+}
+
 main .about-us .about-us-image {
   flex: 1;
   display: flex;
