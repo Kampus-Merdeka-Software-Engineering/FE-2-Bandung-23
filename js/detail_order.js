@@ -54,25 +54,63 @@ document.querySelectorAll(".order-total").forEach(function (element) {
 });
 
 // Modal
+
+// Get modals and buttons
 var konfirmasiBtn = document.getElementById("konfirmasiBtn");
-var tutupBtn = document.getElementById("tutupBtn");
-var modal = document.getElementById("modal");
+var modal = document.getElementById("myModal");
+var modal2 = document.getElementById("myModal2");
+var btn = document.getElementById("tutupBtn");
+var closeModalBtn = document.getElementById("closeModalBtn");
+var nextModalBtn = document.getElementById("nextModalBtn");
+var closeModalBtn2 = document.getElementById("closeModalBtn2");
+var homeBtn = document.getElementById("homeBtn");
 
 konfirmasiBtn.addEventListener("click", function () {
   tampilkanModal();
 });
 
-tutupBtn.addEventListener("click", function () {
+homeBtn.addEventListener("click", function () {
   tutupModal();
 });
-
-function tampilkanModal() {
-  modal.style.display = "flex";
-}
 
 function tutupModal() {
   modal.style.display = "none";
   // Arahkan ke halaman index.html
   window.location.href = "index.html";
 }
+
+function tampilkanModal() {
+  modal.style.display = "flex";
+}
+
+// Add event listener to open the first modal
+btn.addEventListener("click", function () {
+  modal.style.display = "block";
+});
+
+// Add event listener to close the first modal
+closeModalBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+// Add event listener to open the second modal
+nextModalBtn.addEventListener("click", function () {
+  modal.style.display = "none";
+  modal2.style.display = "flex";
+});
+
+// Add event listener to close the second modal
+closeModalBtn2.addEventListener("click", function () {
+  modal2.style.display = "none";
+});
+
+// Add event listener to close the modals when clicking outside of them
+window.addEventListener("click", function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  } else if (event.target == modal2) {
+    modal2.style.display = "none";
+  }
+});
+
 // End of Modal

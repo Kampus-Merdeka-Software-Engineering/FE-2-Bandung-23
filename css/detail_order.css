@@ -434,16 +434,20 @@ header.navbar-container .nav-list li:hover a {
   text-align: center;
   max-width: 550px;
   width: 100%;
-  max-height: 300px;
+  max-height: 330px;
   height: 100%;
 }
 
 .hr-modal {
   background-color: #b2533e;
-  max-width: 200px;
-  height: 5px;
+  max-width: 450px;
+  height: 4px;
   border-radius: 10px;
   margin-inline: auto;
+}
+
+.modal-content h1 {
+  font-size: 24px;
 }
 
 .modal-content p {
@@ -454,12 +458,84 @@ header.navbar-container .nav-list li:hover a {
   margin-block: 40px;
 }
 
+.modal-title {
+  display: flex;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.modal-title h1 {
+  margin-left: 20px;
+}
+
+#closeModalBtn {
+  font-size: 32px;
+}
+
+.list-order {
+  overflow: auto;
+  height: 150px;
+  margin-block: 20px;
+}
+
+.list-detail {
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-detail p {
+  margin: 0;
+}
+
+.list-detail hr {
+  height: 20px;
+}
+
 .close-btn {
   background-color: #186f65;
   color: white;
   padding: 15px;
   border: none;
   border-radius: 30px;
+  margin-top: 15px;
+}
+
+.modal2 {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content2 {
+  background-color: #fff;
+  color: #b2533e;
+  padding: 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 550px;
+  width: 100%;
+  max-height: 330px;
+  height: 100%;
+}
+
+.modal-content2 p {
+  color: black;
+  font-size: 21px;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+  margin-top: 60px;
 }
 /* End of Order Confirmation */
 
