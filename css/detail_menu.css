@@ -405,12 +405,16 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .title-review h1 {
+  justify-content: center;
+  align-items: center;
   font-size: 1.5 rem;
   color: #b2533e;
   margin-top: 20px;
+  text-align: center;
 }
 
 .title-review hr {
+  align-items: center;
   width: 115px;
   height: 5px;
   border-radius: 15px;
@@ -738,6 +742,9 @@ ul li a {
 
   .title-review h1 {
     margin-bottom: 0;
+    /* margin-left:250px; */
+    justify-content: center;
+    align-items: center;
   }
 
   .title-review hr {
@@ -745,6 +752,8 @@ ul li a {
     height: 4px;
     background-color: #b2533e;
     border-radius: 15px;
+    justify-content: center;
+    align-items: center;
   }
 
   .footer-col,
