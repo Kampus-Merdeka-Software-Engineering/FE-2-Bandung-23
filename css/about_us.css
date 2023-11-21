@@ -152,6 +152,8 @@ main .about-us .about-us-image img {
   margin-block: 20px;
 }
 
+/* End of Tentang Kami */
+
 /*Tim Kami*/
 .team {
   max-height: 950px;
@@ -214,6 +216,8 @@ main .about-us .about-us-image img {
   margin-top: 10px;
   background-color: #f7e1ae;
 }
+
+/* End of Tim Kami */
 
 /*Footer*/
 footer {
