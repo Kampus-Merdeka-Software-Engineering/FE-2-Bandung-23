@@ -102,8 +102,7 @@ main {
   );
 }
 
-/* recommend start */
-
+/* Recommend Start */
 .title-recommend {
   text-align: center;
   font-size: 1 rem;
@@ -222,8 +221,7 @@ main {
   font-size: 1rem;
   margin-top: 15px;
 }
-
-/* end of recomeend */
+/* End of Recommend */
 
 /*Footer*/
 footer {
