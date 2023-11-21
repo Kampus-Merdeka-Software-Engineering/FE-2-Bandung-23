@@ -130,14 +130,6 @@ main .about-us .about-us-description p {
   padding: 10px;
 }
 
-.featured {
-  margin-top: 60px;
-  flex: 1;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(to right, #fdfaf2, white);
-}
-
 main .about-us .about-us-image {
   flex: 1;
   display: flex;
@@ -148,11 +140,65 @@ main .about-us .about-us-image img {
   width: 100%;
 }
 
+/* End of Tentang Kami */
+
+/*Mengapa Memilih Kami*/
+.featured {
+  margin-top: 40px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to right, #fdfaf2, white);
+}
+
+.why-choose-us-title {
+  justify-content: center;
+  text-align: center;
+  font-size: 42px;
+  color: #b2533e;
+}
+
+.why-choose-us-title hr {
+  width: 200px;
+  height: 5px;
+  margin: auto;
+  border-radius: 15px;
+  background-color: #b2533e;
+}
+
 .about-image {
   margin-block: 20px;
 }
 
-/* End of Tentang Kami */
+.featured-description-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Dua kolom */
+  gap: 10px; /* Jarak antar elemen */
+  padding: 20px;
+}
+
+.featured-description-item {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid #ddd; */
+  padding: 20px;
+}
+
+.featured-description-item img {
+  /* max-width: 100%; */
+  width: 70px;
+  height: 70px;
+  margin-right: 20px;
+  /* height: auto; */
+}
+
+.featured-description-item p {
+  font-size: 1.5rem;
+  text-align: left;
+  padding: 10px;
+}
+
+/* End of Mengapa Memilih Kami */
 
 /*Tim Kami*/
 .team {
