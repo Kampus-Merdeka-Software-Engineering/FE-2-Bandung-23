@@ -114,19 +114,6 @@ main {
   margin: 30px 10px;
   transition: transform 0.3s ease-in-out;
 }
-
-.side-bar .open {
-  transform: translate(0, 0);
-}
-
-#filter {
-  display: none;
-  font-size: 28px;
-  text-decoration: none;
-  color: #b2533e;
-  text-align: center;
-  justify-content: center;
-}
 /* End of Side Bar */
 
 /* Start Kategori Menu */
@@ -319,6 +306,7 @@ main {
   font-size: 20px;
   border: transparent;
   background-color: transparent;
+  margin-left: 3px;
   outline: none;
 }
 
