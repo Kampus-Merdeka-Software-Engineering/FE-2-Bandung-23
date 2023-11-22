@@ -176,7 +176,7 @@ header.navbar-container .nav-list li:hover a {
 }
 /* End of category */
 
-/* Start  Article*/
+/* Start Artikel */
 .article {
   justify-content: center;
   align-items: center;
@@ -190,7 +190,7 @@ header.navbar-container .nav-list li:hover a {
   box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
 }
 
-.article-title {
+.title-article {
   text-align: center;
   color: white;
   width: 100%;
@@ -200,7 +200,7 @@ header.navbar-container .nav-list li:hover a {
   font-size: 24px;
 }
 
-.title-hr {
+.title-article-hr {
   height: 5px;
   background-color: #fce09b;
 }
@@ -238,7 +238,7 @@ header.navbar-container .nav-list li:hover a {
 .article-hr {
   margin-block: 30px;
 }
-/* End of Article */
+/* End of Artikel */
 
 .dropdown {
   display: none;
@@ -337,7 +337,7 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .menu-btn button {
-  padding: 10px;
+  /* padding: 10px;
   width: 120px;
   max-height: 40px;
   height: 100%;
@@ -345,7 +345,25 @@ header.navbar-container .nav-list li:hover a {
   border-radius: 7px;
   color: #fce09b;
   background-color: #186f65;
-  box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5); */
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #186f65;
+  cursor: pointer;
+  /* transition: all 0.15s ease-in; */
+}
+
+.menu-btn :hover{
+  border: 3px solid #186f65;
+  color: #2d3e50;
+  background-color: transparent;
 }
 
 .detail-menu img {
@@ -393,18 +411,18 @@ header.navbar-container .nav-list li:hover a {
 }
 /* End of Detail Menu */
 
-.title-review {
+/* .title-review {
   /* display: flex;
   flex-wrap: wrap; */
-  justify-content: center;
+  /* justify-content: center;
   align-items: center;
   margin-top: 20px;
   max-width: 900px;
   width: 100%;
   border-radius: 10px;
-}
+} */ 
 
-.title-review h1 {
+/* .title-review h1 {
   justify-content: center;
   align-items: center;
   font-size: 1.5 rem;
@@ -468,6 +486,11 @@ header.navbar-container .nav-list li:hover a {
 
 .review p {
   font-size: 1rem;
+} */
+/* end of detail menu */
+
+.article-bottom {
+  display: none;
 }
 
 /*Footer*/
@@ -568,6 +591,25 @@ ul li a {
 
   .container {
     width: 100%;
+  }
+
+  .art-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .article {
+    height: 600px;
+  }
+
+  .article p {
+    font-size: 12px;
+  }
+
+  .article a {
+    font-size: 12px;
+    margin-left: 25px;
   }
 }
 /* End of Display Laptop */
@@ -995,6 +1037,38 @@ ul li a {
 
   .review p {
     font-size: 12px;
+  }
+
+.article-bottom {
+    width: 360px;
+    display: block;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .article {
+    height: 520px;
+  }
+
+  .title-article {
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+
+  .article p {
+    font-size: 14px;
+  }
+
+  .article a {
+    margin-left: 140px;
+  }
+
+  .article hr {
+    margin-block: 15px;
+  }
+
+  .title-article-hr {
+    margin-block: 0;
   }
 
   .star {
