@@ -342,6 +342,7 @@ ul li a {
   p {
     width: 500px;
     margin: auto;
+    font-size: 16px;
   }
 
   .content2 button {
