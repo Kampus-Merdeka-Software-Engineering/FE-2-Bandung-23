@@ -126,28 +126,34 @@
             <div class="form">
               <div class="first-name">
                 <label>Nama Depan</label>
-                <input type="text" required />
+                <input type="text" placeholder="Fadhil" name="fname" required />
               </div>
               <div class="last-name">
                 <label>Nama Belakang</label>
-                <input type="text" required />
+                <input type="text" placeholder="Aja" name="lname" required />
               </div>
               <div class="email">
                 <label>Email</label>
-                <input type="email" required />
+                <input
+                  type="email"
+                  placeholder="blablabla@gmail.com"
+                  name="email"
+                  required
+                />
               </div>
               <div class="no-telp">
                 <label>Nomor Telepon</label>
                 <input
                   type="text"
                   id="nomorTelepon"
-                  name="nomorTelepon"
+                  placeholder="911"
+                  name="number"
                   required
                 />
               </div>
               <div class="address">
                 <label>Alamat Lengkap</label>
-                <input type="text" required />
+                <input type="text" placeholder="bumi" required />
               </div>
             </div>
 
@@ -228,53 +234,57 @@
             <!-- First Modal -->
             <div id="myModal" class="modal">
               <div class="modal-content">
-                <div class="modal-title">
-                  <h1>Sudah Yakin Dengan Pesanan Anda?</h1>
-                  <span class="close" id="closeModalBtn">&times;</span>
-                </div>
                 <div class="img-bill">
-                  <img src="img/Logo Putih.png" alt="bill" />
+                  <img src="img/Logo Hitam.png" alt="bill" />
                   <hr />
                 </div>
                 <div class="list-order">
                   <div class="list-detail">
-                    <p>Ayam Taliwang</p>
+                    <p class="menu-bill">Ayam Taliwang</p>
                     <hr />
-                    <p>1</p>
+                    <p class="qty">1</p>
                     <hr />
-                    <p>Rp 65.000</p>
+                    <p class="price">Rp 65.000</p>
                   </div>
                   <hr />
                   <div class="list-detail">
-                    <p>Ayam Taliwang</p>
+                    <p class="menu-bill">Ayam Taliwang</p>
                     <hr />
-                    <p>1</p>
+                    <p class="qty">1</p>
                     <hr />
-                    <p>Rp 65.000</p>
+                    <p class="price">Rp 65.000</p>
                   </div>
                   <hr />
                   <div class="list-detail">
-                    <p>Ayam Taliwang</p>
+                    <p class="menu-bill">Ayam Taliwang</p>
                     <hr />
-                    <p>1</p>
+                    <p class="qty">1</p>
                     <hr />
-                    <p>Rp 65.000</p>
+                    <p class="price">Rp 65.000</p>
                   </div>
                   <hr />
                   <div class="list-detail">
-                    <p>Ayam Taliwang</p>
+                    <p class="menu-bill">Ayam Taliwang</p>
                     <hr />
-                    <p>1</p>
+                    <p class="qty">1</p>
                     <hr />
-                    <p>Rp 65.000</p>
+                    <p class="price">Rp 65.000</p>
                   </div>
                   <hr />
                   <div class="list-detail">
-                    <p>Ayam Taliwang</p>
+                    <p class="menu-bill">Ayam Taliwang</p>
                     <hr />
-                    <p>1</p>
+                    <p class="qty">1</p>
                     <hr />
-                    <p>Rp 65.000</p>
+                    <p class="price">Rp 65.000</p>
+                  </div>
+                  <hr />
+                  <div class="list-detail">
+                    <p class="menu-bill">Ayam Taliwang</p>
+                    <hr />
+                    <p class="qty">1</p>
+                    <hr />
+                    <p class="price">Rp 65.000</p>
                   </div>
                   <hr />
                 </div>
@@ -290,9 +300,15 @@
                     <h3>Rp.105.000</h3>
                   </div>
                 </div>
-                <button class="close-btn" id="nextModalBtn">
-                  Ya, Lanjutkan pesanan.
-                </button>
+                <div class="modal-title">
+                  <h1>Sudah Yakin Dengan Pesanan Anda?</h1>
+                </div>
+                <div class="button-modal">
+                  <button class="close" id="closeModalBtn">Ubah pesanan</button>
+                  <button class="close-btn" id="nextModalBtn">
+                    Ya, Lanjutkan pesanan.
+                  </button>
+                </div>
               </div>
             </div>
             <!-- End of First Modal  -->

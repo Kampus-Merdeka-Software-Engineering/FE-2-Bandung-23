@@ -259,6 +259,12 @@ header.navbar-container .nav-list li:hover a {
   cursor: pointer;
   transition: all 0.15s ease-in;
 }
+
+.add-order button:hover {
+  border: 3px solid #b2533e;
+  color: #2d3e50;
+  background-color: transparent;
+}
 /* End of Add Order */
 
 /* Shipping Information */
@@ -413,6 +419,12 @@ header.navbar-container .nav-list li:hover a {
   transition: all 0.15s ease-in;
 }
 
+.order-confirm-btn button:hover {
+  border: 3px solid #b2533e;
+  color: #2d3e50;
+  background-color: transparent;
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -434,7 +446,7 @@ header.navbar-container .nav-list li:hover a {
   text-align: center;
   max-width: 550px;
   width: 100%;
-  max-height: 450px;
+  max-height: 520px;
   height: 100%;
 }
 
@@ -452,10 +464,13 @@ header.navbar-container .nav-list li:hover a {
   justify-content: space-between;
   height: 100px;
   margin: 0;
+  text-align: left;
+  border: 0.5px solid gray;
 }
 
-.subtotal-bill p {
-  margin-block: 0;
+.subtotal-bill h3 {
+  font-size: 18px;
+  margin-top: 8px;
 }
 
 .hr-modal {
@@ -467,15 +482,15 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .modal-content h1 {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .modal-content p {
   max-width: 550px;
   width: 100%;
   color: black;
+  font-size: 14px;
   font-weight: 500;
-  margin-block: 40px;
 }
 
 .modal-title {
@@ -483,18 +498,14 @@ header.navbar-container .nav-list li:hover a {
   height: 30px;
   text-align: center;
   align-items: center;
-  justify-content: space-around;
-}
-
-.modal-title h1 {
-  margin-left: 20px;
-}
-
-#closeModalBtn {
-  font-size: 32px;
+  justify-content: center;
+  margin-block: 10px;
 }
 
 .list-order {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
   overflow: auto;
   height: 150px;
   margin-block: 20px;
@@ -503,8 +514,22 @@ header.navbar-container .nav-list li:hover a {
 .list-detail {
   display: flex;
   height: 30px;
+  width: 480px;
   justify-content: center;
   align-items: center;
+}
+
+.list-detail .qty {
+  width: 80px;
+}
+
+.list-detail .menu-bill {
+  text-align: left;
+}
+
+.list-detail .price {
+  text-align: right;
+  width: 200px;
 }
 
 .list-detail p {
@@ -515,13 +540,55 @@ header.navbar-container .nav-list li:hover a {
   height: 20px;
 }
 
+.button-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
 .close-btn {
   background-color: #186f65;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
   color: white;
   padding: 15px;
   border: none;
   border-radius: 30px;
-  margin-top: 15px;
+  border: 3px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+#homeBtn {
+  background-color: #186f65;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 30px;
+  margin-top: 20px;
+}
+
+.close button:hover {
+  border: 3px solid #186f65;
+  color: #2d3e50;
+  background-color: transparent;
+}
+
+.close {
+  background-color: #b3b4b4;
+  font-family: "Poppins", sans-serif;
+  font-weight: 10px;
+  color: black;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.close p {
+  font-size: 10px;
 }
 
 .modal2 {
@@ -537,6 +604,10 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .modal-content2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   background-color: #fff;
   color: #b2533e;
   padding: 20px;
@@ -545,7 +616,7 @@ header.navbar-container .nav-list li:hover a {
   text-align: center;
   max-width: 550px;
   width: 100%;
-  max-height: 330px;
+  max-height: 230px;
   height: 100%;
 }
 
@@ -555,7 +626,6 @@ header.navbar-container .nav-list li:hover a {
   max-width: 400px;
   width: 100%;
   margin: auto;
-  margin-top: 60px;
 }
 /* End of Order Confirmation */
 
@@ -821,6 +891,14 @@ ul li a {
     margin-top: 0;
   }
 
+  .shipping-info {
+    font-size: 16px;
+  }
+
+  .form label {
+    font-size: 12px;
+  }
+
   .form .first-name,
   .last-name,
   .email,
@@ -872,7 +950,7 @@ ul li a {
     margin-block: 1.5rem;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 12px;
     color: white;
     border: 3px solid transparent;
     border-radius: 10px;
@@ -891,6 +969,7 @@ ul li a {
 
   .subtotal-item {
     margin-inline: 20px;
+    font-size: 12px;
   }
 
   .footer-col .title {
@@ -1073,6 +1152,82 @@ ul li a {
 
   .order-confirm-btn {
     margin-top: 20px;
+  }
+
+  .modal-content {
+    width: 340px;
+    height: 470px;
+  }
+
+  .list-order {
+    margin-block: 10px;
+  }
+
+  .modal-content p {
+    font-size: 12px;
+  }
+
+  .subtotal-bill h3 {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .subtotal-bill {
+    height: 85px;
+  }
+
+  .list-order,
+  .list-detail {
+    width: 100%;
+  }
+
+  .modal-content h1 {
+    font-size: 14px;
+  }
+
+  .close-btn {
+    font-size: 12px;
+    padding: 7px;
+    border-radius: 999px;
+  }
+
+  .close {
+    font-size: 10px;
+    border-radius: 999px;
+  }
+
+  .img-bill img {
+    width: 150px;
+    height: 60px;
+  }
+
+  .modal-content2 h1 {
+    font-size: 21px;
+  }
+
+  .modal-content2 p {
+    font-size: 18px;
+  }
+
+  #homeBtn {
+    padding: 10px;
+  }
+
+  .modal-content2 {
+    width: 340px;
+    height: 200px;
+  }
+
+  .subtotal-item {
+    font-size: 12px;
+  }
+
+  .form label {
+    font-size: 12px;
+  }
+
+  .shipping-info {
+    font-size: 16px;
   }
 
   .footer-col img {

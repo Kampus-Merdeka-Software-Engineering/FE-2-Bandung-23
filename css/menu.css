@@ -18,6 +18,7 @@ main {
   padding: 0;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 /* Header */
@@ -341,6 +342,10 @@ main {
   margin-top: 5px;
 }
 
+.card-menu img:hover {
+  box-shadow: 0 8px 12px 0 rgba(54, 17, 17, 0.9);
+}
+
 .card-menu img {
   max-width: 375px;
   width: 100%;
@@ -349,6 +354,8 @@ main {
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .menu-name {
