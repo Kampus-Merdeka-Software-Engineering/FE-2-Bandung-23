@@ -254,10 +254,20 @@ header.navbar-container .nav-list li:hover a {
   font-size: 0.8rem;
   color: white;
   border: 3px solid transparent;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #b2533e;
   cursor: pointer;
   transition: all 0.15s ease-in;
+}
+
+.add-order button:hover {
+  border: 3px solid #b2533e;
+  color: #b2533e;
+  background-color: transparent;
+}
+
+.add-order a {
+  text-decoration: none;
 }
 /* End of Add Order */
 
@@ -411,6 +421,16 @@ header.navbar-container .nav-list li:hover a {
   background-color: #b2533e;
   cursor: pointer;
   transition: all 0.15s ease-in;
+}
+
+.order-confirm-btn button:hover {
+  border: 3px solid #b2533e;
+  color: #b2533e;
+  background-color: transparent;
+}
+
+.order-confirm-btn a {
+  text-decoration: none;
 }
 
 .modal {
