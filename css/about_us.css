@@ -125,7 +125,7 @@ main .about-us .about-us-description .about-us-title {
 }
 
 main .about-us .about-us-description p {
-  font-size: 1.3rem;
+  font-size: 21px;
   text-align: left;
   padding: 10px;
 }
@@ -144,11 +144,10 @@ main .about-us .about-us-image img {
 
 /*Mengapa Memilih Kami*/
 .featured {
-  margin-top: 40px;
+  width: 100%;
   flex: 1;
   display: flex;
   align-items: center;
-  background: linear-gradient(to right, #fdfaf2, white);
 }
 
 .why-choose-us-title {
@@ -156,45 +155,47 @@ main .about-us .about-us-image img {
   text-align: center;
   font-size: 42px;
   color: #b2533e;
+  margin-top: 20px;
 }
 
 .why-choose-us-title hr {
   height: 5px;
   background-color: #b2533e;
-  width: 650px;
+  width: 680px;
   border-radius: 15px;
   margin: auto;
-  margin-bottom: 20px;
 }
 
 .about-image {
   margin-block: 20px;
+  width: 700px;
+}
+
+.about-image img{
+  width: 100%;
+  left: 0;
 }
 
 .featured-description-container {
   display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Dua kolom */
-  gap: 10px; /* Jarak antar elemen */
-  padding: 20px;
+  grid-template-columns: repeat(1, 1fr); 
+  gap: 10px; 
 }
 
 .featured-description-item {
   display: flex;
   align-items: center;
-  /* border: 1px solid #ddd; */
   padding: 20px;
 }
 
 .featured-description-item img {
-  /* max-width: 100%; */
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   margin-right: 20px;
-  /* height: auto; */
 }
 
 .featured-description-item p {
-  font-size: 1.5rem;
+  font-size: 21px;
   text-align: left;
   padding: 10px;
 }
@@ -242,6 +243,9 @@ main .about-us .about-us-image img {
   justify-content: center;
   margin: auto;
   flex-wrap: wrap;
+  max-width: 1000px;
+  width: 100%;
+  gap: 50px 20px;
 }
 
 .our-team-container .our-team-item {
@@ -363,12 +367,73 @@ ul li a {
   .about-us-title {
     font-size: 1.75rem;
   }
+
+  header.navbar-container {
+    width: 100%;
+  }
+
   header.navbar-container .logo img {
     width: 150px;
+    margin-left: 50px;
   }
 
   .our-team hr {
     width: 120px;
+  }
+
+  .our-team-container .our-team-item {
+    width: 300px;
+  }
+
+  .our-team-container {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    width: 100%;
+    gap: 35px;
+  }
+
+  .team .our-team .our-team-title {
+    font-size: 32px;
+  }
+
+  .why-choose-us-title {
+    font-size: 32px;
+  }
+
+  main .about-us .about-us-description .about-us-title {
+    font-size: 32px;
+  }
+
+  .about-us-description hr {
+    width: 233px;
+    margin-bottom: 10px;
+  }
+
+  .about-us {
+    margin-top: 80px;
+  }
+
+  .why-choose-us-title hr {
+    width: 521px;
+  }
+
+  .our-team hr {
+    width: 153px;
+  }
+
+  main .about-us .about-us-description p {
+    font-size: 16px;
+  }
+
+  .featured-description-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+  }
+
+  .team {
+    max-height: 1300px;
+    height: 100%;
   }
 }
 
@@ -464,6 +529,28 @@ ul li a {
     font-size: 32px;
   }
 
+  .why-choose-us-title {
+    font-size: 32px;
+  }
+
+  .why-choose-us-title hr {
+    width: 515px;
+  }
+
+  .featured-description-item p {
+    font-size: 14px;
+  }
+
+  .featured-description-item img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .our-team-item p {
+    font-size: 12px;
+  }
+
   .our-team hr {
     width: 145px;
     height: 4px;
@@ -480,6 +567,13 @@ ul li a {
 
   .our-team-container {
     grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    width: 100%;
+    gap: 40px;
+  }
+
+  .social-media i{
+    font-size: 24px;
   }
 
   .footer-col .title {
@@ -555,20 +649,51 @@ ul li a {
   .why-choose-us-title hr {
     height: 3px;
     background-color: #b2533e;
-    width: 300px;
+    width: 320px;
     border-radius: 15px;
     margin: auto;
-    margin-bottom: 20px;
+    /* margin-bottom: 10px; */
+  }
+
+  .featured {
+    max-height: 450px;
+    height: 100%;
+  }
+
+  .about-image {
+    width: 250px;
   }
 
   .featured .about-image img {
     width: 100%;
   }
 
+  .featured-description-item p {
+    font-size: 8px;
+    text-align: left;
+    padding: 5px;
+  }
+
   .featured-description-container {
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
+    
     gap: 10px;
+  }
+
+  .featured-description-item {
+    padding: 5px;
+  }
+
+  .featured-description-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .team {
+    max-height: 1400px;
+    height: 100%;
   }
 
   .team .our-team .our-team-title {
@@ -579,6 +704,25 @@ ul li a {
   .our-team hr {
     width: 100px;
     height: 3px;
+  }
+
+  .our-team-container .our-team-item {
+    max-width: 150px;
+    width: 100%;
+    /* max-height: 300px; */
+    height: 100%;
+  }
+
+  .our-team-item h4 {
+    font-size: 12px;
+  }
+
+  .our-team-item p {
+    font-size: 8px;
+  }
+
+  .our-team-item .social-media i{
+    font-size: 12px;
   }
 
   header.navbar-container .logo img {
