@@ -950,20 +950,19 @@ ul li a {
   }
 
   .menu-img img {
-    max-width: 300px;
-    max-height: 250px;
-    align-items: center;
-    margin: auto;
+    max-width: 325px;
+    max-height: 275px;
+    margin-left: 0;
+  }
+
+  .menu-detail {
+    margin-inline: 15px;
+    margin-top: 10px;
   }
 
   .menu-btn {
     margin-top: 10px;
     height: 40px;
-  }
-
-  .menu-detail {
-    margin-inline: 30px;
-    margin-top: 15px;
   }
 
   .menu-detail h2 {
