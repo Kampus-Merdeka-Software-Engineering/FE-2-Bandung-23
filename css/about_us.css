@@ -125,7 +125,7 @@ main .about-us .about-us-description .about-us-title {
 }
 
 main .about-us .about-us-description p {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: left;
   padding: 10px;
 }
@@ -159,11 +159,12 @@ main .about-us .about-us-image img {
 }
 
 .why-choose-us-title hr {
-  width: 200px;
   height: 5px;
-  margin: auto;
-  border-radius: 15px;
   background-color: #b2533e;
+  width: 650px;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .about-image {
@@ -261,6 +262,10 @@ main .about-us .about-us-image img {
   object-fit: cover;
   margin-top: 10px;
   background-color: #f7e1ae;
+}
+
+.our-team-item p {
+  font-size: 11px;
 }
 
 /* End of Tim Kami */
@@ -541,6 +546,29 @@ ul li a {
 
   main .about-us .about-us-description .about-us-title {
     font-size: 20px;
+  }
+
+  main .why-choose-us-title {
+    font-size: 20px;
+  }
+
+  .why-choose-us-title hr {
+    height: 3px;
+    background-color: #b2533e;
+    width: 300px;
+    border-radius: 15px;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .featured .about-image img {
+    width: 100%;
+  }
+
+  .featured-description-container {
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    gap: 10px;
   }
 
   .team .our-team .our-team-title {
