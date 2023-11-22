@@ -87,24 +87,23 @@ header.navbar-container .nav-list li:hover a {
 /* End of Header */
 
 .container {
-  margin-top: 80px;
-  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: radial-gradient(
-    circle farthest-side at center right,
-    #f6e8c9,
-    #ffffff
-  );
+  background: radial-gradient
+    (circle farthest-side at center right, #f6e8c9, #ffffff);
+  margin-top: 80px;
 }
 
 .left-content {
-  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
   max-width: 300px;
   width: 100%;
   margin: 30px 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Start category */
@@ -245,12 +244,16 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .right-content {
-  min-height: 100vh;
-  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  max-width: 850px;
   width: 100%;
   margin: 20px 10px;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
+  top: 0;
 }
 
 .box-detail-menu {
@@ -594,6 +597,10 @@ ul li a {
     width: 100%;
   }
 
+  .left-content {
+    width: 230px;
+  }
+
   .art-title {
     font-size: 14px;
     margin-bottom: 10px;
@@ -611,6 +618,10 @@ ul li a {
   .article a {
     font-size: 12px;
     margin-left: 25px;
+  }
+
+  .box-detail-menu {
+    width: 750px;
   }
 }
 /* End of Display Laptop */
