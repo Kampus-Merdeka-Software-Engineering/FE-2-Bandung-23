@@ -87,24 +87,23 @@ header.navbar-container .nav-list li:hover a {
 /* End of Header */
 
 .container {
-  margin-top: 80px;
-  min-height: 100vh;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background: radial-gradient(
-    circle farthest-side at center right,
-    #f6e8c9,
-    #ffffff
-  );
+  background: radial-gradient
+    (circle farthest-side at center right, #f6e8c9, #ffffff);
+  margin-top: 80px;
 }
 
 .left-content {
-  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
   max-width: 300px;
   width: 100%;
   margin: 30px 10px;
+  transition: transform 0.3s ease-in-out;
 }
 
 /* Start category */
@@ -176,7 +175,7 @@ header.navbar-container .nav-list li:hover a {
 }
 /* End of category */
 
-/* Start  Article*/
+/* Start Artikel */
 .article {
   justify-content: center;
   align-items: center;
@@ -190,17 +189,17 @@ header.navbar-container .nav-list li:hover a {
   box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
 }
 
-.article-title {
+.title-article {
   text-align: center;
   color: white;
   width: 100%;
   height: 25px;
   margin-top: 20px;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
   font-size: 24px;
 }
 
-.title-hr {
+.title-article-hr {
   height: 5px;
   background-color: #fce09b;
 }
@@ -238,19 +237,23 @@ header.navbar-container .nav-list li:hover a {
 .article-hr {
   margin-block: 30px;
 }
-/* End of Article */
+/* End of Artikel */
 
 .dropdown {
   display: none;
 }
 
 .right-content {
-  min-height: 100vh;
-  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  max-width: 850px;
   width: 100%;
   margin: 20px 10px;
   align-items: center;
   justify-content: center;
+  margin-bottom: 50px;
+  top: 0;
 }
 
 .box-detail-menu {
@@ -305,10 +308,9 @@ header.navbar-container .nav-list li:hover a {
 .detail-menu {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
-  height: 350px;
+  width: 750px;
   margin-block: 20px;
-  height: 350px;
+  height: 250px;
   background-color: #fff1cd;
   justify-content: center;
   padding-block: 20px;
@@ -320,9 +322,9 @@ header.navbar-container .nav-list li:hover a {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 400px;
+  max-width: 270px;
   width: 100%;
-  max-height: 300px;
+  max-height: 200px;
   height: 100%;
 }
 
@@ -337,7 +339,7 @@ header.navbar-container .nav-list li:hover a {
 }
 
 .menu-btn button {
-  padding: 10px;
+  /* padding: 10px;
   width: 120px;
   max-height: 40px;
   height: 100%;
@@ -345,12 +347,32 @@ header.navbar-container .nav-list li:hover a {
   border-radius: 7px;
   color: #fce09b;
   background-color: #186f65;
-  box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
+  box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5); */
+  padding: 0.8rem 2.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #186f65;
+  cursor: pointer;
+  /* transition: all 0.15s ease-in; */
+}
+
+.menu-btn :hover{
+  border: 3px solid #186f65;
+  color: #2d3e50;
+  background-color: transparent;
 }
 
 .detail-menu img {
+  max-width: 300px;
   width: 100%;
-  height: 300px;
+  max-height: 200px;
+  height: 100%;
   border-radius: 10px;
   box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
 }
@@ -393,18 +415,18 @@ header.navbar-container .nav-list li:hover a {
 }
 /* End of Detail Menu */
 
-.title-review {
+/* .title-review {
   /* display: flex;
   flex-wrap: wrap; */
-  justify-content: center;
+  /* justify-content: center;
   align-items: center;
   margin-top: 20px;
   max-width: 900px;
   width: 100%;
   border-radius: 10px;
-}
+} */ 
 
-.title-review h1 {
+/* .title-review h1 {
   justify-content: center;
   align-items: center;
   font-size: 1.5 rem;
@@ -468,6 +490,11 @@ header.navbar-container .nav-list li:hover a {
 
 .review p {
   font-size: 1rem;
+} */
+/* end of detail menu */
+
+.article-bottom {
+  display: none;
 }
 
 /*Footer*/
@@ -569,6 +596,33 @@ ul li a {
   .container {
     width: 100%;
   }
+
+  .left-content {
+    width: 230px;
+  }
+
+  .art-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .article {
+    height: 650px;
+  }
+
+  .article p {
+    font-size: 12px;
+  }
+
+  .article a {
+    font-size: 12px;
+    margin-left: 25px;
+  }
+
+  .box-detail-menu {
+    width: 750px;
+  }
 }
 /* End of Display Laptop */
 
@@ -576,6 +630,10 @@ ul li a {
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
+  }
+
+  .container {
+    margin-top: 60px;
   }
 
   .navbar-container {
@@ -809,7 +867,7 @@ ul li a {
   }
 
   .dropbtn {
-    width: 100%;
+    width: 350px;
     height: 40px;
     background-color: #186f65;
     color: white;
@@ -822,7 +880,6 @@ ul li a {
   }
 
   .dropdown {
-    width: 100%;
     display: inline-block;
     margin-bottom: 20px;
   }
@@ -831,14 +888,14 @@ ul li a {
     width: 100%;
     display: none;
     background-color: #fce09b;
-    min-width: 160px;
+    width: 350px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
   }
 
   .dropdown-content a {
     color: #186f65;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     padding: 12px 16px;
     text-decoration: none;
@@ -881,7 +938,7 @@ ul li a {
   }
 
   .detail-menu {
-    width: 100%;
+    width: 350px;
     height: 520px;
     margin-top: 20px;
   }
@@ -893,20 +950,19 @@ ul li a {
   }
 
   .menu-img img {
-    max-width: 300px;
-    max-height: 250px;
-    align-items: center;
-    margin: auto;
+    max-width: 325px;
+    max-height: 275px;
+    margin-left: 0;
+  }
+
+  .menu-detail {
+    margin-inline: 15px;
+    margin-top: 10px;
   }
 
   .menu-btn {
     margin-top: 10px;
     height: 40px;
-  }
-
-  .menu-detail {
-    margin-inline: 30px;
-    margin-top: 15px;
   }
 
   .menu-detail h2 {
@@ -995,6 +1051,38 @@ ul li a {
 
   .review p {
     font-size: 12px;
+  }
+
+.article-bottom {
+    width: 360px;
+    display: block;
+    margin-top: 20px;
+    justify-content: center;
+  }
+
+  .article {
+    height: 520px;
+  }
+
+  .title-article {
+    margin-bottom: 25px;
+    font-size: 18px;
+  }
+
+  .article p {
+    font-size: 14px;
+  }
+
+  .article a {
+    margin-left: 140px;
+  }
+
+  .article hr {
+    margin-block: 15px;
+  }
+
+  .title-article-hr {
+    margin-block: 0;
   }
 
   .star {
