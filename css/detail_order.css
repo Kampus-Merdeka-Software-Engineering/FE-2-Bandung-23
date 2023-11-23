@@ -734,8 +734,47 @@ ul li a {
     width: 150px;
   }
 
+  main,
+  body,
+  html {
+    height: auto;
+  }
+
   main .content .content-image img {
     width: 75%;
+  }
+
+  .container {
+    max-height: 800px;
+    height: 100%;
+  }
+
+  .content {
+    height: 680px;
+  }
+
+  .row-content {
+    width: 450px;
+    height: 780px;
+    padding: 0px 15px;
+  }
+
+  .form {
+    max-height: 430px;
+    height: 100%;
+  }
+
+  .order-menu {
+    width: 100%;
+  }
+
+  .subtotal-item,
+  .order-confirm-btn button {
+    margin-inline: 18px;
+  }
+
+  .side-bar {
+    width: 580px;
   }
 }
 /* End of Display Laptop */
@@ -808,8 +847,13 @@ ul li a {
   .container {
     display: flex;
     flex-wrap: wrap;
-    height: 1300px;
+    max-height: 1200px;
+    height: 100%;
     margin-top: 60px;
+  }
+
+  .content {
+    height: 100%;
   }
 
   .row {
@@ -1115,6 +1159,7 @@ ul li a {
   .notes input {
     margin-top: 8px;
     height: 30px;
+    font-size: 10px;
   }
 
   .order-total {
@@ -1133,7 +1178,7 @@ ul li a {
   }
 
   .content {
-    height: 620px;
+    height: 630px;
   }
 
   .form {
