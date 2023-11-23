@@ -555,17 +555,37 @@ header.navbar-container .nav-list li:hover a {
   gap: 40px;
 }
 
+.button-modal button:hover {
+  border: 3px solid black;
+  color: black;
+  background-color: transparent;
+}
+
+.button-modal a {
+  text-decoration: none;
+}
+
+.close {
+  background-color: #b3b4b4;
+  font-family: "Poppins", sans-serif;
+  font-weight: 10px;
+  color: black;
+  padding: 10px;
+  border: 3px solid transparent;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
 .close-btn {
   background-color: #186f65;
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: 10px;
   color: white;
-  padding: 15px;
+  padding: 10px;
   border: none;
   border-radius: 30px;
   border: 3px solid transparent;
   cursor: pointer;
-  transition: all 0.15s ease-in;
 }
 
 #homeBtn {
@@ -576,27 +596,6 @@ header.navbar-container .nav-list li:hover a {
   border: none;
   border-radius: 30px;
   margin-top: 20px;
-}
-
-.close button:hover {
-  border: 3px solid #186f65;
-  color: #2d3e50;
-  background-color: transparent;
-}
-
-.close {
-  background-color: #b3b4b4;
-  font-family: "Poppins", sans-serif;
-  font-weight: 10px;
-  color: black;
-  padding: 10px;
-  border: none;
-  border-radius: 30px;
-  cursor: pointer;
-}
-
-.close p {
-  font-size: 10px;
 }
 
 .modal2 {
@@ -634,6 +633,16 @@ header.navbar-container .nav-list li:hover a {
   max-width: 400px;
   width: 100%;
   margin: auto;
+}
+
+.modal-content2 button:hover {
+  border: 3px solid #186f65;
+  color: #186f65;
+  background-color: transparent;
+}
+
+.modal-content2 a {
+  text-decoration: none;
 }
 /* End of Order Confirmation */
 
