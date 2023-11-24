@@ -374,7 +374,6 @@ ul li a {
 
   header.navbar-container .logo img {
     width: 150px;
-    margin-left: 50px;
   }
 
   .our-team hr {
@@ -491,6 +490,10 @@ ul li a {
 
   .nav-list.active {
     right: 0;
+  }
+
+  .about-us {
+    margin-top: 60px;
   }
 
   .team {
@@ -625,7 +628,7 @@ ul li a {
 @media (max-width: 450px) {
   main .about-us .about-us-description p {
     line-height: 1rem;
-    font-size: 8px;
+    font-size: 10px;
     text-align: justify;
     padding-inline: 8px;
   }
@@ -639,20 +642,21 @@ ul li a {
   }
 
   main .about-us .about-us-description .about-us-title {
-    font-size: 20px;
+    font-size: 16px;
+    margin-top: 10px;
   }
 
   main .why-choose-us-title {
-    font-size: 20px;
+    font-size: 16px;
+    margin-top: 10px;
   }
 
   .why-choose-us-title hr {
     height: 3px;
     background-color: #b2533e;
-    width: 320px;
+    width: 260px;
     border-radius: 15px;
     margin: auto;
-    /* margin-bottom: 10px; */
   }
 
   .featured {
@@ -669,7 +673,7 @@ ul li a {
   }
 
   .featured-description-item p {
-    font-size: 8px;
+    font-size: 10px;
     text-align: left;
     padding: 5px;
   }
@@ -677,8 +681,7 @@ ul li a {
   .featured-description-container {
     grid-template-columns: repeat(1, 1fr);
     width: 100%;
-    
-    gap: 10px;
+    gap: 1px;
   }
 
   .featured-description-item {
@@ -697,24 +700,23 @@ ul li a {
   }
 
   .team .our-team .our-team-title {
-    font-size: 20px;
+    font-size: 16px;
     color: #b2533e;
   }
 
   .our-team hr {
-    width: 100px;
+    width: 77px;
     height: 3px;
   }
 
   .our-team-container .our-team-item {
-    max-width: 150px;
     width: 100%;
-    /* max-height: 300px; */
+    max-height: 300px;
     height: 100%;
   }
 
   .our-team-item h4 {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .our-team-item p {
@@ -763,6 +765,7 @@ ul li a {
 
   .about-us {
     width: 100%;
+    margin-top: 60px;
   }
 
   main .about-us .about-us-description {
@@ -771,7 +774,7 @@ ul li a {
   }
 
   .about-us-description hr {
-    width: 140px;
+    width: 117px;
     height: 3px;
     margin-bottom: 5px;
   }
@@ -783,7 +786,7 @@ ul li a {
   .our-team-container {
     grid-template-columns: repeat(2, 1fr);
     width: 100%;
-    gap: 20px;
+    gap: 20px 10px;
   }
 
   .our-team-item {
