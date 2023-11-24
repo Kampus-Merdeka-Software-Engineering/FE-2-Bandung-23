@@ -783,7 +783,26 @@ ul li a {
   }
 
   .side-bar {
-    width: 580px;
+    width: 640px;
+  }
+
+  .form .first-name, .last-name, .email, .no-telp {
+    max-width: 410px;
+    width: 100%;
+    max-height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 20px;
+  }
+
+  .form .first-name label, .last-name label, .email label, .no-telp label {
+    max-width: 410px;
+    width: 100%;
+  }
+
+  .form .first-name input, .last-name input, .email input, .no-telp input {
+    max-width: 410px;
+    width: 100%;
   }
 }
 /* End of Display Laptop */
