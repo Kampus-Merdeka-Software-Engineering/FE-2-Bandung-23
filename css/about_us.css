@@ -171,15 +171,15 @@ main .about-us .about-us-image img {
   width: 700px;
 }
 
-.about-image img{
+.about-image img {
   width: 100%;
   left: 0;
 }
 
 .featured-description-container {
   display: grid;
-  grid-template-columns: repeat(1, 1fr); 
-  gap: 10px; 
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
 }
 
 .featured-description-item {
@@ -233,6 +233,11 @@ main .about-us .about-us-image img {
 .social-media i {
   font-size: 30px;
   margin: 10px;
+}
+
+.social-media i:hover {
+  border-radius: 20px;
+  box-shadow: 0 8px 12px 0 rgba(54, 17, 17, 0.9);
 }
 
 .our-team-container {
@@ -575,7 +580,7 @@ ul li a {
     gap: 40px;
   }
 
-  .social-media i{
+  .social-media i {
     font-size: 24px;
   }
 
@@ -723,7 +728,7 @@ ul li a {
     font-size: 8px;
   }
 
-  .our-team-item .social-media i{
+  .our-team-item .social-media i {
     font-size: 12px;
   }
 

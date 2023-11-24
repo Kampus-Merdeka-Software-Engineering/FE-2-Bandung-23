@@ -96,6 +96,7 @@ main {
 }
 
 .container {
+  height: 2200px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -109,7 +110,7 @@ main {
 .side-bar {
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
+  height: 1300px;
   max-width: 300px;
   width: 100%;
   margin: 30px 10px;
@@ -258,7 +259,7 @@ main {
 .main-content {
   display: flex;
   flex-wrap: wrap;
-  height: 100%;
+  height: 1800px;
   max-width: 850px;
   width: 100%;
   margin: 20px 10px;
@@ -273,11 +274,11 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-
   max-width: 1200px;
   width: 100%;
+  max-height: 1800px;
   height: 100%;
-
+  margin-left: 20px;
   border-radius: 10px;
 }
 
@@ -334,15 +335,20 @@ main {
 .card-menu {
   display: flex;
   flex-wrap: wrap;
-  max-width: 400px;
+  max-height: 500px;
+  height: 100%;
+  max-width: 375px;
   width: 100%;
   text-align: center;
   justify-content: center;
   margin-left: 10px;
   margin-top: 5px;
+  border: 1px solid black;
+  border-radius: 15px;
+  box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
 }
 
-.card-menu img:hover {
+.card-menu:hover {
   box-shadow: 0 8px 12px 0 rgba(54, 17, 17, 0.9);
 }
 
@@ -353,38 +359,87 @@ main {
   height: 100%;
   object-fit: cover;
   border-radius: 15px;
-  box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-.menu-name {
+.menu-detail {
   bottom: 25px;
-  border-radius: 15px;
-  background-color: #fce09b;
-  max-height: 110px;
+  /* border-radius: 15px; */
+  /* background-color: #fce09b; */
+  max-height: 230px;
   height: 100%;
-  max-width: 320px;
+  /* max-width: 320px; */
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   color: #186f65;
-  box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5);
-  border: 0.5px solid black;
+  /* box-shadow: 3px 3px 5px 2px rgb(0, 0, 0, 0.5); */
+  /* border: 0.5px solid black; */
+  text-align: justify;
 }
 
-.menu-name h4 {
+.menu-detail h4 {
   font-weight: 400;
 }
 
-.menu-name a {
+.menu-detail a {
   text-decoration: none;
   color: #b2533e;
   font-weight: 600;
 }
 
-.menu-name i {
-  margin-left: 10px;
+.menu-name {
+  display: flex;
 }
+
+.menu-price {
+  width: 220px;
+}
+
+.menu-rating {
+  width: 120px;
+  justify-content: center;
+  align-items: end;
+  color: #b2533e;
+  text-align: right;
+}
+
+.menu-description {
+  margin-block: 10px;
+  color: #b2533e;
+}
+
+.menu-btn {
+  display: flex;
+  width: 100%;
+  max-height: 40px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.menu-btn button {
+  padding: 0.5rem 1.5rem;
+  margin-block-start: 1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.75rem;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background-color: #186f65;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+
+.menu-btn button:hover {
+  border: 3px solid #186f65;
+  color: #2d3e50;
+  background-color: transparent;
+}
+
 /* End of Daftar Menu */
 
 .article-bottom {
@@ -493,19 +548,24 @@ ul li a {
 
   .side-bar {
     width: 230px;
+    height: 1200px;
+  }
+
+  .sub-main-content {
+    max-width: 500px;
+    width: 100%;
   }
 
   .main-content {
-    width: 480px;
+    width: 600px;
   }
 
   .card-menu {
-    width: 200px;
+    width: 280px;
   }
 
   .list-menu {
     display: grid;
-    max-width: 600px;
     width: 100%;
     height: 100%;
     grid-template-columns: repeat(2, 1fr);
@@ -545,6 +605,7 @@ ul li a {
 
   .container {
     margin-top: 60px;
+    height: 1960px;
   }
 
   .navbar-container {
@@ -606,7 +667,7 @@ ul li a {
 
   .title-article {
     font-size: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   .article p {
@@ -614,7 +675,10 @@ ul li a {
   }
 
   .article {
-    height: 650px;
+    height: 740px;
+    max-width: 630px;
+    width: 100%;
+    margin: auto;
   }
 
   .article p {
@@ -627,15 +691,85 @@ ul li a {
   }
 
   .side-bar {
-    width: 230px;
+    display: none;
+  }
+
+  .dropbtn {
+    width: 350px;
+    height: 40px;
+    background-color: #186f65;
+    color: white;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 99px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .dropdown {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  .dropdown-content {
+    width: 100%;
+    display: none;
+    background-color: #fce09b;
+    width: 350px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: #186f65;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content hr {
+    height: 1.5px;
+    background-color: #186f65;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #d7996c;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .article-bottom {
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+    height: 770px;
+  }
+
+  .title-article-hr {
+    height: 3px;
   }
 
   .main-content {
-    width: 400px;
+    width: 800px;
+    margin-left: 0;
+  }
+
+  .sub-main-content {
+    margin-left: 0;
   }
 
   .card-menu {
-    width: 175px;
+    width: 300px;
+  }
+
+  .search-bar input[type="text"] {
+    width: 240px;
+    margin-left: 30px;
   }
 
   .list-menu {
@@ -696,6 +830,7 @@ ul li a {
   .container {
     margin-top: 60px;
     width: 100%;
+    height: 605vh;
   }
 
   .title {
@@ -707,6 +842,10 @@ ul li a {
   }
 
   .side-bar {
+    display: none;
+  }
+
+  .highliht-article {
     display: none;
   }
 
@@ -773,23 +912,41 @@ ul li a {
     width: 100%;
   }
 
-  .card-menu {
-    max-width: 150px;
+  .main-content {
+    /* max-height: 2500px; */
+    /* height: 100%; */
   }
 
-  .menu-name {
+  .sub-main-content {
+    margin-left: 0;
+    /* max-height: 2500px; */
+    height: 100%;
+  }
+
+  .list-menu {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .card-menu {
+    max-width: 340px;
+    width: 100%;
+    margin-left: 0;
+    margin: auto;
+  }
+
+  .menu-detail {
     font-size: 1.4rem;
   }
 
-  .menu-name h3 {
+  .menu-detail h3 {
     font-size: 14px;
   }
 
-  .menu-name h4 {
+  .menu-detail h4 {
     font-size: 12px;
   }
 
-  .menu-name a {
+  .menu-detail a {
     font-size: 10px;
   }
 
@@ -797,6 +954,8 @@ ul li a {
     width: 330px;
     display: block;
     margin-top: 20px;
+    margin-bottom: 20px;
+    height: 100%;
   }
 
   .article {
