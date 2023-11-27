@@ -123,113 +123,78 @@
         <div class="row-content">
           <div class="content">
             <h2 class="shipping-info">Informasi Pengiriman</h2>
-            <div class="form">
-              <div class="first-name">
-                <label>Nama Depan</label>
-                <input type="text" placeholder="Fadhil" name="fname" required />
+            <form id="form">
+              <div class="form">
+                <div class="first-name">
+                  <label>Nama Depan</label>
+                  <input
+                    id="firstName"
+                    type="text"
+                    placeholder="Fadhil"
+                    required
+                  />
+                </div>
+                <div class="last-name">
+                  <label>Nama Belakang</label>
+                  <input id="lastName" type="text" placeholder="Aja" required />
+                </div>
+                <div class="email">
+                  <label>Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="blablabla@gmail.com"
+                    name="email"
+                    required
+                  />
+                </div>
+                <div class="no-telp">
+                  <label>Nomor Telepon</label>
+                  <input
+                    type="number"
+                    id="noTelepon"
+                    maxlength="13"
+                    placeholder="911"
+                    name="phone"
+                    required
+                  />
+                </div>
+                <div class="address">
+                  <label>Alamat Lengkap</label>
+                  <textarea
+                    name=""
+                    id="address"
+                    cols="30"
+                    rows="10"
+                    required
+                  ></textarea>
+                  <!-- <input id="address" type="text" placeholder="bumi" required /> -->
+                </div>
               </div>
-              <div class="last-name">
-                <label>Nama Belakang</label>
-                <input type="text" placeholder="Aja" name="lname" required />
-              </div>
-              <div class="email">
-                <label>Email</label>
-                <input
-                  type="email"
-                  placeholder="blablabla@gmail.com"
-                  name="email"
-                  required
-                />
-              </div>
-              <div class="no-telp">
-                <label>Nomor Telepon</label>
-                <input
-                  type="text"
-                  id="nomorTelepon"
-                  placeholder="911"
-                  name="number"
-                  required
-                />
-              </div>
-              <div class="address">
-                <label>Alamat Lengkap</label>
-                <input type="text" placeholder="bumi" required />
-              </div>
-            </div>
 
-            <!-- Total Charge -->
-            <div class="subtotal">
-              <div class="subtotal-item">
-                <div class="subtotal-left">
-                  <p>Subtotal</p>
-                  <p>Biaya Antar</p>
-                  <h3>Total</h3>
-                </div>
-                <div class="subtotal-right">
-                  <p>Rp 65.000</p>
-                  <p>Rp 5000</p>
-                  <h3>Rp 70.000</h3>
+              <!-- Total Charge -->
+              <div class="subtotal">
+                <div class="subtotal-item">
+                  <div class="subtotal-left">
+                    <p>Subtotal</p>
+                    <p>Biaya Antar</p>
+                    <h3>Total</h3>
+                  </div>
+                  <div class="subtotal-right">
+                    <p>Rp 65.000</p>
+                    <p>Rp 5000</p>
+                    <h3>Rp 70.000</h3>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- Order Confirmation -->
-            <div class="order-confirm-btn">
-              <button id="konfirmasiBtn">Konfirmasi Pesanan</button>
-            </div>
-            <div id="modal" class="modal">
-              <div class="modal-content">
-                <h1>Sudah yakin dengan pesanan Anda?</h1>
-                <div class="hr">
-                  <hr class="hr-modal" />
-                </div>
-                <div class="list-order">
-                  <div class="list-detail">
-                    <p>Ayam Taliwang</p>
-                    <hr />
-                    <p>1</p>
-                    <hr />
-                    <p>Rp 65.000</p>
-                  </div>
-                  <hr />
-                  <div class="list-detail">
-                    <p>Ayam Taliwang</p>
-                    <hr />
-                    <p>1</p>
-                    <hr />
-                    <p>Rp 65.000</p>
-                  </div>
-                  <hr />
-                  <div class="list-detail">
-                    <p>Ayam Taliwang</p>
-                    <hr />
-                    <p>1</p>
-                    <hr />
-                    <p>Rp 65.000</p>
-                  </div>
-                  <hr />
-                  <div class="list-detail">
-                    <p>Ayam Taliwang</p>
-                    <hr />
-                    <p>1</p>
-                    <hr />
-                    <p>Rp 65.000</p>
-                  </div>
-                  <hr />
-                  <div class="list-detail">
-                    <p>Ayam Taliwang</p>
-                    <hr />
-                    <p>1</p>
-                    <hr />
-                    <p>Rp 65.000</p>
-                  </div>
-                  <hr />
-                </div>
-                <button class="close-btn" id="tutupBtn">
-                  Ya, Lanjutkan pesanan.
+              <!-- Order Confirmation -->
+              <div class="order-confirm-btn">
+                <button type="submit" id="konfirmasiBtn" value="submit">
+                  Konfirmasi Pesanan
                 </button>
               </div>
-            </div>
+            </form>
 
             <!-- First Modal -->
             <div id="myModal" class="modal">

@@ -331,6 +331,12 @@ header.navbar-container .nav-list li:hover a {
   max-height: 35px;
   height: 100%;
   background-color: #fdfaf2;
+  height: 40px;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield; /* Firefox */
+  appearance: none; /* Chrome, Safari, Edge */
 }
 
 .form .address {
@@ -343,14 +349,14 @@ header.navbar-container .nav-list li:hover a {
   margin: 10px 20px;
 }
 
-.form .address input {
+.form .address textarea {
   max-width: 550px;
   width: 100%;
-  max-height: 100px;
-  height: 100%;
   border: 1px solid #b2533e;
   border-radius: 10px;
   background-color: #fdfaf2;
+  padding: 10px;
+  resize: none;
 }
 
 .form input {
@@ -786,7 +792,10 @@ ul li a {
     width: 640px;
   }
 
-  .form .first-name, .last-name, .email, .no-telp {
+  .form .first-name,
+  .last-name,
+  .email,
+  .no-telp {
     max-width: 410px;
     width: 100%;
     max-height: 60px;
@@ -795,12 +804,18 @@ ul li a {
     margin: 0px 20px;
   }
 
-  .form .first-name label, .last-name label, .email label, .no-telp label {
+  .form .first-name label,
+  .last-name label,
+  .email label,
+  .no-telp label {
     max-width: 410px;
     width: 100%;
   }
 
-  .form .first-name input, .last-name input, .email input, .no-telp input {
+  .form .first-name input,
+  .last-name input,
+  .email input,
+  .no-telp input {
     max-width: 410px;
     width: 100%;
   }

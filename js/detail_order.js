@@ -56,61 +56,102 @@ document.querySelectorAll(".order-total").forEach(function (element) {
 // Modal
 
 // Get modals and buttons
-var konfirmasiBtn = document.getElementById("konfirmasiBtn");
-var modal = document.getElementById("myModal");
-var modal2 = document.getElementById("myModal2");
-var btn = document.getElementById("tutupBtn");
-var closeModalBtn = document.getElementById("closeModalBtn");
-var nextModalBtn = document.getElementById("nextModalBtn");
-var closeModalBtn2 = document.getElementById("closeModalBtn2");
-var homeBtn = document.getElementById("homeBtn");
+// var name = document.getElementById("firstName").value;
+// var konfirmasiBtn = document.getElementById("konfirmasiBtn");
+// var modal = document.getElementById("myModal");
+// var modal2 = document.getElementById("myModal2");
+// var btn = document.getElementById("tutupBtn");
+// var closeModalBtn = document.getElementById("closeModalBtn");
+// var nextModalBtn = document.getElementById("nextModalBtn");
+// var closeModalBtn2 = document.getElementById("closeModalBtn2");
+// var homeBtn = document.getElementById("homeBtn");
 
-konfirmasiBtn.addEventListener("click", function () {
-  tampilkanModal();
-});
+// konfirmasiBtn.addEventListener("click", function () {
+//   if (firstName !== "") {
+//     tampilkanModal();
+//   } else {
+//     alert("Masukkan nama anda");
+//   }
+// });
 
-homeBtn.addEventListener("click", function () {
-  tutupModal();
-});
+// homeBtn.addEventListener("click", function () {
+//   tutupModal();
+// });
 
-function tutupModal() {
-  modal.style.display = "none";
-  // Arahkan ke halaman index.html
-  window.location.href = "index.html";
-}
+// function tutupModal() {
+//   modal.style.display = "none";
+//   // Arahkan ke halaman index.html
+//   window.location.href = "index.html";
+// }
 
-function tampilkanModal() {
-  modal.style.display = "flex";
-}
+// function tampilkanModal() {
+//   modal.style.display = "flex";
+// }
 
-// Add event listener to open the first modal
-btn.addEventListener("click", function () {
-  modal.style.display = "block";
-});
+// // Add event listener to open the first modal
+// btn.addEventListener("click", function () {
+//   modal.style.display = "block";
+// });
 
-// Add event listener to close the first modal
-closeModalBtn.addEventListener("click", function () {
-  modal.style.display = "none";
-});
+// // Add event listener to close the first modal
+// closeModalBtn.addEventListener("click", function () {
+//   modal.style.display = "none";
+// });
 
-// Add event listener to open the second modal
-nextModalBtn.addEventListener("click", function () {
-  modal.style.display = "none";
-  modal2.style.display = "flex";
-});
+// // Add event listener to open the second modal
+// nextModalBtn.addEventListener("click", function () {
+//   modal.style.display = "none";
+//   modal2.style.display = "flex";
+// });
 
-// Add event listener to close the second modal
-closeModalBtn2.addEventListener("click", function () {
-  modal2.style.display = "none";
-});
+// // Add event listener to close the second modal
+// closeModalBtn2.addEventListener("click", function () {
+//   modal2.style.display = "none";
+// });
 
-// Add event listener to close the modals when clicking outside of them
-window.addEventListener("click", function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  } else if (event.target == modal2) {
-    modal2.style.display = "none";
+// // Add event listener to close the modals when clicking outside of them
+// window.addEventListener("click", function (event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   } else if (event.target == modal2) {
+//     modal2.style.display = "none";
+//   }
+// });
+
+// // End of Modal
+
+document.getElementById("form").addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
+  const noTelepon = document.getElementById("noTelepon").value;
+  const address = document.getElementById("address").value;
+
+  // Check if all fields are filled
+  if (
+    firstName !== "" &&
+    lastName !== "" &&
+    email !== "" &&
+    address !== "" &&
+    noTelepon !== ""
+  ) {
+    // Show modal
+    document.getElementById("myModal").style.display = "flex";
+  } else {
   }
 });
 
-// End of Modal
+document.getElementById("closeModalBtn").addEventListener("click", () => {
+  document.getElementById("myModal").style.display = "none";
+});
+
+document.getElementById("nextModalBtn").addEventListener("click", () => {
+  document.getElementById("myModal").style.display = "none";
+  document.getElementById("myModal2").style.display = "flex";
+});
+
+document.getElementById("homeBtn").addEventListener("click", () => {
+  window.location.href = "index.html";
+});
