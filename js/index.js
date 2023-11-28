@@ -137,7 +137,7 @@ function tutupModal() {
 
 
 // CONNECT TO BACKEND SERVER
-const API_URL = 'https://kampus-merdeka-software-engineering.github.io/FE-2-Bandung-23/:3000';
+const API_URL = 'https://kampus-merdeka-software-engineering.github.io/FE-2-Bandung-23/';
 
 async function getMenu() {
   try {
