@@ -1,4 +1,28 @@
-// Function active link on the navbar
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex - 1].style.display = "block";
+
+  setTimeout(function () {
+    plusSlides(1);
+  }, 4000);
+}
 
 // Ambil URL saat ini
 const currentUrl = window.location.href;
@@ -134,21 +158,20 @@ function tutupModal() {
   window.location.href = "index.html";
 }
 
-
-
 // CONNECT TO BACKEND SERVER
-const API_URL = 'https://kampus-merdeka-software-engineering.github.io/FE-2-Bandung-23/';
+const API_URL =
+  "https://kampus-merdeka-software-engineering.github.io/FE-2-Bandung-23/";
 
 async function getMenu() {
   try {
     const response = await fetch(`${API_URL}/offer`);
     const menus = await response.json();
-    const menuOffer = document.getElementsByClassName('card-offer');
+    const menuOffer = document.getElementsByClassName("card-offer");
     menus.forEach((menu) => {
-      const newMenu = document.createElement('p');
+      const newMenu = document.createElement("p");
       newMenu.textContent = `${menu.menu_name}`;
       menuOffer.appendChild(newMenu);
-    })
+    });
   } catch (error) {
     console.log(menus);
   }

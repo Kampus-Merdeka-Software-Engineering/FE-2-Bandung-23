@@ -67,3 +67,5 @@ const menus = [
     rating: "4.7/5",
   },
 ];
+
+export default menus;
