@@ -242,22 +242,23 @@ function tutupModal() {
   window.location.href = "index.html";
 }
 
+
 // CONNECT TO BACKEND SERVER
 const API_URL =
-  "https://kampus-merdeka-software-engineering.github.io/FE-2-Bandung-23/";
+  "http://localhost:3000";
 
 async function getMenu() {
   try {
-    const response = await fetch(`${API_URL}/offer`);
+    const response = await fetch(`${API_URL}/home/offer`);
     const menus = await response.json();
-    const menuOffer = document.getElementsByClassName("card-offer");
+    const menuOffer = document.getElementById("card-offer");
     menus.forEach((menu) => {
       const newMenu = document.createElement("p");
       newMenu.textContent = `${menu.menu_name}`;
       menuOffer.appendChild(newMenu);
     });
   } catch (error) {
-    console.log(menus);
+    console.log(getMenu);
   }
 }
 
