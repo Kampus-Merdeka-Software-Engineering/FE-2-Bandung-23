@@ -20,11 +20,11 @@ async function getRecommendation() {
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star-half-stroke"></i>
-          <p>(${menu.menu_rating})</p>
+          <p>(${recommendation.menu_rating})</p>
         </div>
         <h4>Rp${recommendation.menu_price}</h4>
         <p>
-          ${menu.menu_description}
+          ${recommendation.menu_description}
         </p>
         <div class="menu-btn">
           <a href="detail_order.html"

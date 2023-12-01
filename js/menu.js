@@ -49,9 +49,9 @@ getMenu();
 
 
 // Function Get Menu by Category
-async function getMenuCategory() {
+async function getMenuCategory(type) {
   try {
-    const response = await fetch(`${API_URL}/menu/category/:type`);
+    const response = await fetch(`${API_URL}/menu/category/${type}`);
     const menus = await response.json();
     const menuOffer = document.getElementById("listMenu");
     menus.forEach((menu) => {
