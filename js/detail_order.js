@@ -1,3 +1,39 @@
+// CONNECT TO BACKEND SERVER
+const API_URL = "http://localhost:3000";
+
+async function getDetailOrder() {
+  try {
+    const response = await fetch(`${API_URL}/detail_order`);
+    const detailOrder = await response.json();
+    const orderMenu = document.getElementById("order-menu");
+    detailOrder.forEach((detail_order) => {
+      const newDetailOrder = document.createElement("div");
+      newDetailOrder.innerHTML = `
+      <img src="img/Ayam Taliwang.jpg" alt="Ayam Taliwang" />
+      <div class="order-menu">
+        <div class="order-type">
+          <div class="menu-price">
+            <h3>${detail_order.order_type}</h3>
+            <p>Rp${detail_order.menu_price}</p>
+          </div>
+        </div>
+        <div class="menu-btn">
+          <a href="menu.html"
+            ><button><h2>Tambah</h2></button></a
+          >
+        </div>
+      </div>`;
+      newDetailOrder.classList.add("card-menu");
+      orderMenu.appendChild(newDetailOrder);
+    });
+  } catch (error) {
+    console.log("404");
+  }
+}
+
+getDetailOrder();
+// END OF CONNECT TO BACKEND SERVER/
+
 // Function hamburger button
 const hamburgerButtonElement = document.querySelector("#hamburger");
 const drawerElement = document.querySelector(".nav-list");
