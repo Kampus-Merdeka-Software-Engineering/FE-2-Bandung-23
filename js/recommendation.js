@@ -5,38 +5,34 @@ async function getRecommendation() {
   try {
     const response = await fetch(`${API_URL}/recommendation`);
     const recommendations = await response.json();
-    const menuRecommendation = document.getElementById("content-recommends");
+    const menuRecommendation = document.getElementById("listRecommend");
     recommendations.forEach((recommendation) => {
       const newRecommendation = document.createElement("div");
       newRecommendation.innerHTML = `
-      <img src="img/Rawon.jpeg" alt="Rawon" />
-      <div class="detail-menu">
-        <div class="menu-name">
-          <div class="menu-price">
-            <h2>${recommendation.menu_name}</h2>
-            <h4>Rp${recommendation.menu_price}</h4>
-          </div>
-          <div class="rating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-            <p>(${recommendation.menu_rating})</p>
-          </div>
+      <div class="menu-img">
+      <img src="./img/Rawon.jpeg" alt="" />
+      </div>
+      <div class="menu-detail">
+        <h2>${recommendation.menu_name}</h2>
+        <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+          <p>(${menu.menu_rating})</p>
         </div>
-        <div class="menu-description">
-          <p>
-            ${recommendation.menu_description}
-          </p>
-        </div>
+        <h4>Rp${recommendation.menu_price}</h4>
+        <p>
+          ${menu.menu_description}
+        </p>
         <div class="menu-btn">
           <a href="detail_order.html"
             ><button><h3>Pesan</h3></button></a
           >
         </div>
       </div>`;
-      newRecommendation.classList.add("card-menu");
+      newRecommendation.classList.add("detail-menu");
       menuRecommendation.appendChild(newRecommendation);
     });
   } catch (error) {
