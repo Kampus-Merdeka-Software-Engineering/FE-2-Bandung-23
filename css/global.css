@@ -85,7 +85,7 @@ main {
 
 /* End of Header */
 
-main {
+/* main {
   width: 100%;
   flex: 1;
   display: flex;
@@ -152,7 +152,7 @@ main {
 
 /*About SR*/
 
-.box-about-us {
+/* .box-about-us {
   width: 100%;
   flex: 1;
 
@@ -160,9 +160,9 @@ main {
   align-items: center;
   background-color: #fdfaf2;
   background: linear-gradient(to left, #f7e1ae, #fdfaf2);
-}
+} */
 
-.about-description {
+/* .about-description {
   flex: 1 1;
   padding: auto;
 }
@@ -233,9 +233,9 @@ main {
   justify-content: center;
   background-color: white;
   background: linear-gradient(to top, #fdfaf2, white);
-}
+} */
 
-.offer-description {
+/* .offer-description {
   margin-top: 30px;
 }
 
@@ -337,7 +337,7 @@ main {
 
 .order .order-des {
   margin: 30px;
-}
+/* } */
 
 .title3 {
   justify-content: center;
@@ -373,7 +373,7 @@ main {
   text-align: center;
   margin-block: 50px;
   font-weight: 700;
-}
+} */ */
 
 /*Footer*/
 footer {
@@ -683,4 +683,5 @@ ul li a {
     text-align: center;
     width: 100%;
   }
+}
 }
