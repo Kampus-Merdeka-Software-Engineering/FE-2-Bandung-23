@@ -1,3 +1,34 @@
+// CONNECT TO BACKEND SERVER
+const API_URL = "https://be-2-bandung-23-production.up.railway.app";
+
+// Function Get Menu Default
+async function getOffer() {
+  try {
+    const response = await fetch(`${API_URL}/home/offer`);
+    const menus = await response.json();
+    const listOffer = document.getElementById("carousel");
+    menus.forEach((menu) => {
+      const newOffer = document.createElement("li");
+      newOffer.innerHTML = `
+      <div class="img">
+        <img
+          src="${menu.image_url}"
+          alt="img"
+          draggable="false"
+        />
+      </div>
+      <h2>${menu.menu_name}</h2>
+      <span>Rp${menu.menu_price}</span>`;
+      newOffer.classList.add("card");
+      listOffer.appendChild(newOffer);
+    });
+  } catch (error) {
+    console.log("404");
+  }
+}
+
+getOffer();
+
 // Slideshow Jumbotron
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -139,23 +170,3 @@ hamburgerButtonElement.addEventListener("click", () => {
   drawerElement.classList.toggle("active");
 });
 // End of Function hamburger button
-
-// CONNECT TO BACKEND SERVER
-const API_URL = "http://localhost:3000";
-
-async function getMenu() {
-  try {
-    const response = await fetch(`${API_URL}/home/offer`);
-    const menus = await response.json();
-    const menuOffer = document.getElementById("card-offer");
-    menus.forEach((menu) => {
-      const newMenu = document.createElement("p");
-      newMenu.textContent = `${menu.menu_name}`;
-      menuOffer.appendChild(newMenu);
-    });
-  } catch (error) {
-    console.log(getMenu);
-  }
-}
-
-getMenu();
