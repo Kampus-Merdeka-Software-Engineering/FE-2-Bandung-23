@@ -1,43 +1,22 @@
 // CONNECT TO BACKEND SERVER
-const API_URL = "http://localhost:3000";
+const API_URL = "https://be-2-bandung-23-production.up.railway.app";
+
+// Variable untuk menyimpan data menu asli
+let originalMenus = [];
 
 // Function Get Menu Default
 async function getMenu() {
   try {
     const response = await fetch(`${API_URL}/menu`);
     const menus = await response.json();
+    originalMenus = menus; // Simpan data menu asli
     const listMenu = document.getElementById("listMenu");
-    menus.forEach((menu) => {
-      const newMenu = document.createElement("div");
-      newMenu.innerHTML = `
-      <img src="${menu.image_url}" alt="Rawon" />
-      <div class="menu-detail">
-        <div class="menu-name">
-          <div class="menu-price">
-            <h3>${menu.menu_name}</h3>
-            <h4>Rp${menu.menu_price}</h4>
-          </div>
-          <div class="menu-rating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-            <p>(${menu.menu_rating})</p>
-          </div>
-        </div>
-        <div class="menu-description">
-          <p>
-            ${menu.menu_description}
-          </p>
-        </div>
-        <div class="menu-btn">
-          <a href="detail_order.html"
-            ><button><h3>Pesan</h3></button></a
-          >
-        </div>
-      </div>`;
-      newMenu.classList.add("card-menu");
+
+    // Ambil 8 data secara acak
+    const randomMenus = getRandomMenus(menus, 8);
+
+    randomMenus.forEach((menu) => {
+      const newMenu = createMenuElement(menu);
       listMenu.appendChild(newMenu);
     });
   } catch (error) {
@@ -45,8 +24,83 @@ async function getMenu() {
   }
 }
 
-getMenu();
+// Fungsi untuk mengambil data secara acak
+function getRandomMenus(menus, limit) {
+  const shuffledMenus = menus.sort(() => 0.5 - Math.random());
+  return shuffledMenus.slice(0, limit);
+}
 
+// Fungsi untuk membuat elemen menu
+function createMenuElement(menu) {
+  const newMenu = document.createElement("div");
+  newMenu.innerHTML = `
+    <img src="${menu.image_url}" alt="Rawon" />
+    <div class="menu-detail">
+      <div class="menu-name">
+        <div class="menu-price">
+          <h3>${menu.menu_name}</h3>
+          <h4>Rp${menu.menu_price}</h4>
+        </div>
+        <div class="menu-rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star-half-stroke"></i>
+          <p>(${menu.menu_rating})</p>
+        </div>
+      </div>
+      <div class="menu-description">
+        <p>
+          ${menu.menu_description}
+        </p>
+      </div>
+    </div>
+    <div class="menu-btn">
+      <a href="detail_order.html"><button><h3>Pesan</h3></button></a>
+    </div>`;
+  newMenu.classList.add("card-menu");
+  return newMenu;
+}
+
+// Fungsi pencarian menu
+function searchMenu() {
+  const searchInput = document
+    .getElementById("searchInput")
+    .value.toLowerCase();
+  const filteredMenus = originalMenus.filter((menu) =>
+    menu.menu_name.toLowerCase().includes(searchInput)
+  );
+
+  // Hapus semua menu yang ada
+  const listMenu = document.getElementById("listMenu");
+  listMenu.innerHTML = "";
+
+  if (filteredMenus.length === 0) {
+    // Tampilkan alert jika tidak ada hasil pencarian
+    alert("Menu tidak ditemukan");
+  } else {
+    // Tampilkan hasil pencarian
+    filteredMenus.forEach((menu) => {
+      const newMenu = createMenuElement(menu);
+      listMenu.appendChild(newMenu);
+    });
+  }
+}
+
+// Event listener untuk button pencarian
+const searchButton = document.getElementById("searchButton");
+searchButton.addEventListener("click", searchMenu);
+
+// Event listener untuk input pencarian (Enter)
+const searchInput = document.getElementById("searchInput");
+searchInput.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    searchMenu();
+  }
+});
+
+getMenu();
 
 // Function Get Menu by Category
 async function getMenuCategory(type) {
@@ -84,7 +138,7 @@ async function getMenuCategory(type) {
           >
         </div>
       </div>`;
-      newMenu.classList.add('card-menu');
+      newMenu.classList.add("card-menu");
       menuOffer.appendChild(newMenu);
     });
   } catch (error) {
@@ -128,10 +182,10 @@ links.forEach((link) => {
 const listItems = document.querySelectorAll(".list-cat li");
 
 // Menambahkan event listener pada setiap elemen <li>
-listItems.forEach(function (item, index) {
-  item.addEventListener("click", function () {
+listItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
     // Menghapus class "active" dari semua elemen <li>
-    listItems.forEach(function (li) {
+    listItems.forEach((li) => {
       li.classList.remove("active");
     });
 
@@ -140,13 +194,3 @@ listItems.forEach(function (item, index) {
   });
 });
 // End of Function active link on Category
-
-// Function hamburger button
-const filterButtonElement = document.getElementById("filter");
-const filterElement = document.getElementById("sideBar");
-
-filterButtonElement.addEventListener("click", () => {
-  filterButtonElement.classList.toggle("active");
-  filterElement.classList.toggle("active");
-});
-// End of Function hamburger button
