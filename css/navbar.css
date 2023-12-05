@@ -1,33 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-html,
-body,
-main {
-  width: 100%;
-  min-height: 100vh;
-  font-size: 100%;
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
-
 /* Header */
 
 header.navbar-container {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 80px;
-  margin: auto;
+  height: 100px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -94,12 +71,12 @@ header.navbar-container .nav-list li:hover a {
     font-size: 75%;
   }
 
-  header.navbar-container .logo img {
-    width: 150px;
+  header.navbar-container {
+    height: 80px;
   }
 
-  .content-image img {
-    width: 75%;
+  header.navbar-container .logo img {
+    width: 150px;
   }
 }
 
@@ -146,5 +123,11 @@ header.navbar-container .nav-list li:hover a {
 
   .nav-list.active {
     right: 0;
+  }
+}
+
+@media (max-width: 450px) {
+  header.navbar-container .logo img {
+    width: 130px;
   }
 }
