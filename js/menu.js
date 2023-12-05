@@ -10,7 +10,7 @@ async function getMenu() {
     menus.forEach((menu) => {
       const newMenu = document.createElement("div");
       newMenu.innerHTML = `
-      <img src="img/Sop Konro resize.jpg" alt="Rawon" />
+      <img src="${menu.image_url}" alt="Rawon" />
       <div class="menu-detail">
         <div class="menu-name">
           <div class="menu-price">

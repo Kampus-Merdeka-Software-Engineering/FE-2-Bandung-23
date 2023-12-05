@@ -10,7 +10,7 @@ async function getRecommendation() {
       const newRecommendation = document.createElement("div");
       newRecommendation.innerHTML = `
       <div class="menu-img">
-      <img src="./img/Rawon.jpeg" alt="" />
+      <img src="${recommendation.image_url}" alt="" />
       </div>
       <div class="menu-detail">
         <h2>${recommendation.menu_name}</h2>
