@@ -76,16 +76,11 @@ function searchMenu() {
   const listMenu = document.getElementById("listMenu");
   listMenu.innerHTML = "";
 
-  if (filteredMenus.length === 0) {
-    // Tampilkan alert jika tidak ada hasil pencarian
-    alert("Menu tidak ditemukan");
-  } else {
-    // Tampilkan hasil pencarian
-    filteredMenus.forEach((menu) => {
-      const newMenu = createMenuElement(menu);
-      listMenu.appendChild(newMenu);
-    });
-  }
+  // Tampilkan hasil pencarian
+  filteredMenus.forEach((menu) => {
+    const newMenu = createMenuElement(menu);
+    listMenu.appendChild(newMenu);
+  });
 }
 
 // Event listener untuk button pencarian

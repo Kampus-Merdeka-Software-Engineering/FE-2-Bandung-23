@@ -1,37 +1,25 @@
 // CONNECT TO BACKEND SERVER
-const API_URL = "http://localhost:3000";
+const baseURL = 'https://be-2-bandung-23-production.up.railway.app'
 
-async function getDetailOrder() {
-  try {
-    const response = await fetch(`${API_URL}/detail_order`);
-    const detailOrder = await response.json();
-    const orderMenu = document.getElementById("order-menu");
-    detailOrder.forEach((detail_order) => {
-      const newDetailOrder = document.createElement("div");
-      newDetailOrder.innerHTML = `
-      <img src="img/Ayam Taliwang.jpg" alt="Ayam Taliwang" />
-      <div class="order-menu">
-        <div class="order-type">
-          <div class="menu-price">
-            <h3>${detail_order.order_type}</h3>
-            <p>Rp${detail_order.menu_price}</p>
-          </div>
-        </div>
-        <div class="menu-btn">
-          <a href="menu.html"
-            ><button><h2>Tambah</h2></button></a
-          >
-        </div>
-      </div>`;
-      newDetailOrder.classList.add("card-menu");
-      orderMenu.appendChild(newDetailOrder);
+  const createOrder = document.getElementById("form", "", "")
+
+    createOrder.addEventListener("click", async () => {
+      const firstName =  document.getElementById("firstName").value;
+      const lastName =  document.getElementById("lastName").value;
+      const email = document.getElementById("createEmail").value;
+
+      const response = await fetch(baseURL + '/', {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({name, email}),
+      });
+
+      const result = await response.json();
+      output.innerHTML = JSON.stringify(result);
     });
-  } catch (error) {
-    console.log("404");
-  }
-}
 
-getDetailOrder();
 // END OF CONNECT TO BACKEND SERVER/
 
 // Function hamburger button
@@ -88,73 +76,6 @@ document.querySelectorAll(".order-total").forEach(function (element) {
     jumlahElement.innerText = jumlah;
   }
 });
-
-// Modal
-
-// Get modals and buttons
-// var name = document.getElementById("firstName").value;
-// var konfirmasiBtn = document.getElementById("konfirmasiBtn");
-// var modal = document.getElementById("myModal");
-// var modal2 = document.getElementById("myModal2");
-// var btn = document.getElementById("tutupBtn");
-// var closeModalBtn = document.getElementById("closeModalBtn");
-// var nextModalBtn = document.getElementById("nextModalBtn");
-// var closeModalBtn2 = document.getElementById("closeModalBtn2");
-// var homeBtn = document.getElementById("homeBtn");
-
-// konfirmasiBtn.addEventListener("click", function () {
-//   if (firstName !== "") {
-//     tampilkanModal();
-//   } else {
-//     alert("Masukkan nama anda");
-//   }
-// });
-
-// homeBtn.addEventListener("click", function () {
-//   tutupModal();
-// });
-
-// function tutupModal() {
-//   modal.style.display = "none";
-//   // Arahkan ke halaman index.html
-//   window.location.href = "index.html";
-// }
-
-// function tampilkanModal() {
-//   modal.style.display = "flex";
-// }
-
-// // Add event listener to open the first modal
-// btn.addEventListener("click", function () {
-//   modal.style.display = "block";
-// });
-
-// // Add event listener to close the first modal
-// closeModalBtn.addEventListener("click", function () {
-//   modal.style.display = "none";
-// });
-
-// // Add event listener to open the second modal
-// nextModalBtn.addEventListener("click", function () {
-//   modal.style.display = "none";
-//   modal2.style.display = "flex";
-// });
-
-// // Add event listener to close the second modal
-// closeModalBtn2.addEventListener("click", function () {
-//   modal2.style.display = "none";
-// });
-
-// // Add event listener to close the modals when clicking outside of them
-// window.addEventListener("click", function (event) {
-//   if (event.target == modal) {
-//     modal.style.display = "none";
-//   } else if (event.target == modal2) {
-//     modal2.style.display = "none";
-//   }
-// });
-
-// // End of Modal
 
 document.getElementById("form").addEventListener("submit", (event) => {
   event.preventDefault();

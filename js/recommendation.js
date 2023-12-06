@@ -1,5 +1,5 @@
 // CONNECT TO BACKEND SERVER
-const API_URL = "http://localhost:3000";
+const API_URL = "https://be-2-bandung-23-production.up.railway.app";
 
 async function getRecommendation() {
   try {
