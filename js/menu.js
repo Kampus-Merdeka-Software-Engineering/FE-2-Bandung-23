@@ -115,6 +115,57 @@ searchInput.addEventListener("keydown", function (event) {
 
 getMenu();
 
+// Get menu by type
+async function getMenuTypes() {
+  document.getElementById('listCat').addEventListener('click', function(e) {
+    if (e.target && e.target.nodeName === 'LI') {
+        let type = e.target.getAttribute('value');
+        fetchMenuData(type);
+    }
+  });
+
+  function fetchMenuData(type) {
+    fetch(`${API_URL}/menu/${type}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data); // Process and display your data here
+            const listMenu = document.getElementById("listMenu");
+            const newMenu = document.createElement("div");
+            newMenu.innerHTML = `
+              <img src="${data.image_url}" alt="Rawon" />
+              <div class="menu-detail">
+                <div class="menu-name">
+                  <div class="menu-price">
+                    <h3>${data.menu_name}</h3>
+                    <h4>Rp${data.menu_price}</h4>
+                  </div>
+                  <div class="menu-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <p>(${data.menu_rating})</p>
+                  </div>
+                </div>
+                <div class="menu-description">
+                  <p>
+                    ${data.menu_description}
+                  </p>
+                </div>
+              </div>
+              <div class="menu-btn">
+                <a href="detail_order.html"><button><h3>Pesan</h3></button></a>
+              </div>`;
+            newMenu.classList.add("card-menu");
+            listMenu.appendChild(newMenu);
+        })
+        .catch(error => console.error('Error:', error));
+  }
+};
+
+getMenuTypes();
+
 // // Function Get Menu by Category
 // async function getMenuCategory(type) {
 //   try {
