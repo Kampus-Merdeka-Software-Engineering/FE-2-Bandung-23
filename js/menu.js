@@ -33,13 +33,22 @@ function getRandomMenus(menus, limit) {
 // Fungsi untuk membuat elemen menu
 function createMenuElement(menu) {
   const newMenu = document.createElement("div");
+  // Format the menu price as Indonesian Rupiah without commas and trailing zeros
+  const formattedPrice = new Intl.NumberFormat("id-ID", {
+    style: "currency",
+    currency: "IDR",
+    minimumFractionDigits: 0, // Ensure at least one digit after the decimal point
+    maximumFractionDigits: 2, // Limit to a maximum of two digits after the decimal point
+  })
+    .format(menu.menu_price)
+    .replace(/,00$/, "");
   newMenu.innerHTML = `
     <img src="${menu.image_url}" alt="Rawon" />
     <div class="menu-detail">
       <div class="menu-name">
         <div class="menu-price">
           <h3>${menu.menu_name}</h3>
-          <h4>Rp${menu.menu_price}</h4>
+          <h4>${formattedPrice}</h4>
         </div>
         <div class="menu-rating">
           <i class="fa-solid fa-star"></i>
@@ -55,9 +64,9 @@ function createMenuElement(menu) {
       </div>
     </div>
     <div class="menu-btn">
-      <a href="detail_order.html">
+      
         <button class="pesan-btn"><h3>Pesan</h3></button>
-      </a>
+      
     </div>`;
   newMenu.classList.add("card-menu");
 
@@ -94,11 +103,19 @@ function searchMenu() {
   const listMenu = document.getElementById("listMenu");
   listMenu.innerHTML = "";
 
-  // Tampilkan hasil pencarian
-  filteredMenus.forEach((menu) => {
-    const newMenu = createMenuElement(menu);
-    listMenu.appendChild(newMenu);
-  });
+  if (filteredMenus.length === 0) {
+    // Tampilkan alert jika tidak ada hasil pencarian
+    const createAlert = document.createElement("div");
+    createAlert.innerHTML = `<p>Menu tidak ditemukan</p>`;
+    createAlert.classList.add("alert");
+    listMenu.appendChild(createAlert);
+  } else {
+    // Tampilkan hasil pencarian
+    filteredMenus.forEach((menu) => {
+      const newMenu = createMenuElement(menu);
+      listMenu.appendChild(newMenu);
+    });
+  }
 }
 
 // Event listener untuk button pencarian
@@ -117,117 +134,46 @@ getMenu();
 
 // Get menu by type
 async function getMenuTypes() {
-  document.getElementById('listCat').addEventListener('click', function(e) {
-    if (e.target && e.target.nodeName === 'LI') {
-        let type = e.target.getAttribute('value');
-        fetchMenuData(type);
+  const listCat = document.getElementById("listCat");
+  const listMenu = document.getElementById("listMenu");
+
+  listCat.addEventListener("click", async function (e) {
+    if (e.target && e.target.nodeName === "LI") {
+      let type = e.target.getAttribute("value");
+      await fetchMenuData(type);
     }
   });
 
-  function fetchMenuData(type) {
-    fetch(`${API_URL}/menu/${type}`)
-        .then(response => response.json())
-        .then(data => {
-            console.log(data); // Process and display your data here
-            const listMenu = document.getElementById("listMenu");
-            const newMenu = document.createElement("div");
-            newMenu.innerHTML = `
-              <img src="${data.image_url}" alt="Rawon" />
-              <div class="menu-detail">
-                <div class="menu-name">
-                  <div class="menu-price">
-                    <h3>${data.menu_name}</h3>
-                    <h4>Rp${data.menu_price}</h4>
-                  </div>
-                  <div class="menu-rating">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star-half-stroke"></i>
-                    <p>(${data.menu_rating})</p>
-                  </div>
-                </div>
-                <div class="menu-description">
-                  <p>
-                    ${data.menu_description}
-                  </p>
-                </div>
-              </div>
-              <div class="menu-btn">
-                <a href="detail_order.html"><button><h3>Pesan</h3></button></a>
-              </div>`;
-            newMenu.classList.add("card-menu");
-            listMenu.appendChild(newMenu);
-        })
-        .catch(error => console.error('Error:', error));
+  async function fetchMenuData(type) {
+    // Remove previously displayed data
+    listMenu.innerHTML = "";
+
+    try {
+      const response = await fetch(`${API_URL}/menu/${type}`);
+      const data = await response.json();
+
+      console.log("Received data:", data);
+
+      // Check for the existence of data
+      if (Array.isArray(data) && data.length > 0) {
+        // Log all properties present in the data
+        console.log("Properties in received data:", Object.keys(data[0]));
+
+        // Check for specific properties you need
+        data.forEach((menu) => {
+          const newMenu = createMenuElement(menu);
+          listMenu.appendChild(newMenu);
+        });
+      } else {
+        console.error("Invalid data received. Data is empty or not an array.");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
   }
-};
+}
 
 getMenuTypes();
-
-// // Function Get Menu by Category
-// async function getMenuCategory(type) {
-//   try {
-//     const response = await fetch(`${API_URL}/menu/category/${type}`);
-//     const menus = await response.json();
-//     const menuOffer = document.getElementById("listMenu");
-//     menus.forEach((menu) => {
-//       const newMenu = document.createElement("div");
-//       newMenu.innerHTML = `
-//       <img src="img/Sop Konro resize.jpg" alt="Rawon" />
-//       <div class="menu-detail">
-//         <div class="menu-name">
-//           <div class="menu-price">
-//             <h3>${menu.menu_name}</h3>
-//             <h4>Rp${menu.menu_price}</h4>
-//           </div>
-//           <div class="menu-rating">
-//             <i class="fa-solid fa-star"></i>
-//             <i class="fa-solid fa-star"></i>
-//             <i class="fa-solid fa-star"></i>
-//             <i class="fa-solid fa-star"></i>
-//             <i class="fa-solid fa-star-half-stroke"></i>
-//             <p>(4.9/5)</p>
-//           </div>
-//         </div>
-//         <div class="menu-description">
-//           <p>
-//             ${menu.menu_description}
-//           </p>
-//         </div>
-//         <div class="menu-btn">
-//           <button onclick="saveToLocalStorage('${menu.image_url}', '${menu.menu_name}', '${menu.menu_price}')"><h3>Pesan</h3></button>
-//         </div>
-//       </div>`;
-//       newMenu.classList.add("card-menu");
-//       menuOffer.appendChild(newMenu);
-//     });
-//     // Fungsi untuk menyimpan data terpilih ke local storage
-//     function saveToLocalStorage(event, imgSrc, menuName, menuPrice) {
-//       // Mencegah perilaku default dari link
-//       event.preventDefault();
-
-//       const dataToSave = {
-//         imgSrc: imgSrc,
-//         menuName: menuName,
-//         menuPrice: menuPrice,
-//       };
-
-//       // Simpan data ke local storage
-//       localStorage.setItem("selectedData", JSON.stringify(dataToSave));
-
-//       // Tampilkan pesan bahwa data berhasil disimpan (opsional)
-//       alert("Data terpilih berhasil disimpan di Local Storage");
-//     }
-//   } catch (error) {
-//     console.log("404");
-//   }
-// }
-
-// getMenuCategory();
-
-// END OF CONNECT TO BACKEND SERVER
 
 // Function hamburger button
 const hamburgerButtonElement = document.querySelector("#hamburger");

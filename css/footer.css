@@ -77,6 +77,10 @@ ul li a {
   size: 40px;
 }
 
+.copyright {
+  text-align: left;
+}
+
 @media (max-width: 768px) {
   footer {
     display: flex;

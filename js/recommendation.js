@@ -8,6 +8,15 @@ async function getRecommendation() {
     const menuRecommendation = document.getElementById("listRecommend");
     recommendations.forEach((recommendation) => {
       const newRecommendation = document.createElement("div");
+      // Format the menu price as Indonesian Rupiah without commas and trailing zeros
+      const formattedPrice = new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        minimumFractionDigits: 0, // Ensure at least one digit after the decimal point
+        maximumFractionDigits: 2, // Limit to a maximum of two digits after the decimal point
+      })
+        .format(recommendation.menu_price)
+        .replace(/,00$/, "");
       newRecommendation.innerHTML = `
       <div class="menu-img">
       <img src="${recommendation.image_url}" alt="" />
@@ -22,7 +31,7 @@ async function getRecommendation() {
           <i class="fa-solid fa-star-half-stroke"></i>
           <p>(${recommendation.menu_rating})</p>
         </div>
-        <h4>Rp${recommendation.menu_price}</h4>
+        <h4>${formattedPrice}</h4>
         <p>
           ${recommendation.menu_description}
         </p>

@@ -9,6 +9,15 @@ async function getOffer() {
     const listOffer = document.getElementById("carousel");
     menus.forEach((menu) => {
       const newOffer = document.createElement("li");
+      // Format the menu price as Indonesian Rupiah without commas and trailing zeros
+      const formattedPrice = new Intl.NumberFormat("id-ID", {
+        style: "currency",
+        currency: "IDR",
+        minimumFractionDigits: 0, // Ensure at least one digit after the decimal point
+        maximumFractionDigits: 2, // Limit to a maximum of two digits after the decimal point
+      })
+        .format(menu.menu_price)
+        .replace(/,00$/, "");
       newOffer.innerHTML = `
       <div class="img">
         <img
@@ -18,7 +27,7 @@ async function getOffer() {
         />
       </div>
       <h2>${menu.menu_name}</h2>
-      <span>Rp${menu.menu_price}</span>`;
+      <span>${formattedPrice}</span>`;
       newOffer.classList.add("card");
       listOffer.appendChild(newOffer);
     });
@@ -140,7 +149,7 @@ const infiniteScroll = () => {
 const autoPlay = () => {
   if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
   // Autoplay the carousel after every 2500 ms
-  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2500);
+  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 1000);
 };
 autoPlay();
 carousel.addEventListener("mousedown", dragStart);
@@ -149,3 +158,9 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
+
+console.log(carousel);
+console.log(carouselChildrens);
+console.log(firstCardWidth);
+console.log(cardPerView);
+console.log(isDragging);
