@@ -20,7 +20,7 @@ async function getMenu() {
       listMenu.appendChild(newMenu);
     });
   } catch (error) {
-    console.log("404");
+    console.error("Error fetching menu:", error);
   }
 }
 
@@ -51,16 +51,34 @@ function createMenuElement(menu) {
         </div>
       </div>
       <div class="menu-description">
-        <p>
-          ${menu.menu_description}
-        </p>
+        <p>${menu.menu_description}</p>
       </div>
     </div>
     <div class="menu-btn">
-      <a href="detail_order.html"><button><h3>Pesan</h3></button></a>
+      <a href="detail_order.html">
+        <button class="pesan-btn"><h3>Pesan</h3></button>
+      </a>
     </div>`;
   newMenu.classList.add("card-menu");
+
+  // Menambahkan event listener pada tombol "Pesan"
+  const pesanButton = newMenu.querySelector(".pesan-btn");
+  pesanButton.addEventListener("click", () => saveToLocalStorage(menu));
+
   return newMenu;
+}
+
+// Fungsi untuk menyimpan data terpilih ke local storage
+function saveToLocalStorage(selectedMenu) {
+  const { image_url, menu_name, menu_price } = selectedMenu;
+  const dataToSave = {
+    imgSrc: image_url,
+    menuName: menu_name,
+    menuPrice: menu_price,
+  };
+
+  // Simpan data ke local storage
+  localStorage.setItem("selectedData", JSON.stringify(dataToSave));
 }
 
 // Fungsi pencarian menu
@@ -97,51 +115,66 @@ searchInput.addEventListener("keydown", function (event) {
 
 getMenu();
 
-// Function Get Menu by Category
-async function getMenuCategory(type) {
-  try {
-    const response = await fetch(`${API_URL}/menu/category/${type}`);
-    const menus = await response.json();
-    const menuOffer = document.getElementById("listMenu");
-    menus.forEach((menu) => {
-      const newMenu = document.createElement("div");
-      newMenu.innerHTML = `
-      <img src="img/Sop Konro resize.jpg" alt="Rawon" />
-      <div class="menu-detail">
-        <div class="menu-name">
-          <div class="menu-price">
-            <h3>${menu.menu_name}</h3>
-            <h4>Rp${menu.menu_price}</h4>
-          </div>
-          <div class="menu-rating">
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-            <p>(4.9/5)</p>
-          </div>
-        </div>
-        <div class="menu-description">
-          <p>
-            ${menu.menu_description}
-          </p>
-        </div>
-        <div class="menu-btn">
-          <a href="detail_order.html"
-            ><button><h3>Pesan</h3></button></a
-          >
-        </div>
-      </div>`;
-      newMenu.classList.add("card-menu");
-      menuOffer.appendChild(newMenu);
-    });
-  } catch (error) {
-    console.log("404");
-  }
-}
+// // Function Get Menu by Category
+// async function getMenuCategory(type) {
+//   try {
+//     const response = await fetch(`${API_URL}/menu/category/${type}`);
+//     const menus = await response.json();
+//     const menuOffer = document.getElementById("listMenu");
+//     menus.forEach((menu) => {
+//       const newMenu = document.createElement("div");
+//       newMenu.innerHTML = `
+//       <img src="img/Sop Konro resize.jpg" alt="Rawon" />
+//       <div class="menu-detail">
+//         <div class="menu-name">
+//           <div class="menu-price">
+//             <h3>${menu.menu_name}</h3>
+//             <h4>Rp${menu.menu_price}</h4>
+//           </div>
+//           <div class="menu-rating">
+//             <i class="fa-solid fa-star"></i>
+//             <i class="fa-solid fa-star"></i>
+//             <i class="fa-solid fa-star"></i>
+//             <i class="fa-solid fa-star"></i>
+//             <i class="fa-solid fa-star-half-stroke"></i>
+//             <p>(4.9/5)</p>
+//           </div>
+//         </div>
+//         <div class="menu-description">
+//           <p>
+//             ${menu.menu_description}
+//           </p>
+//         </div>
+//         <div class="menu-btn">
+//           <button onclick="saveToLocalStorage('${menu.image_url}', '${menu.menu_name}', '${menu.menu_price}')"><h3>Pesan</h3></button>
+//         </div>
+//       </div>`;
+//       newMenu.classList.add("card-menu");
+//       menuOffer.appendChild(newMenu);
+//     });
+//     // Fungsi untuk menyimpan data terpilih ke local storage
+//     function saveToLocalStorage(event, imgSrc, menuName, menuPrice) {
+//       // Mencegah perilaku default dari link
+//       event.preventDefault();
 
-getMenuCategory();
+//       const dataToSave = {
+//         imgSrc: imgSrc,
+//         menuName: menuName,
+//         menuPrice: menuPrice,
+//       };
+
+//       // Simpan data ke local storage
+//       localStorage.setItem("selectedData", JSON.stringify(dataToSave));
+
+//       // Tampilkan pesan bahwa data berhasil disimpan (opsional)
+//       alert("Data terpilih berhasil disimpan di Local Storage");
+//     }
+//   } catch (error) {
+//     console.log("404");
+//   }
+// }
+
+// getMenuCategory();
 
 // END OF CONNECT TO BACKEND SERVER
 

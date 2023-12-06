@@ -29,6 +29,16 @@ async function getOffer() {
 
 getOffer();
 
+// Function hamburger button
+const hamburgerButtonElement = document.querySelector("#hamburger");
+const drawerElement = document.querySelector(".nav-list");
+
+hamburgerButtonElement.addEventListener("click", () => {
+  hamburgerButtonElement.classList.toggle("active");
+  drawerElement.classList.toggle("active");
+});
+// End of Function hamburger button
+
 // Slideshow Jumbotron
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -58,9 +68,8 @@ function showSlides(n) {
 
 //End of Slideshow Jumbotron
 
-// Card carousel
 const wrapper = document.querySelector(".wrapper");
-const carousel = document.querySelector(".carousel");
+let carousel = document.querySelector(".carousel");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
 const arrowBtns = document.querySelectorAll(".wrapper i");
 const carouselChildrens = [...carousel.children];
@@ -131,7 +140,7 @@ const infiniteScroll = () => {
 const autoPlay = () => {
   if (window.innerWidth < 800 || !isAutoPlay) return; // Return if window is smaller than 800 or isAutoPlay is false
   // Autoplay the carousel after every 2500 ms
-  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 3000);
+  timeoutId = setTimeout(() => (carousel.scrollLeft += firstCardWidth), 2500);
 };
 autoPlay();
 carousel.addEventListener("mousedown", dragStart);
@@ -140,33 +149,3 @@ document.addEventListener("mouseup", dragStop);
 carousel.addEventListener("scroll", infiniteScroll);
 wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
 wrapper.addEventListener("mouseleave", autoPlay);
-
-// End of Card carousel
-
-// Navbar active link
-const currentUrl = window.location.href;
-
-// Ambil semua elemen link di dalam navigasi
-const links = document.querySelectorAll(".nav-link");
-
-// Loop melalui setiap link untuk memeriksa URL
-links.forEach((link) => {
-  const linkUrl = link.href;
-
-  // Periksa apakah URL saat ini mengandung URL link
-  if (currentUrl.includes(linkUrl)) {
-    // Tambahkan class "active" pada link yang sesuai
-    link.classList.add("active");
-  }
-});
-// End of Function active link on the navbar
-
-// Function hamburger button
-const hamburgerButtonElement = document.querySelector("#hamburger");
-const drawerElement = document.querySelector(".nav-list");
-
-hamburgerButtonElement.addEventListener("click", () => {
-  hamburgerButtonElement.classList.toggle("active");
-  drawerElement.classList.toggle("active");
-});
-// End of Function hamburger button

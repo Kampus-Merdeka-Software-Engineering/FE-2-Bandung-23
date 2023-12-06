@@ -38,7 +38,7 @@ main {
 .slides .slide img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: 680px;
   object-fit: cover;
   animation-name: fade;
   animation-duration: 1.5s;
@@ -94,7 +94,7 @@ main {
   display: block;
   text-align: center;
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 10%;
 }
 
@@ -390,6 +390,7 @@ main {
 .offer-button {
   text-align: center;
   align-items: center;
+  width: 100%;
 }
 
 .offer-button button {
@@ -584,7 +585,11 @@ main {
 
 @media (max-width: 450px) {
   .slides {
-    height: 200px;
+    height: 250px;
+  }
+
+  .slides .slide img {
+    height: 250px;
   }
 
   .content-description {
