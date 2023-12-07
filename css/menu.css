@@ -422,7 +422,7 @@
 
   .container {
     margin-top: 60px;
-    height: 1960px;
+    height: 2900px;
   }
 
   .menu-category {
@@ -522,7 +522,7 @@
   .article-bottom {
     width: 100%;
     display: block;
-    margin-top: 20px;
+    margin-top: 120px;
     height: 770px;
   }
 
@@ -570,7 +570,7 @@
   .container {
     margin-top: 60px;
     width: 100%;
-    height: 605vh;
+    height: 665vh;
   }
 
   .title {
@@ -689,7 +689,7 @@
   .article-bottom {
     width: 330px;
     display: block;
-    margin-top: 20px;
+    margin-top: 1300px;
     margin-bottom: 20px;
   }
 
