@@ -1,24 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-html,
-body,
-main {
-  width: 100%;
-  min-height: 100vh;
-  font-size: 100%;
-  font-family: "Poppins", sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
 
 /* Seribu Rasa Description */
 
@@ -471,86 +451,7 @@ main {
 
 /* end of order */
 
-/*Footer*/
-footer {
-  display: flex;
-  background-color: #186f65;
-  max-height: 400px;
-  justify-content: center;
-  width: 100%;
-}
 
-.footer-col img {
-  justify-content: center;
-  display: flex;
-  max-width: 180px;
-  width: 100%;
-  align-items: center;
-}
-
-.footer-col-com ul,
-.footer-col ul {
-  display: inline-flex;
-  list-style: none;
-  padding: 0;
-  margin-inline: auto;
-  justify-content: center;
-  width: 100%;
-}
-
-.footer-col {
-  justify-content: center;
-  align-items: center;
-  color: white;
-  padding-block: 20px;
-  width: 25%;
-}
-
-.footer-col .title {
-  text-align: center;
-  margin-block: 15px;
-}
-
-.footer-col-com {
-  color: white;
-  margin-block: auto;
-  width: 35%;
-}
-
-.footer-col-com h3 {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.footer-col-com a,
-.footer-col a {
-  max-width: 130px;
-  text-align: left;
-  margin-inline: 10px;
-}
-
-ul li a {
-  display: block;
-  color: white;
-  text-decoration: none;
-}
-
-.social-links {
-  text-align: center;
-  height: 30px;
-}
-
-.social-links i {
-  font-size: 25px;
-  width: 30px;
-  height: 30px;
-}
-
-.social-links i fa-brands::before {
-  size: 40px;
-}
-
-/* End of Footer */
 
 /* Responsive Page Setting */
 
