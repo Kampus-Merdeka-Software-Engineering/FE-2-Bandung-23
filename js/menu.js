@@ -84,6 +84,7 @@ function saveToLocalStorage(selectedMenu) {
     imgSrc: image_url,
     menuName: menu_name,
     menuPrice: menu_price,
+    total: 1, // Menambah properti quantity dan menginisialisasinya dengan 1
   };
 
   // Simpan data ke local storage
