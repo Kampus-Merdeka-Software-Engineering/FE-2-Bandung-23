@@ -42,7 +42,7 @@
   margin-top: 10px;
 }
 
-.side-bar {
+.side-bar-order {
   align-items: right;
   flex: 1;
   max-width: 650px;
@@ -62,7 +62,7 @@
   height: 100%;
 }
 
-.side-bar img {
+.side-bar-order img {
   max-width: 150px;
   width: 100%;
   max-height: 150px;
@@ -618,7 +618,7 @@ input[type="number"] {
     margin-inline: 18px;
   }
 
-  .side-bar {
+  .side-bar-order {
     width: 640px;
   }
 
@@ -744,7 +744,7 @@ input[type="number"] {
     margin-top: 10px;
   }
 
-  .side-bar {
+  .side-bar-order {
     align-items: center;
     width: 475px;
     height: 130px;
@@ -754,7 +754,7 @@ input[type="number"] {
     background-color: #fdfaf2;
   }
 
-  .side-bar img {
+  .side-bar-order img {
     width: 150px;
     height: 130px;
   }
@@ -997,12 +997,12 @@ input[type="number"] {
     height: 50px;
   }
 
-  .side-bar {
+  .side-bar-order {
     width: 350px;
     height: 105px;
   }
 
-  .side-bar img {
+  .side-bar-order img {
     width: 100px;
     height: 100px;
   }
@@ -1016,7 +1016,7 @@ input[type="number"] {
     height: 4px;
   }
 
-  .side-bar img {
+  .side-bar-order img {
     width: 100px;
     height: 100px;
   }

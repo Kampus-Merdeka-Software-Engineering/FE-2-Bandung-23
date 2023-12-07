@@ -69,7 +69,7 @@ if (selectedData) {
         .replace(/,00$/, "");
 
       return `
-      <div class="side-bar">
+      <div class="side-bar-order">
         <div class="order-menu">
           <img src=${selectedMenu.imgSrc} alt=${selectedMenu.menuName} />
           <div class="order-type">

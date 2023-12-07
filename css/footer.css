@@ -77,9 +77,9 @@ ul li a {
   size: 40px;
 }
 
-/* .copyright {
+.copyright {
   text-align: left;
-} */
+}
 
 @media (max-width: 768px) {
   footer {
@@ -115,6 +115,11 @@ ul li a {
 
   .footer-col h3 {
     margin-block: 7px;
+  }
+
+  .copyright {
+    text-align: center;
+    width: 100%;
   }
 }
 
