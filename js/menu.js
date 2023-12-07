@@ -43,7 +43,7 @@ function createMenuElement(menu) {
     .format(menu.menu_price)
     .replace(/,00$/, "");
   newMenu.innerHTML = `
-    <img src="${menu.image_url}" alt="Rawon" />
+    <img src="${menu.image_url}" alt="${menu.menu_name}" />
     <div class="menu-detail">
       <div class="menu-name">
         <div class="menu-price">
@@ -87,8 +87,44 @@ function saveToLocalStorage(selectedMenu) {
     total: 1, // Menambah properti quantity dan menginisialisasinya dengan 1
   };
 
+  // Dapatkan data yang telah disimpan sebelumnya dari local storage
+  const storedData = localStorage.getItem("selectedData");
+
+  // Cek apakah data sudah tersimpan sebelumnya atau belum
+  let selectedDataArray = [];
+
+  if (storedData) {
+    try {
+      // Coba mengonversi data yang ada menjadi array
+      selectedDataArray = JSON.parse(storedData);
+
+      // Pastikan bahwa selectedDataArray adalah array
+      if (!Array.isArray(selectedDataArray)) {
+        selectedDataArray = [];
+      }
+
+      // Mencari apakah data yang sama sudah ada dalam array
+      const existingDataIndex = selectedDataArray.findIndex(
+        (item) => item.imgSrc === dataToSave.imgSrc
+      );
+
+      // Jika data yang sama sudah ada, tambahkan totalnya
+      if (existingDataIndex !== -1) {
+        selectedDataArray[existingDataIndex].total += 1;
+      } else {
+        // Jika data belum ada, tambahkan ke dalam array
+        selectedDataArray.push(dataToSave);
+      }
+    } catch (error) {
+      console.error("Error parsing stored data:", error);
+    }
+  } else {
+    // Jika belum ada data, tambahkan data ke dalam array
+    selectedDataArray.push(dataToSave);
+  }
+
   // Simpan data ke local storage
-  localStorage.setItem("selectedData", JSON.stringify(dataToSave));
+  localStorage.setItem("selectedData", JSON.stringify(selectedDataArray));
 }
 
 // Fungsi pencarian menu

@@ -53,61 +53,83 @@ links.forEach((link) => {
 const selectedData = localStorage.getItem("selectedData");
 
 if (selectedData) {
-  let selectedMenu = JSON.parse(selectedData);
+  let selectedMenus = JSON.parse(selectedData);
 
-  const orderMenu = document.querySelector(".order-menu");
-  // Format the menu price as Indonesian Rupiah without commas and trailing zeros
-  const formattedPrice = new Intl.NumberFormat("id-ID", {
-    style: "currency",
-    currency: "IDR",
-    minimumFractionDigits: 0, // Ensure at least one digit after the decimal point
-    maximumFractionDigits: 2, // Limit to a maximum of two digits after the decimal point
-  })
-    .format(selectedMenu.menuPrice)
-    .replace(/,00$/, "");
-  orderMenu.innerHTML = `
-  <img src=${selectedMenu.imgSrc} alt=${selectedMenu.menuName} />
-  <div class="order-type">
-    <h3>${selectedMenu.menuName}</h3>
-    <div class="menu-price">
-      <p>${formattedPrice}</p>
-    </div>
-    <div class="notes">
-      <input type="text " placeholder="Catatan Khusus" />
-    </div>
-  </div>
-  <div class="order-total">
-    <p class="minus">-</p>
-    <p class="num" id="total">${selectedMenu.total}</p>
-    <p class="plus">+</p>
-  </div>
-  `;
+  const orderMenu = document.querySelector(".scroll");
+  const cardMenu = document.createElement("div");
 
-  const minusButton = orderMenu.querySelector(".minus");
-  const plusButton = orderMenu.querySelector(".plus");
-  const orderTotal = orderMenu.querySelector(".num");
+  // Display each selected item as a separate order menu
 
-  minusButton.addEventListener("click", () => {
-    if (selectedMenu.total > 1) {
-      selectedMenu.total--;
-      orderTotal.textContent = selectedMenu.total;
-      updateLocalStorage();
-    }
-  });
+  if (Array.isArray(selectedMenus)) {
+    // Display each selected item as a separate order menu
+    cardMenu.innerHTML = selectedMenus
+      .map((selectedMenu, index) => {
+        const formattedPrice = new Intl.NumberFormat("id-ID", {
+          style: "currency",
+          currency: "IDR",
+          minimumFractionDigits: 0,
+          maximumFractionDigits: 2,
+        })
+          .format(selectedMenu.menuPrice)
+          .replace(/,00$/, "");
 
-  plusButton.addEventListener("click", () => {
-    selectedMenu.total++;
-    orderTotal.textContent = selectedMenu.total;
-    updateLocalStorage();
-  });
+        return `
+        <div class="side-bar">
+          <div class="order-menu">
+            <img src=${selectedMenu.imgSrc} alt=${selectedMenu.menuName} />
+            <div class="order-type">
+              <h3>${selectedMenu.menuName}</h3>
+              <div class="menu-price">
+                <p>${formattedPrice}</p>
+              </div>
+              <div class="notes">
+                <input type="text" placeholder="Catatan Khusus" />
+              </div>
+            </div>
+            <div class="order-total">
+              <p class="minus">-</p>
+              <p class="num" data-menu-id="${selectedMenu.menuId}">${selectedMenu.total}</p>
+              <p class="plus">+</p>
+            </div>
+          </div>
+        </div>  
+        `;
+      })
+      .join("");
+    orderMenu.appendChild(cardMenu);
+
+    // Attach event listeners to each order item
+    const minusButtons = orderMenu.querySelectorAll(".minus");
+    const plusButtons = orderMenu.querySelectorAll(".plus");
+    const orderTotals = orderMenu.querySelectorAll(".num");
+
+    minusButtons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        if (selectedMenus[index].total > 1) {
+          selectedMenus[index].total--;
+          orderTotals[index].textContent = selectedMenus[index].total;
+          updateLocalStorage();
+        }
+      });
+    });
+
+    plusButtons.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        selectedMenus[index].total++;
+        orderTotals[index].textContent = selectedMenus[index].total;
+        updateLocalStorage();
+      });
+    });
+  } else {
+    // If it's not an array, display a single item in the order menu
+    // ... (your existing code for a single item)
+  }
 
   function updateLocalStorage() {
-    localStorage.setItem("selectedData", JSON.stringify(selectedMenu));
+    localStorage.setItem("selectedData", JSON.stringify(selectedMenus));
   }
 } else {
-  const initialData = {
-    total: 0,
-  };
+  const initialData = [];
   localStorage.setItem("selectedData", JSON.stringify(initialData));
 }
 

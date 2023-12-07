@@ -19,7 +19,7 @@ async function getRecommendation() {
         .replace(/,00$/, "");
       newRecommendation.innerHTML = `
       <div class="menu-img">
-      <img src="${recommendation.image_url}" alt="" />
+      <img src="${recommendation.image_url}" alt="${recommendation.menu_name}" />
       </div>
       <div class="menu-detail">
         <h2>${recommendation.menu_name}</h2>
@@ -36,17 +36,70 @@ async function getRecommendation() {
           ${recommendation.menu_description}
         </p>
         <div class="menu-btn">
-          <a href="detail_order.html"
-            ><button><h3>Pesan</h3></button></a
-          >
+          <button class="pesan-btn"><h3>Pesan</h3></button>
         </div>
       </div>`;
       newRecommendation.classList.add("detail-menu");
       menuRecommendation.appendChild(newRecommendation);
+      // Menambahkan event listener pada tombol "Pesan"
+      const pesanButton = newRecommendation.querySelector(".pesan-btn");
+      pesanButton.addEventListener("click", () =>
+        saveToLocalStorage(recommendation)
+      );
     });
   } catch (error) {
     console.log("404");
   }
+}
+
+// Fungsi untuk menyimpan data terpilih ke local storage
+function saveToLocalStorage(selectedMenu) {
+  const { image_url, menu_name, menu_price } = selectedMenu;
+  const dataToSave = {
+    imgSrc: image_url,
+    menuName: menu_name,
+    menuPrice: menu_price,
+    total: 1, // Menambah properti quantity dan menginisialisasinya dengan 1
+  };
+
+  // Dapatkan data yang telah disimpan sebelumnya dari local storage
+  const storedData = localStorage.getItem("selectedData");
+
+  // Cek apakah data sudah tersimpan sebelumnya atau belum
+  let selectedDataArray = [];
+
+  if (storedData) {
+    try {
+      // Coba mengonversi data yang ada menjadi array
+      selectedDataArray = JSON.parse(storedData);
+
+      // Pastikan bahwa selectedDataArray adalah array
+      if (!Array.isArray(selectedDataArray)) {
+        selectedDataArray = [];
+      }
+
+      // Mencari apakah data yang sama sudah ada dalam array
+      const existingDataIndex = selectedDataArray.findIndex(
+        (item) => item.imgSrc === dataToSave.imgSrc
+      );
+
+      // Jika data yang sama sudah ada, tambahkan totalnya
+      if (existingDataIndex !== -1) {
+        selectedDataArray[existingDataIndex].total += 1;
+      } else {
+        // Jika data belum ada, tambahkan ke dalam array
+        selectedDataArray.push(dataToSave);
+      }
+    } catch (error) {
+      console.error("Error parsing stored data:", error);
+    }
+  } else {
+    // Jika belum ada data, tambahkan data ke dalam array
+    selectedDataArray.push(dataToSave);
+  }
+
+  // Simpan data ke local storage
+  localStorage.setItem("selectedData", JSON.stringify(selectedDataArray));
 }
 
 getRecommendation();
