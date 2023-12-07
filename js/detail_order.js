@@ -1,30 +1,32 @@
-// // CONNECT TO BACKEND SERVER
-// const baseURL = "https://be-2-bandung-23-production.up.railway.app";
+// CONNECT TO BACKEND SERVER
+const baseURL = "https://be-2-bandung-23-production.up.railway.app";
 
-// const createOrder = document.getElementById("form");
+const createOrder = document.getElementById("form");
 
-// createOrder.addEventListener("submit", async (event) => {
-//   event.preventDefault();
+createOrder.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-//   const firstName = document.getElementById("firstName").value;
-//   const lastName = document.getElementById("lastName").value;
-//   const email = document.getElementById("createEmail").value;
+  const firstName = document.getElementById("firstName").value;
+  const lastName = document.getElementById("lastName").value;
+  const email = document.getElementById("email").value;
+  const phone = document.getElementById("phone").value;
+  const address = document.getElementById("address").value;
 
-//   try {
-//     const response = await fetch(`${baseURL}/`, {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({ firstName, lastName, email }),
-//     });
+  try {
+    const response = await fetch(`${baseURL}/order`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ firstName, lastName, email, phone, address }),
+    });
 
-//     const result = await response.json();
-//     output.innerHTML = JSON.stringify(result);
-//   } catch (error) {
-//     console.error("Error:", error);
-//   }
-// });
+    const result = await response.json();
+    output.innerHTML = JSON.stringify(result);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+});
 
 // Function hamburger button
 const hamburgerButtonElement = document.querySelector("#hamburger");
