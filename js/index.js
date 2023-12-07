@@ -1,42 +1,42 @@
-// CONNECT TO BACKEND SERVER
-const API_URL = "https://be-2-bandung-23-production.up.railway.app";
+// // CONNECT TO BACKEND SERVER
+// const API_URL = "https://be-2-bandung-23-production.up.railway.app";
 
-// Function Get Menu Default
-async function getOffer() {
-  try {
-    const response = await fetch(`${API_URL}/home/offer`);
-    const menus = await response.json();
-    const listOffer = document.getElementById("carousel");
-    menus.forEach((menu) => {
-      const newOffer = document.createElement("li");
-      // Format the menu price as Indonesian Rupiah without commas and trailing zeros
-      const formattedPrice = new Intl.NumberFormat("id-ID", {
-        style: "currency",
-        currency: "IDR",
-        minimumFractionDigits: 0, // Ensure at least one digit after the decimal point
-        maximumFractionDigits: 2, // Limit to a maximum of two digits after the decimal point
-      })
-        .format(menu.menu_price)
-        .replace(/,00$/, "");
-      newOffer.innerHTML = `
-      <div class="img">
-        <img
-          src="${menu.image_url}"
-          alt="img"
-          draggable="false"
-        />
-      </div>
-      <h2>${menu.menu_name}</h2>
-      <span>${formattedPrice}</span>`;
-      newOffer.classList.add("card");
-      listOffer.appendChild(newOffer);
-    });
-  } catch (error) {
-    console.log("404");
-  }
-}
+// // Function Get Menu Default
+// async function getOffer() {
+//   try {
+//     const response = await fetch(`${API_URL}/home/offer`);
+//     const menus = await response.json();
+//     const listOffer = document.getElementById("carousel");
+//     menus.forEach((menu) => {
+//       const newOffer = document.createElement("li");
+//       // Format the menu price as Indonesian Rupiah without commas and trailing zeros
+//       const formattedPrice = new Intl.NumberFormat("id-ID", {
+//         style: "currency",
+//         currency: "IDR",
+//         minimumFractionDigits: 0, // Ensure at least one digit after the decimal point
+//         maximumFractionDigits: 2, // Limit to a maximum of two digits after the decimal point
+//       })
+//         .format(menu.menu_price)
+//         .replace(/,00$/, "");
+//       newOffer.innerHTML = `
+//       <div class="img">
+//         <img
+//           src="${menu.image_url}"
+//           alt="img"
+//           draggable="false"
+//         />
+//       </div>
+//       <h2>${menu.menu_name}</h2>
+//       <span>${formattedPrice}</span>`;
+//       newOffer.classList.add("card");
+//       listOffer.appendChild(newOffer);
+//     });
+//   } catch (error) {
+//     console.log("404");
+//   }
+// }
 
-getOffer();
+// getOffer();
 
 // Function hamburger button
 const hamburgerButtonElement = document.querySelector("#hamburger");
@@ -109,7 +109,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Add event listeners for the arrow buttons to scroll the carousel left and right
   arrowBtns.forEach((btn) => {
     btn.addEventListener("click", () => {
-      carousel.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+      carousel.scrollLeft +=
+        btn.id == "left" ? -firstCardWidth : firstCardWidth;
     });
   });
   const dragStart = (e) => {
