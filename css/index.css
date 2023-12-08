@@ -498,6 +498,7 @@
 
   .slides {
     height: 400px;
+    margin-top: 60px;
   }
 
   .content-description {
@@ -521,10 +522,6 @@
     max-width: 500px;
     width: 100%;
     border-radius: 15px;
-  }
-
-  .slides {
-    margin-top: 60px;
   }
 
   .content-image img {
