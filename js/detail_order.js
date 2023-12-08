@@ -40,35 +40,35 @@ const updateTotal = (index, amount) => {
 };
 
 // Function to update subtotal and total
-const updateSubtotalAndTotal = () => {
-  let selectedMenus = JSON.parse(localStorage.getItem("selectedData"));
+// const updateSubtotalAndTotal = () => {
+//   let selectedMenus = JSON.parse(localStorage.getItem("selectedData"));
 
-  const price = selectedMenus.reduce(
-    (acc, menu) => acc + menu.menuPrice * menu.total,
-    0
-  );
-  const deliveryFee = 7000; // Biaya antar
-  const total = price + deliveryFee;
+//   const price = selectedMenus.reduce(
+//     (acc, menu) => acc + menu.menuPrice * menu.total,
+//     0
+//   );
+//   const deliveryFee = 7000; // Biaya antar
+//   const total = price + deliveryFee;
 
-  const formattedPrice = formatCurrency(price);
-  const formattedDeliveryFee = formatCurrency(deliveryFee);
-  const formattedTotal = formatCurrency(total);
+//   const formattedPrice = formatCurrency(price);
+//   const formattedDeliveryFee = formatCurrency(deliveryFee);
+//   const formattedTotal = formatCurrency(total);
 
-  subtotal.innerHTML = `
-    <div class="subtotal-item">
-      <div class="subtotal-left">
-        <p>Subtotal</p>
-        <p>Biaya Antar</p>
-        <h3>Total</h3>
-      </div>
-      <div class="subtotal-right">
-        <p>${formattedPrice}</p>
-        <p>${formattedDeliveryFee}</p>
-        <h3>${formattedTotal}</h3>
-      </div>
-    </div>
-  `;
-};
+//   subtotal.innerHTML = `
+//     <div class="subtotal-item">
+//       <div class="subtotal-left">
+//         <p>Subtotal</p>
+//         <p>Biaya Antar</p>
+//         <h3>Total</h3>
+//       </div>
+//       <div class="subtotal-right">
+//         <p>${formattedPrice}</p>
+//         <p>${formattedDeliveryFee}</p>
+//         <h3>${formattedTotal}</h3>
+//       </div>
+//     </div>
+//   `;
+// };
 
 if (selectedData) {
   let selectedMenus = JSON.parse(selectedData);
@@ -137,7 +137,8 @@ if (selectedData) {
 } else {
 }
 function updateLocalStorage() {
-  localStorage.setItem("selectedData", JSON.stringify(selectedMenus));
+  selectedMenu.total = total;
+  localStorage.setItem("selectedData", JSON.stringify(selectedMenu));
 }
 
 const formatCurrency = (value) => {
@@ -152,9 +153,9 @@ const formatCurrency = (value) => {
 };
 
 if (selectedData) {
-  let selectedMenus = JSON.parse(selectedData);
+  let selectedMenu = JSON.parse(selectedData);
 
-  const price = selectedMenus.reduce(
+  const price = selectedMenu.reduce(
     (acc, menu) => acc + menu.menuPrice * menu.total,
     0
   );
@@ -184,16 +185,36 @@ if (selectedData) {
 
 if (selectedData) {
   let selectedMenu = JSON.parse(selectedData);
+  console.log(selectedData);
 
   const modal = document.querySelector(".modal-content");
-  const price = selectedMenu.menuPrice * selectedMenu.total;
   const deliveryFee = 7000; // Biaya antar
-  const total = price + deliveryFee;
+
+  // Calculate total price by iterating over the array
+  const price = selectedMenu.reduce(
+    (acc, menu) => acc + menu.menuPrice * menu.total,
+    0
+  );
+
+  // Iterate over the selectedMenu array and create HTML for each menu
+  const menuHtml = selectedMenu
+    .map(
+      (menu) => `
+        <div class="list-detail">
+          <p class="menu-bill">${menu.menuName}</p>
+          <hr />
+          <p class="qty">${menu.total}</p>
+          <hr />
+          <p class="price">${formatCurrency(menu.menuPrice)}</p>
+        </div>
+        <hr />
+  `
+    )
+    .join("");
 
   const formattedPrice = formatCurrency(price);
   const formattedDeliveryFee = formatCurrency(deliveryFee);
-  const formattedTotal = formatCurrency(total);
-  const formattedUnitPrice = formatCurrency(selectedMenu.menuPrice);
+  const formattedTotal = formatCurrency(price + deliveryFee);
 
   modal.innerHTML = `
     <div class="img-bill">
@@ -201,14 +222,7 @@ if (selectedData) {
       <hr />
     </div>
     <div class="list-order">
-      <div class="list-detail">
-        <p class="menu-bill">${selectedMenu.menuName}</p>
-        <hr />
-        <p class="qty">${selectedMenu.total}</p>
-        <hr />
-        <p class="price">${formattedUnitPrice}</p>
-      </div>
-      <hr />
+    ${menuHtml}
     </div>
     <div class="subtotal-bill">
       <div class="subtotal-left">
