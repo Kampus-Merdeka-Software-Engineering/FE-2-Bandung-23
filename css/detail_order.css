@@ -1,5 +1,5 @@
 /* Main Content */
-.container-order {
+.container {
   height: 700px;
   width: 100%;
   display: flex;
@@ -589,7 +589,7 @@ input[type="number"] {
     width: 75%;
   }
 
-  .container-order {
+  .container {
     max-height: 800px;
     height: 100%;
   }
@@ -717,7 +717,7 @@ input[type="number"] {
     margin: auto;
   }
 
-  .container-order {
+  .container {
     display: flex;
     flex-wrap: wrap;
     max-height: 1200px;
