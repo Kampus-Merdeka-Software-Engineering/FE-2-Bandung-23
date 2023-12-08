@@ -1,4 +1,4 @@
-// Ambil URL saat ini
+// Function active link on the navbar
 const currentUrl = window.location.href;
 
 // Ambil semua elemen link di dalam navigasi

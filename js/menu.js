@@ -79,8 +79,9 @@ function createMenuElement(menu) {
 
 // Fungsi untuk menyimpan data terpilih ke local storage
 function saveToLocalStorage(selectedMenu) {
-  const { image_url, menu_name, menu_price } = selectedMenu;
+  const { menu_id, image_url, menu_name, menu_price } = selectedMenu;
   const dataToSave = {
+    menuId: menu_id,
     imgSrc: image_url,
     menuName: menu_name,
     menuPrice: menu_price,
@@ -211,34 +212,6 @@ async function getMenuTypes() {
 }
 
 getMenuTypes();
-
-// Function hamburger button
-const hamburgerButtonElement = document.querySelector("#hamburger");
-const drawerElement = document.querySelector(".nav-list");
-
-hamburgerButtonElement.addEventListener("click", () => {
-  hamburgerButtonElement.classList.toggle("active");
-  drawerElement.classList.toggle("active");
-});
-// End of Function hamburger button
-
-// Function active link on the navbar
-const currentUrl = window.location.href;
-
-// Ambil semua elemen link di dalam navigasi
-const links = document.querySelectorAll(".nav-link");
-
-// Loop melalui setiap link untuk memeriksa URL
-links.forEach((link) => {
-  const linkUrl = link.href;
-
-  // Periksa apakah URL saat ini mengandung URL link
-  if (currentUrl.includes(linkUrl)) {
-    // Tambahkan class "active" pada link yang sesuai
-    link.classList.add("active");
-  }
-});
-// End of Function active link on the navbar
 
 // Function active link on Category
 const listItems = document.querySelectorAll(".list-cat li");

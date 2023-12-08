@@ -24,32 +24,51 @@ createOrder.addEventListener("click", async (event) => {
   }
 });
 
-const handleHamburgerButtonClick = () => {
-  hamburgerButtonElement.classList.toggle("active");
-  drawerElement.classList.toggle("active");
+const selectedData = localStorage.getItem("selectedData");
+
+// Function to update total and save to local storage
+const updateTotal = (index, amount) => {
+  let selectedMenus = JSON.parse(localStorage.getItem("selectedData"));
+  selectedMenus[index].total += amount;
+  localStorage.setItem("selectedData", JSON.stringify(selectedMenus));
+
+  // Update the displayed total
+  orderTotals[index].textContent = selectedMenus[index].total;
+
+  // Update subtotal and total
+  updateSubtotalAndTotal();
 };
 
-const hamburgerButtonElement = document.querySelector("#hamburger");
-const drawerElement = document.querySelector(".nav-list");
+// Function to update subtotal and total
+const updateSubtotalAndTotal = () => {
+  let selectedMenus = JSON.parse(localStorage.getItem("selectedData"));
 
-hamburgerButtonElement.addEventListener("click", handleHamburgerButtonClick);
+  const price = selectedMenus.reduce(
+    (acc, menu) => acc + menu.menuPrice * menu.total,
+    0
+  );
+  const deliveryFee = 7000; // Biaya antar
+  const total = price + deliveryFee;
 
-const currentUrl = window.location.href;
-const links = document.querySelectorAll(".nav-link");
+  const formattedPrice = formatCurrency(price);
+  const formattedDeliveryFee = formatCurrency(deliveryFee);
+  const formattedTotal = formatCurrency(total);
 
-links.forEach((link) => {
-  const linkUrl = link.href;
-
-  if (currentUrl.includes(linkUrl)) {
-    link.classList.add("active");
-  }
-});
-
-// const updateLocalStorage = () => {
-//   localStorage.setItem("selectedData", JSON.stringify(selectedMenus));
-// };
-
-const selectedData = localStorage.getItem("selectedData");
+  subtotal.innerHTML = `
+    <div class="subtotal-item">
+      <div class="subtotal-left">
+        <p>Subtotal</p>
+        <p>Biaya Antar</p>
+        <h3>Total</h3>
+      </div>
+      <div class="subtotal-right">
+        <p>${formattedPrice}</p>
+        <p>${formattedDeliveryFee}</p>
+        <h3>${formattedTotal}</h3>
+      </div>
+    </div>
+  `;
+};
 
 if (selectedData) {
   let selectedMenus = JSON.parse(selectedData);
@@ -82,9 +101,9 @@ if (selectedData) {
             </div>
           </div>
           <div class="order-total">
-            <p class="minus">-</p>
+            <p class="minus" onclick="updateTotal(${index}, -1)">-</p>
             <p class="num" data-menu-id="${selectedMenu.menuId}">${selectedMenu.total}</p>
-            <p class="plus">+</p>
+            <p class="plus" onclick="updateTotal(${index}, 1)">+</p>
           </div>
         </div>
       </div>
@@ -93,6 +112,7 @@ if (selectedData) {
     .join("");
   orderMenu.appendChild(cardMenu);
 
+  // Attach event listeners to each order item
   const minusButtons = orderMenu.querySelectorAll(".minus");
   const plusButtons = orderMenu.querySelectorAll(".plus");
   const orderTotals = orderMenu.querySelectorAll(".num");
@@ -100,19 +120,24 @@ if (selectedData) {
   minusButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
       if (selectedMenus[index].total > 1) {
-        updateTotal(index, -1);
+        selectedMenus[index].total--;
+        orderTotals[index].textContent = selectedMenus[index].total;
+        updateLocalStorage();
       }
     });
   });
 
   plusButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
-      updateTotal(index, 1);
+      selectedMenus[index].total++;
+      orderTotals[index].textContent = selectedMenus[index].total;
+      updateLocalStorage();
     });
   });
 } else {
-  const initialData = [];
-  localStorage.setItem("selectedData", JSON.stringify(initialData));
+}
+function updateLocalStorage() {
+  localStorage.setItem("selectedData", JSON.stringify(selectedMenus));
 }
 
 const formatCurrency = (value) => {
