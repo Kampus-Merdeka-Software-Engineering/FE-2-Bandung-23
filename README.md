@@ -1,6 +1,6 @@
 # Seribu Rasa
 
-![App Screenshot](./images/logo-putih.png)
+![App Screenshot](./assets/img/logo/Logo%20Putih.png)
 
 Seribu Rasa adalah proyek yang didedikasikan untuk menghadirkan kelezatan dan keragaman makanan khas Indonesia. Kami mengundang Anda untuk memperluas pengalaman kuliner Anda dengan menjelajahi beragam cita rasa yang khas dari nusantara.
 
