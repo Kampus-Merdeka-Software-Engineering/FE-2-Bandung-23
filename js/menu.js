@@ -11,7 +11,6 @@ async function getMenu() {
     const menus = await response.json();
     originalMenus = menus; // Simpan data menu asli
     const listMenu = document.getElementById("listMenu");
-
     // Ambil 8 data secara acak
     const randomMenus = getRandomMenus(menus, 8);
 
@@ -126,6 +125,7 @@ function saveToLocalStorage(selectedMenu) {
 
   // Simpan data ke local storage
   localStorage.setItem("selectedData", JSON.stringify(selectedDataArray));
+  updateBadge();
 }
 
 // Fungsi pencarian menu

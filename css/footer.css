@@ -80,7 +80,9 @@ ul li a {
 .copyright {
   text-align: left;
 }
+/* Responsive Page Setting */
 
+/* 1. Display Tablet */
 @media (max-width: 768px) {
   footer {
     display: flex;
@@ -123,6 +125,7 @@ ul li a {
   }
 }
 
+/* 2. Display Hp */
 @media (max-width: 450px) {
   .footer-col img {
     max-width: 144px;

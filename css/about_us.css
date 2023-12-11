@@ -43,7 +43,6 @@ main .about-us .about-us-image {
 main .about-us .about-us-image img {
   width: 100%;
 }
-
 /* End of Tentang Kami */
 
 /*Mengapa Memilih Kami*/
@@ -103,7 +102,6 @@ main .about-us .about-us-image img {
   text-align: left;
   padding: 10px;
 }
-
 /* End of Mengapa Memilih Kami */
 
 /*Tim Kami*/
@@ -112,6 +110,7 @@ main .about-us .about-us-image img {
   text-align: center;
   height: 100%;
   width: 100%;
+  padding-bottom: 50px;
   background: linear-gradient(to left, #f7e1ae, #fdfaf2);
 }
 
@@ -146,9 +145,9 @@ main .about-us .about-us-image img {
 
 .our-team-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Dua kolom dengan lebar yang sama */
-  grid-template-rows: repeat(2, 1fr); /* Tiga baris dengan tinggi yang sama */
-  grid-gap: 20px; /* Jarak antara elemen-elemen dalam grid */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
   justify-content: center;
   margin: auto;
   flex-wrap: wrap;
@@ -180,9 +179,11 @@ main .about-us .about-us-image img {
 .our-team-item p {
   font-size: 11px;
 }
-
 /* End of Tim Kami */
 
+/* Responsive Page Setting */
+
+/* 1. Display Laptop */
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
@@ -250,7 +251,9 @@ main .about-us .about-us-image img {
     height: 100%;
   }
 }
+/* End of Display Laptop */
 
+/* 2. Display Tablet */
 @media (max-width: 768px) {
   main {
     min-height: 100vh;
@@ -354,7 +357,9 @@ main .about-us .about-us-image img {
     font-size: 24px;
   }
 }
+/* End of Display Tablet */
 
+/* 3. Display HP */
 @media (max-width: 450px) {
   main .about-us .about-us-description p {
     line-height: 1rem;
@@ -501,3 +506,4 @@ main .about-us .about-us-image img {
     font-size: 21px;
   }
 }
+/* End of Display Hp */

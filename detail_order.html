@@ -49,7 +49,7 @@
           </li>
           <li class="nav-item">
             <a href="detail_order.html" class="nav-link"
-              ><strong>Pesan</strong></a
+              ><strong>Pesan<span class="badge" id="badge">0</span></strong></a
             >
           </li>
           <li class="nav-item">
@@ -65,9 +65,9 @@
 
     <main>
       <!-- Main Content -->
-      <div class="container">
+      <div class="container" id="container">
         <!-- Order List -->
-        <div class="row">
+        <div class="row" id="row">
           <div class="title-order">
             <h2>Pesanan Saya</h2>
             <hr />
@@ -97,23 +97,35 @@
               <div class="form">
                 <div class="first-name">
                   <label>Nama Depan</label>
-                  <input id="firstName" type="text" />
+                  <input id="firstName" type="text" required />
                 </div>
                 <div class="last-name">
                   <label>Nama Belakang</label>
-                  <input id="lastName" type="text" />
+                  <input id="lastName" type="text" required />
                 </div>
                 <div class="email">
                   <label>Email</label>
-                  <input id="email" type="email" name="email" />
+                  <input id="email" type="email" name="email" required />
                 </div>
                 <div class="no-telp">
                   <label>Nomor Telepon</label>
-                  <input type="number" id="phone" maxlength="13" name="phone" />
+                  <input
+                    type="number"
+                    id="phone"
+                    maxlength="13"
+                    name="phone"
+                    required
+                  />
                 </div>
                 <div class="address">
                   <label>Alamat Lengkap</label>
-                  <textarea name="" id="address" cols="30" rows="10"></textarea>
+                  <textarea
+                    name=""
+                    id="address"
+                    cols="30"
+                    rows="10"
+                    required
+                  ></textarea>
                 </div>
               </div>
 
@@ -130,13 +142,18 @@
 
             <!-- First Modal -->
             <div id="myModal" class="modal">
-              <div class="modal-content"></div>
+              <div class="modal-content" id="modalPayment"></div>
             </div>
             <!-- End of First Modal  -->
 
             <!-- Second Modal -->
             <div id="myModal2" class="modal2">
-              <div class="modal-content2">
+              <div class="modal-content2" id="modalContent2"></div>
+            </div>
+            <!-- End of Second Modal -->
+            <!-- Second Modal -->
+            <div id="myModal3" class="modal3">
+              <div class="modal-content3">
                 <h1>Terima kasih!</h1>
                 <p>Pesanan anda sedang diproses.</p>
                 <button class="close-btn" id="homeBtn">
@@ -193,7 +210,8 @@
     </main>
 
     <!-- JavaScript -->
-    <script src="./js/detail_order.js"></script>
+    <!-- <script src="./js/detail_order.js"></script> -->
+    <script src="./js/detail_order2.js"></script>
     <script src="./js/hamburger_button.js"></script>
     <script src="./js/navlink_active.js"></script>
   </body>

@@ -15,3 +15,19 @@ links.forEach((link) => {
   }
 });
 // End of Function active link on the navbar
+
+function updateBadge() {
+  const selectedData = localStorage.getItem("selectedData");
+
+  if (selectedData) {
+    let selectedMenu = JSON.parse(selectedData);
+    let totalJumlah = selectedMenu.reduce(
+      (accumulator, selectedMenu) => accumulator + selectedMenu.total,
+      0
+    );
+
+    const badgeElement = document.getElementById("badge");
+    badgeElement.textContent = `${totalJumlah}`;
+  }
+}
+updateBadge();

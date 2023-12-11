@@ -55,17 +55,29 @@ header.navbar-container .nav-list li a {
 }
 
 header.navbar-container .nav-list li:hover a {
+  color: #186f65;
   background-color: #a6cf98;
-  color: #1a5d1a;
+}
+
+.badge {
+  position: absolute;
+  font-size: 12px;
+  padding: 4px 8px;
+  top: 50%;
+  border-radius: 50%;
+  background: red;
+  color: white;
 }
 
 .nav-link.active {
   background-color: #a6cf98;
   color: #186f65;
 }
-
 /* End of Header */
 
+/* Responsive Page Setting */
+
+/* 1. Display Laptop */
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
@@ -79,7 +91,9 @@ header.navbar-container .nav-list li:hover a {
     width: 150px;
   }
 }
+/* End of Display Laptop */
 
+/* 2. Display Tablet */
 @media (max-width: 768px) {
   html {
     font-size: 62.5%;
@@ -125,9 +139,12 @@ header.navbar-container .nav-list li:hover a {
     right: 0;
   }
 }
+/* End of Display Tablet */
 
+/* Display Hp */
 @media (max-width: 450px) {
   header.navbar-container .logo img {
     width: 130px;
   }
 }
+/* End of Display Hp */

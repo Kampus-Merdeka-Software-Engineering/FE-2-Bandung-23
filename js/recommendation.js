@@ -48,7 +48,7 @@ async function getRecommendation() {
       );
     });
   } catch (error) {
-    console.log("404");
+    console.error("404");
   }
 }
 
@@ -63,15 +63,15 @@ function saveToLocalStorage(selectedMenu) {
   };
 
   // Dapatkan data yang telah disimpan sebelumnya dari local storage
-  const storedData = localStorage.getItem("selectedData");
+  const selectedData = localStorage.getItem("selectedData");
 
   // Cek apakah data sudah tersimpan sebelumnya atau belum
   let selectedDataArray = [];
 
-  if (storedData) {
+  if (selectedData) {
     try {
       // Coba mengonversi data yang ada menjadi array
-      selectedDataArray = JSON.parse(storedData);
+      selectedDataArray = JSON.parse(selectedData);
 
       // Pastikan bahwa selectedDataArray adalah array
       if (!Array.isArray(selectedDataArray)) {

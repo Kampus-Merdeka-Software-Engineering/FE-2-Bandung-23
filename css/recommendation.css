@@ -142,7 +142,6 @@ main {
 /* Responsive Page Setting */
 
 /* 1. Display Laptop */
-
 @media (max-width: 1366px) {
   html {
     font-size: 75%;
@@ -219,7 +218,6 @@ main {
 /* End of Display Tablet */
 
 /* 3. Display HP */
-
 @media (max-width: 450px) {
   .title {
     font-size: 1rem;
