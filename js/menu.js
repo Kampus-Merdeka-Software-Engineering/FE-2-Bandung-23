@@ -190,13 +190,8 @@ async function getMenuTypes() {
       const response = await fetch(`${API_URL}/menu/${type}`);
       const data = await response.json();
 
-      console.log("Received data:", data);
-
       // Check for the existence of data
       if (Array.isArray(data) && data.length > 0) {
-        // Log all properties present in the data
-        console.log("Properties in received data:", Object.keys(data[0]));
-
         // Check for specific properties you need
         data.forEach((menu) => {
           const newMenu = createMenuElement(menu);

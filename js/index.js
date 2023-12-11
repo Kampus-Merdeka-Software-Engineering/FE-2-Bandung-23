@@ -155,11 +155,5 @@ document.addEventListener("DOMContentLoaded", () => {
   carouselCard.addEventListener("scroll", infiniteScroll);
   wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
   wrapper.addEventListener("mouseleave", autoPlay);
-
-  console.log(carouselCard);
-  console.log(carouselChildrens);
-  console.log(firstCardWidth);
-  console.log(cardPerView);
-  console.log(isDragging);
 });
 // const selectedData = localStorage.getItem("selectedData");
